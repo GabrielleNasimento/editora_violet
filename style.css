@@ -186,9 +186,7 @@ nav {
 
 .carrossel-container {
   position: relative;
-  width: 100%;
-  overflow: hidden; /* esconde o conteúdo que ultrapassa a largura */
-  padding: 20px 0;
+  overflow: visible; /* importante para mostrar a seta fora do container */
 }
 
 .carrossel {
@@ -223,37 +221,31 @@ nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
-  font-size: 24px;
-  padding: 10px;
+  font-size: 2rem;
+  padding: 10px 15px;
   cursor: pointer;
   z-index: 10;
+  transition: background 0.3s;
+  border-radius: 5px;
 }
 
-.seta-esquerda,
-.seta-direita {
-  position: absolute;
-  top: 120px; /* ajuste esse valor até centralizar */
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  z-index: 10;
-}
 
 .seta-esquerda {
-  left: 20px;
+  left: -30px;
 }
+
 
 .seta-direita {
-  right: 20px;
+  right: -30px; 
 }
-
 
 .seta:hover {
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
 }
+
 
 
 .carrossel {
