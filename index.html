@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+<head> <!--Configuração padrão de site-->
+  <!--Ajusta a tela ao dispositivo que foi aberto, permite o uso das maioria dos caracteres e define o nome da página-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Violet - Página Inicial</title>
+  <!-- Conecta o css e javascript a página html -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="script.js" async></script>
 </head>
 <body>
-<header>
+<header> <!--Cabeçalho-->
+  <!--Adiciona o logo a tela inicial do site-->
   <div class="container">
     <nav class="nav-topo">
         <div class="logo-nav">
@@ -18,12 +21,16 @@
             <img src="./images/Violet_logo.png" alt="Logo da Violet" class="logo-img">
            </a>
         </div>
+        <!-- Adiciona a barra de pesquisa a tela inicial-->
         <div class="barra-pesquisa">
           <input type="text" placeholder="Buscar livros, autores..." class="search-bar">
         </div>
       <div class="imagens">
+        <!-- Logo do usuário-->
         <a href="./paginas_topo/perfil.html"><img src="./images/user.png" alt="Perfil"></a>
+        <!-- Logo dos favoritos-->
         <a href="#"><img src="./images/heart.png" alt="Favoritos"></a>
+        <!-- Logo do carrinho-->
         <a href="#"><img src="./images/shopping-bag.png" alt="Carrinho"></a>
       </div>
     </nav>
@@ -31,7 +38,8 @@
 </header>
 
 
-<main>
+<main> <!--Menu de navegação-->
+  <!--Cria o menu de navegaçao com 7 opções-->
   <div class="opcoes">
     <a href="#">Autores</a>
     <a href="#">Editora</a>
@@ -43,7 +51,8 @@
   </div>
 </main>
 
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"> <!-- Cria a estrutura do carrosel-->
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -51,20 +60,26 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
+      <!--Banner promocional 1-->
       <img src="./images/banner2.png" class="d-block w-100" alt="Jacksonlindo">
     </div>
     <div class="carousel-item">
+      <!--Banner promocional 2-->
       <img src="./images/banner3.png" class="d-block w-100" alt="bruxinha">
     </div>
     <div class="carousel-item">
+      <!--Banner promocional 3-->
       <img src="./images/banner4.png" class="d-block w-100" alt="pirisite">
     </div>
-  </div>
+  </div>  <!-- Botão em formato de seta apontada para esquerda que volta para o antigo banner promocional-->
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <!--Esconde a natureza de voltar, só pra não ficar a palavra "Previous" quando passar o cursor-->
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
+<!--Botão em formato de seta apontada para direita que passa para o próximo banner promocional-->
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+<!--Esconde a natureza de próximo, só pra não ficar a palavra "Next" quando passar o cursor-->
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
@@ -73,15 +88,15 @@
 <section class="sessao-banner">
 </section>
 
-<section class="sessao">
+<section class="sessao"> <!--Lançamentos-->
   <h3>Lançamentos</h3>
-  
+  <!--Cria um carrosel com os livros da categoria "lançamentos"-->
   <div class="carrossel-container">
-  
-
   <div class="carrossel">
+    <!--Adiciona seta apontando para esquerda que permite voltar aos livros passados anteriormente-->
   <button class="seta seta-esquerda">&#10094;</button>
     <div class="card">
+<!--Imagem selecionavel que leva para a página de venda do livro. Mostra o nome, preço e sugere o usuário a ver os detalhes do livro-->
   <a href="../Gittttt_Editora/páginas_livros/sololeveling.html">
     <div class="card-img-wrapper">
       <img src="./images/livros/solo_leveling.webp" alt="Solo Leveling">
@@ -94,36 +109,8 @@
     <p class="text">Solo leveling</p>
   </a>
 </div>
-
-<div class="card">
-  <a href="../Gittttt_Editora/páginas_livros/sololeveling.html">
-    <div class="card-img-wrapper">
-      <img src="./images/livros/solo_leveling.webp" alt="Solo Leveling">
-      <div class="detalhes-hover">
-        <p><strong>Solo Leveling</strong></p>
-        <p>R$ 74,90</p>
-        <a href="./páginas_livros/sololeveling.html" class="botao-detalhes">Ver detalhes</a>
-      </div>
-    </div>
-    <p class="text">Solo leveling</p>
-  </a>
-</div>
-
-    <div class="card">
-      <a href="./páginas_livros/pelasentranhas.html">
-      <div class="card-img-wrapper">
-        <img src="./images/livros/pelas_entranhas.png">
-        <div class="detalhes-hover">
-          <p><strong>Pelas entranhas</strong></p>
-          <p>R$ 50,00</p>
-          <a href="./páginas_livros/pelasentranhas.html" class="botao-detalhes">Ver detalhes</a>
-        </div>
-      </div>
-        <p class="text">Pelas entranhas</p>
-      </a>
-    </div>
-
         <div class="card">
+<!--Imagem selecionavel que leva para a página de venda do livro. Mostra o nome, preço e sugere o usuário a ver os detalhes do livro-->
       <a href="./páginas_livros/pelasentranhas.html">
       <div class="card-img-wrapper">
         <img src="./images/livros/pelas_entranhas.png">
@@ -138,6 +125,7 @@
     </div>
 
     <div class="card">
+<!--Imagem selecionavel que leva para a página de venda do livro. Mostra o nome, preço e sugere o usuário a ver os detalhes do livro-->
       <a href="./páginas_livros/ocaraqueestouafim.html">
         <div class="card-img-wrapper">
         <img src="./images/livros/o cara que eu estou não é um cara.jpg">
@@ -151,6 +139,7 @@
       </a>
     </div>
     <div class="card">
+<!--Imagem selecionavel que leva para a página de venda do livro. Mostra o nome, preço e sugere o usuário a ver os detalhes do livro-->
       <a href="./páginas_livros/thunderbolts.html">
         <div class="card-img-wrapper">
         <img src="./images/livros/thunderbolts.webp">
@@ -164,6 +153,7 @@
       </a>
     </div>
     <div class="card">
+<!--Imagem selecionavel que leva para a página de venda do livro. Mostra o nome, preço e sugere o usuário a ver os detalhes do livro-->
       <a href="./páginas_livros/osdoismorrem.html">
         <div class="card-img-wrapper">
        <img src="./images/livros/os_dois_morrem.jpeg">
@@ -177,22 +167,24 @@
       </a>
     </div>
   </div>
-
+<!--Adiciona seta apontando para direita que permite avançar aos livros que não foram visto anteriormente-->
   <button class="seta seta-direita">&#10095;</button>
 </div>
 
 </section>
 
 
-<section class="sessao">
+<section class="sessao"> <!--Sucessos antigos-->
   <h3>Sucessos Antigos</h3>
-
+  <!--Cria um carrosel para a categoria "Sucessos Antigos"-->
   <div class="carrossel-container">
+<!--Adiciona seta apontando para esquerda que permite voltar aos livros passados anteriormente-->
   <button class="seta seta-esquerda">&#10094;</button>
 
   <div class="carrossel">
 
     <div class="card">
+<!--Imagem selecionavel que leva para a página de venda do livro. Mostra o nome, preço e sugere o usuário a ver os detalhes do livro-->
       <a href="./páginas_livros/authenticgames.html">
         <div class="card-img-wrapper">
        <img src="./images/livros/authentic.jpg">
@@ -206,6 +198,7 @@
       </a>
     </div>
         <div class="card">
+<!--Imagem selecionavel que leva para a página de venda do livro. Mostra o nome, preço e sugere o usuário a ver os detalhes do livro-->
       <a href="./páginas_livros/inuyasha.html">
         <div class="card-img-wrapper">
        <img src="./images/livros/inuyasha.jpg">
@@ -219,6 +212,7 @@
       </a>
     </div>
     <div class="card">
+<!--Imagem selecionavel que leva para a página de venda do livro. Mostra o nome, preço e sugere o usuário a ver os detalhes do livro-->
       <a href="./páginas_livros/akira.html">
         <div class="card-img-wrapper">
        <img src="./images/livros/Akira.png">
@@ -232,6 +226,7 @@
       </a>
     </div>
     <div class="card">
+<!--Imagem selecionavel que leva para a página de venda do livro. Mostra o nome, preço e sugere o usuário a ver os detalhes do livro-->
       <a href="./páginas_livros/sailor.html">
         <div class="card-img-wrapper">
        <img src="./images/livros/sailor_moon.jpg">
@@ -245,6 +240,7 @@
       </a>
     </div>
     <div class="card">
+<!--Imagem selecionavel que leva para a página de venda do livro. Mostra o nome, preço e sugere o usuário a ver os detalhes do livro-->
       <a href="./páginas_livros/herobrine.html">
         <div class="card-img-wrapper">
        <img src="./images/livros/herobrine.jpg">
@@ -258,35 +254,37 @@
       </a>
     </div>
   </div>
-
+<!--Adiciona seta apontando para direita que permite avançar aos livros que não foram visto anteriormente-->
   <button class="seta seta-direita">&#10095;</button>
 </div>
 </section>
 
 
-    <section class="sessao">
+    <section class="sessao"> <!--Edições limitadas-->
   <h3>Edições Limitadas</h3>
+  <!--Cria dois cards para livros de edição limitada-->
   <div class="limitadas">
-    <div class="card-grande">
-      
+    <div class="card-grande"> <!--Card do livro 1, que possui apenas o título :(-->
       <p>Título do Livro 1</p>
     </div>
-    <div class="card-grande">
+    <div class="card-grande"> <!--Card do livro 2, que possui apenas o título :(-->
       <p>Título do Livro 2</p>
     </div>
   </div>
 </section>
 
 
-<section class="sessao">
+<section class="sessao"> <!--Mangás em alta-->
   <h3>Mangás em Alta</h3>
-
+<!--Cria uma sequência de livros da categoria "Mangás em alta"-->
   <div class="carrossel-container">
+<!--Adiciona seta apontada para esquerda meramente ilustrativa-->
   <button class="seta seta-esquerda">&#10094;</button>
 
   <div class="carrossel">
 
       <div class="card">
+<!--Imagem selecionavel que leva para a página de venda do livro. Mostra o nome, preço e sugere o usuário a ver os detalhes do livro-->
       <a href="./páginas_livros/yourname.html">
         <div class="card-img-wrapper">
        <img src="./images/livros/your_name.jpg">
@@ -300,6 +298,7 @@
       </a>
     </div>
     <div class="card">
+<!--Imagem selecionavel que leva para a página de venda do livro. Mostra o nome, preço e sugere o usuário a ver os detalhes do livro-->
       <a href="./páginas_livros/dugeon_meshi.html">
         <div class="card-img-wrapper">
        <img src="./images/livros/dugeon_meshi.webp">
@@ -313,6 +312,7 @@
       </a>
     </div>
     <div class="card">
+<!--Imagem selecionavel que leva para a página de venda do livro. Mostra o nome, preço e sugere o usuário a ver os detalhes do livro-->
       <a href="./páginas_livros/tatsu.html">
         <div class="card-img-wrapper">
        <img src="./images/livros/tatsu_imortal.webp">
@@ -326,6 +326,7 @@
       </a>
     </div>
         <div class="card">
+<!--Imagem selecionavel que leva para a página de venda do livro. Mostra o nome, preço e sugere o usuário a ver os detalhes do livro-->
       <a href="./páginas_livros/evangelion.html">
         <div class="card-img-wrapper">
        <img src="./images/livros/evangelion.png">
@@ -339,6 +340,7 @@
       </a>
     </div>
         <div class="card">
+<!--Imagem selecionavel que leva para a página de venda do livro. Mostra o nome, preço e sugere o usuário a ver os detalhes do livro-->
       <a href="./páginas_livros/haikyuu.html">
         <div class="card-img-wrapper">
        <img src="./images/livros/haikyuu.jpg">
@@ -352,19 +354,22 @@
       </a>
     </div>
   </div>
+<!--Adiciona seta apontando para direita meramente ilustrativa-->
   <button class="seta seta-direita">&#10095;</button>
 </div>
 </section>
 </section>
-<section class="sessao">
+<section class="sessao"> <!--Favoritos do público-->
   <h3>Favoritos do Público</h3>
-
+<!--Cria uma sequência de livros da categoria "Favoritos do Público"-->
   <div class="carrossel-container">
+<!--Adiciona uma seta apontada para esquerda meramente ilustrativa-->
   <button class="seta seta-esquerda">&#10094;</button>
 
   <div class="carrossel">
 
         <div class="card">
+<!--Imagem selecionavel que leva para a página de venda do livro. Mostra o nome, preço e sugere o usuário a ver os detalhes do livro-->
       <a href="./páginas_livros/ocaraqueestouafim.html">
         <div class="card-img-wrapper">
        <img src="./images/livros/o cara que eu estou não é um cara1.jpg">
@@ -378,6 +383,7 @@
       </a>
     </div>
     <div class="card">
+<!--Imagem selecionavel que leva para a página de venda do livro. Mostra o nome, preço e sugere o usuário a ver os detalhes do livro-->
       <a href="./páginas_livros/dugeon_meshi.html">
         <div class="card-img-wrapper">
        <img src="./images/livros/dugeon_meshi.webp">
@@ -391,6 +397,7 @@
       </a>
     </div>
     <div class="card">
+<!--Imagem selecionavel que leva para a página de venda do livro. Mostra o nome, preço e sugere o usuário a ver os detalhes do livro-->
       <a href="./páginas_livros/tatsu.html">
         <div class="card-img-wrapper">
        <img src="./images/livros/tatsu_imortal.webp">
@@ -404,6 +411,7 @@
       </a>
     </div>
         <div class="card">
+<!--Imagem selecionavel que leva para a página de venda do livro. Mostra o nome, preço e sugere o usuário a ver os detalhes do livro-->
       <a href="./páginas_livros/evangelion.html">
         <div class="card-img-wrapper">
        <img src="./images/livros/evangelion.png">
@@ -417,6 +425,7 @@
       </a>
     </div>
         <div class="card">
+<!--Imagem selecionavel que leva para a página de venda do livro. Mostra o nome, preço e sugere o usuário a ver os detalhes do livro-->
       <a href="./páginas_livros/haikyuu.html">
         <div class="card-img-wrapper">
        <img src="./images/livros/haikyuu.jpg">
@@ -430,17 +439,18 @@
       </a>
     </div>
   </div>
+<!--Adiciona set apontada para direita meramente ilustrativa-->
   <button class="seta seta-direita">&#10095;</button>
 </div>
 </section>
 </section>
 
-  <footer>
+  <footer> <!--Rodapé-->
   <div class="footer-container">
     <div class="logo">
-
     </div>
     <ul>
+<!--Adiciona ao rodapé esses seguintes itens:-->
       <li><a href="#">Política de Privacidade</a></li>
       <li><a href="#">Política de pagamento</a></li>
       <li><a href="#">Trocas e reembolso</a></li>
@@ -455,12 +465,14 @@
     </ul>
 
     <div class="redes-sociais">
+<!--Adiciona o png dos símbolos do Facebook, Instagram, X e Youtube-->
+<!-- Icones (por enquanto) apenas ilustrativos-->
       <a href="#"><img src="./images/facebook-app-symbol.png" alt="Facebook"></a>
       <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
       <a href="#"><img src="./images/twitter.png" alt="Twitter"></a>
       <a href="#"><img src="./images/youtube.png" alt="YouTube"></a>
     </div>
-
+<!--Tudo dentro do site é da editora Violet. Tudo nosso, nada deles-->
     <p>&copy; 2025 Violet. Todos os direitos reservados.</p>
   </div>
 </footer>
