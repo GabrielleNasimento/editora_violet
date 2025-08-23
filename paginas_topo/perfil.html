@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Configuração padrão para o site, adicionando o javascript e css-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,35 +10,41 @@
       <script src="script.js" async></script>
 </head>
 <body>
+    <!--Cria uma caixa de texto para o usuário digitar o seu login e senha-->
     <div class="login-box">
         <div class="login-header">
             <header>Login</header>
         </div>
         <div class="input-box">
+            <!--Caixa de texto do email-->
             <input type="text" class="input-field" placeholder="E-mail" autocomplete="off" required>
         </div>
         <div class="input-box">
+            <!--Caixa de texto da senha-->
             <input type="password" class="input-field" placeholder="Senha" autocomplete="off" required>
         </div>
         <div class="esqueceu">
             <section>
+                <!--Opção para o usuário caso queira deixar registrado o login e a senha do usuário-->
                 <input type="checkbox" id="check">
                 <label for="check">Lembrar de mim</label>
             </section>
             <section>
+                <!--Opção para o usuário caso não lembre da sua senha-->
                 <a href="#">Esqueceu a senha?</a>
             </section>
         </div>
+        <!--Botão para logar a conta-->
         <div class="input-logar">
             <button class="logar-btn" id="logar" ></button>
             <label for="logar">Logar</label>
         </div>
         <div class="sign-up-link">
+        <!--Opção para o usuário criar conta-->
             <p>Não tem uma conta? <a href="#">Crie uma</a></p>
         </div>
     </div>
 </body>
 <script>
-    
 </script>
 </html>
