@@ -6,21 +6,11 @@
   --fontes_efeito: #ffccff;
   --categorias: #1f1f1f;
 
-
-  
 }
-
 
 .temaclaro {
   --cor_fundo: #d7bbff;
 }
-
-
-
-
-
-
-
 
 * {
   margin: 0;
@@ -43,6 +33,7 @@ header {
   background-color: var(--cor_fundo);
   padding: 10px 0 0 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding-top: 0;
 }
 
 nav {
@@ -51,7 +42,6 @@ nav {
   padding: 0 20px;
   
 }
-
 
 .nav-topo {
   display: flex;
@@ -64,10 +54,25 @@ nav {
 
 
 
+
+.logo-nav {
+  display: flex;
+  align-items: center;
+  margin-right: auto; 
+  padding-left: 0;
+}
+
+.logo-img {
+  height: 150px;  
+  width: auto;
+}
+
+
 .barra-pesquisa {
   flex: 1;
   display: flex;
   justify-content: center;
+  margin-left: 50px;
 }
 
 .search-bar {
@@ -102,8 +107,6 @@ nav {
   width: auto;              
 }
 
-
-
 .imagens img {
   display: inline-block; 
   vertical-align: middle;
@@ -135,11 +138,12 @@ nav {
   padding: 4px 10px;
   border-radius: 5px;
   transition: background 0.3s, color 0.3s;
+  font-weight: bold;
 }
 
 .opcoes a:hover {
   color: var(--fontes_efeito);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #8502d2;
 }
 
 
@@ -148,7 +152,7 @@ nav {
       padding: 12px;
       border-radius: 20px;
       border: none;
-    }
+}
 
 
 
@@ -174,26 +178,30 @@ nav {
   background-color: #8a4bcc;
 }
 
+.sessao-banner {
+  padding: 40px 110px;
+}
+
 .sessao {
-  padding: 80px 110px;
+  padding: 10px 110px;
 }
 
 .sessao h3 {
-  font-size: 24px;
+  font-size: 40px;
   margin-bottom: 20px;
   color: #ffffff;
 }
 
 .carrossel-container {
   position: relative;
-  overflow: visible; /* importante para mostrar a seta fora do container */
+  overflow: visible; 
 }
 
 .carrossel {
   display: flex;
   gap: 20px;
   overflow-x: auto;
-  flex-wrap: nowrap; /* IMPORTANTE: impede quebra em linhas */
+  flex-wrap: nowrap; 
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
@@ -208,7 +216,7 @@ nav {
   border-radius: 8px;
   text-align: center;
   width: 250px;
-  flex: 0 0 auto; /* garante que o card não encolha nem quebre linha */
+  flex: 0 0 auto; 
   cursor: pointer;
 }
 
@@ -221,7 +229,7 @@ nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.6);
+  background: transparent;
   color: white;
   border: none;
   font-size: 2rem;
@@ -234,18 +242,12 @@ nav {
 
 
 .seta-esquerda {
-  left: -30px;
+  left: -40px;
 }
-
 
 .seta-direita {
-  right: -30px; 
+  right: -40px; 
 }
-
-.seta:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-
 
 
 .carrossel {
@@ -253,25 +255,25 @@ nav {
   gap: 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none; 
 }
 
 .carrossel::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
+  display: none; 
 }
 
 .carrossel-container button {
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.6);
+  background-color: transparent;
   color: white;
   border: none;
   padding: 10px;
   cursor: pointer;
   z-index: 2;
   border-radius: 50%;
-  font-size: 18px;
+  font-size: 40px;
 }
 
 .carrossel-container .prev {
@@ -280,10 +282,6 @@ nav {
 
 .carrossel-container .next {
   right: 5px;
-}
-
-.carrossel-container button:hover {
-  background-color: rgba(0,0,0,0.8);
 }
 
 
@@ -540,3 +538,4 @@ footer p {
     .recomendações:hover {
   transform: scale(1.05);
 }
+
