@@ -256,6 +256,60 @@ nav {
   flex-wrap: wrap;
 }
 
+.politica {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #1e1e1e;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.politica h1 {
+  font-size: 2rem;
+  color: var(--fontes);
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--cor_fundo);
+  padding-bottom: 8px;
+}
+
+.politica h2 {
+  font-size: 1.4rem;
+  color: var(--fontes_efeito);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.politica p {
+  font-size: 20px;
+  color: #ddd;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.politica ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.politica ul li {
+  background: #2a2a2a;
+  margin: 8px 0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #fff;
+  border-left: 4px solid var(--cor_fundo);
+  transition: transform 0.2s, background 0.3s;
+}
+
+.politica ul li:hover {
+  background: #333;
+  transform: translateX(5px);
+  color: var(--fontes_efeito);
+}
+
+
 .seta {
   position: absolute;
   top: 50%;
