@@ -224,6 +224,38 @@ nav {
   border-radius: 8px;
 }
 
+.card-grande {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  text-align: center;
+  width: 500px;
+  flex: 0 0 auto; 
+  cursor: pointer;
+}
+.card-grande img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+.card-granded {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  text-align: center;
+  width: 470px;
+  flex: 0 0 auto; 
+  cursor: pointer;
+}
+.card-granded img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.limitadas {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .seta {
   position: absolute;
   top: 50%;
@@ -379,26 +411,6 @@ nav {
   flex-wrap: wrap;
 }
 
-
-.card-grande {
-  background-color: var(--categorias);
-  border-radius: 12px;
-  flex: 1 1 45%;
-  min-height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.3s;
-  padding: 20px;
-  text-align: center;
-  font-size: 16px;
-}
-
-.card-grande:hover {
-  transform: scale(1.02);
-}
 
 .card-img-compra {
   margin-top: 20px;
@@ -716,7 +728,7 @@ footer p {
 .coracao-para-nomesG{
  position: absolute; 
  top: 185px;       
- left: 730px;
+ left: 605px;
 }
 
 .coracao-final{
