@@ -30,16 +30,16 @@ a {
 }
 
 header {
+  position: relative; 
   background-color: var(--cor_fundo);
-  padding: 10px 0 0 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
 }
 
 nav {
   display: flex;
   align-items: center;
-  padding: 0 20px;
-  
+  justify-content: flex-start;
 }
 
 .nav-topo {
@@ -55,27 +55,35 @@ nav {
 .logo-nav {
   display: flex;
   align-items: center;
-  margin-right: auto; 
-  padding-left: 0;
+  z-index: 2;
+}
+
+.logo-livros {
+  position: flex;
+  padding-left: 50px;
 }
 
 .logo-img {
-  height: 55px;  
-  width: auto;
+ height: 55px;  /* mantenha apenas uma altura */
+ width: auto;
+ display: block;  /* <- ajuda a remover espaçamento "fantasma" abaixo da imagem */
+ margin: 0 auto;  /* centraliza se necessário */
 }
 
-
 .barra-pesquisa {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 500px;
   flex: 1;
   display: flex;
   justify-content: center;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-right: 60px;
 }
 
 .search-bar {
   width: 100%;
-  max-width: 500px;
   padding: 10px 20px;
   border-radius: 20px;
   border: none;
@@ -84,10 +92,12 @@ nav {
   color: #000;
 }
 
+
 .logo {
   font-size: 24px;
   color: white;
 }
+
 
 .imagens {
   padding-left: 15px;
@@ -360,11 +370,11 @@ nav {
 }
 
 .carrossel-container .prev {
-  left: 5px;
+  left: 1px;
 }
 
 .carrossel-container .next {
-  right: 5px;
+  right: 1px;
 }
 
 
@@ -467,10 +477,10 @@ nav {
 
 
 .card-img-compra {
-  margin-top: 20px;
   position: relative;
   width: 200px;
   height: 300px;
+
   overflow: hidden;
   border-radius: 4px;
 }
@@ -479,7 +489,7 @@ nav {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: flex;
+  display: block;
   border-radius: 4px;
 }
 
@@ -516,14 +526,20 @@ nav {
 
 
 footer {
+  width: 100vw;
   background-color: var(--cor_fundo);
   padding: 40px 20px;
   text-align: center;
+  border: none;
+  margin: 0;
+  box-shadow: none;
+  outline: none;
 }
 
 .footer-container {
   max-width: 1200px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-container .logo {
@@ -780,13 +796,9 @@ footer p {
 }
    
 .coracao-para-nomesG{
- position: absolute; 
- top: 185px;       
- left: 605px;
+ position: FLEX; 
 }
 
 .coracao-final{
- position: absolute; 
- top: 185px;       
- left: 770px;
+ position: flex; 
 }

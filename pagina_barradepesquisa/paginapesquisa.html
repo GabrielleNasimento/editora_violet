@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Violet - Página Inicial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylepesquisa.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav class="nav-topo">
+                <div class="logo-nav">
+                    <a href="index.html">
+                        <img src="./images/Violet_logo.jpg" alt="Logo da Violet" class="logo-img">
+                    </a>
+                </div>
+                <div class="barra-pesquisa">
+                    <input type="text" placeholder="Buscar livros, autores..." class="search-bar">
+                </div>
+                <div class="imagens">
+                    <a href="#"><img src="./images/user.png" alt="Perfil"></a>
+                    <a href="#"><img src="./images/heart.png" alt="Favoritos"></a>
+                    <a href="#"><img src="./images/shopping-bag.png" alt="Carrinho"></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Menu de navegação -->
+    <main>
+        <div class="opcoes">
+            <a href="#">Autores</a>
+            <a href="#">Editora</a>
+            <a href="#">Livros</a>
+            <a href="#">Pré-venda</a>
+            <a href="#">Lançamentos</a>
+            <a href="#">Wishlist</a>
+            <a href="#">Meus pedidos</a>
+        </div>
+    </main>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+
+    <!-- Filtros -->
+    <div class="filtros-container">
+        <h3 class="filtros-titulo">Filtrar Produtos</h3>
+
+        <div class="filtro-categoria">
+            <h4>CATEGORIA</h4>
+            <div class="filtro-opcoes">
+                <div class="filtro-opcao">Clássicos</div>
+                <div class="filtro-opcao">Terror e Suspense</div>
+                <div class="filtro-opcao">Biografia</div>
+                <div class="filtro-opcao">HQs e Mangás</div>
+            </div>
+        </div>
+
+        <div class="filtro-categoria">
+            <h4>MARCA</h4>
+            <div class="filtro-opcoes">
+                <div class="filtro-opcao ativo">Violet</div>
+            </div>
+        </div>
+
+        <div class="filtro-categoria">
+            <h4>FILTRAR POR</h4>
+            <div class="filtro-opcoes">
+                <div class="filtro-opcao">Não Ficção</div>
+                <div class="filtro-opcao">Ficção</div>
+            </div>
+        </div>
+
+        <div class="limpar-filtros">Limpar Filtros</div>
+    </div>
+
+    <!-- Banner promocional -->
+    <div class="promo-banner">
+        <h2>25% OFF em "Solo Leveling" + Brindes Exclusivos</h2>
+    </div>
+
+    <!-- Header de produtos -->
+    <div class="produtos-header">
+        <div class="produtos-count">Produtos encontrados: 5</div>
+        <div class="ordenar-por">
+            <span>Ordenar por:</span>
+            <select>
+                <option>Relevância</option>
+                <option>Preço: Menor para maior</option>
+                <option>Preço: Maior para menor</option>
+                <option>Mais recentes</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Produtos Violet -->
+    <section class="sessao">
+        <div class="carrossel-container">
+            <button class="seta seta-esquerda">&#10094;</button>
+
+            <div class="carrossel">
+                <div class="card">
+                    <a href="./páginas_livros/haikyuu.html">
+                        <div class="card-img-wrapper">
+                            <img src="./images/livros/haikyuu.jpg">
+                            <div class="detalhes-hover">
+                                <p><strong>Haikyuu!!</strong></p>
+                                <p>R$ 57,51</p>
+                                <a href="./páginas_livros/haikyuu.html" class="botao-detalhes">Ver detalhes</a>
+                            </div>
+                        </div>
+                        <p class="text">Haikyuu!!</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="./páginas_livros/pelasentranhas.html">
+                        <div class="card-img-wrapper">
+                            <img src="./images/livros/pelas_entranhas.png">
+                            <div class="detalhes-hover">
+                                <p><strong>Pelas entranhas</strong></p>
+                                <p>R$ 50,00</p>
+                                <a href="./páginas_livros/pelasentranhas.html" class="botao-detalhes">Ver detalhes</a>
+                            </div>
+                        </div>
+                        <p class="text">Pelas entranhas</p>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="./páginas_livros/ocaraqueestouafim.html">
+                        <div class="card-img-wrapper">
+                            <img src="./images/livros/o cara que eu estou não é um cara.jpg">
+                            <div class="detalhes-hover">
+                                <p><strong>O cara que eu estou não é um cara</strong></p>
+                                <p>R$ 39,69</p>
+                                <a href="./páginas_livros/ocaraqueestouafim.html" class="botao-detalhes">Ver
+                                    detalhes</a>
+                            </div>
+                        </div>
+                        <p class="text">O cara que estou a fim não é um cara?!</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="./páginas_livros/thunderbolts.html">
+                        <div class="card-img-wrapper">
+                            <img src="./images/livros/thunderbolts.webp">
+                            <div class="detalhes-hover">
+                                <p><strong>Thunderbolts</strong></p>
+                                <p>R$ 148,90</p>
+                                <a href="./páginas_livros/thunderbolts.html" class="botao-detalhes">Ver detalhes</a>
+                            </div>
+                        </div>
+                        <p class="text">Thunderbolts</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="./páginas_livros/osdoismorrem.html">
+                        <div class="card-img-wrapper">
+                            <img src="./images/livros/os_dois_morrem.jpeg">
+                            <div class="detalhes-hover">
+                                <p><strong>Os dois morrem no final</strong></p>
+                                <p>R$ 39,60</p>
+                                <a href="./páginas_livros/osdoismorrem.html" class="botao-detalhes">Ver detalhes</a>
+                            </div>
+                        </div>
+                        <p class="text">Os dois morrem no final</p>
+                    </a>
+                </div>
+            </div>
+
+            <button class="seta seta-direita">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Outras seções seguindo o padrão da Violet -->
+    <section class="sessao">
+        <h3>Você também pode gostar de:</h3>
+
+        <div class="carrossel-container">
+            <button class="seta seta-esquerda">&#10094;</button>
+
+            <div class="carrossel">
+                <div class="card">
+                    <a href="./páginas_livros/yourname.html">
+                        <div class="card-img-wrapper">
+                            <img src="./images/livros/your_name.jpg">
+                            <div class="detalhes-hover">
+                                <p><strong>Your Name</strong></p>
+                                <p>R$ 39,70</p>
+                                <a href="./páginas_livros/yourname.html" class="botao-detalhes">Ver detalhes</a>
+                            </div>
+                        </div>
+                        <p class="text">Your Name </p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="./páginas_livros/dugeon_meshi.html">
+                        <div class="card-img-wrapper">
+                            <img src="./images/livros/dugeon_meshi.webp">
+                            <div class="detalhes-hover">
+                                <p><strong>Delicious in Dungeon</strong></p>
+                                <p>R$ 72,74</p>
+                                <a href="./páginas_livros/dugeon_meshi.html" class="botao-detalhes">Ver detalhes</a>
+                            </div>
+                        </div>
+                        <p class="text">Delicious in Dungeon</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="./páginas_livros/tatsu.html">
+                        <div class="card-img-wrapper">
+                            <img src="./images/livros/tatsu_imortal.webp">
+                            <div class="detalhes-hover">
+                                <p><strong>Tatsu Imortal</strong></p>
+                                <p>R$ 36,90</p>
+                                <a href="./páginas_livros/tatsu.html" class="botao-detalhes">Ver detalhes</a>
+                            </div>
+                        </div>
+                        <p class="text">Tatsu Imortal</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="./páginas_livros/evangelion.html">
+                        <div class="card-img-wrapper">
+                            <img src="./images/livros/evangelion.png">
+                            <div class="detalhes-hover">
+                                <p><strong>Neon Genesis Evangelion</strong></p>
+                                <p>R$ 53,24</p>
+                                <a href="./páginas_livros/evangelion.html" class="botao-detalhes">Ver detalhes</a>
+                            </div>
+                        </div>
+                        <p class="text">Neon Genesis Evangelion</p>
+                    </a>
+                </div>
+            </div>
+
+
+            <button class="seta seta-direita">&#10095;</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="logo">Violet</div>
+            <ul>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Política de pagamento</a></li>
+                <li><a href="#">Política de cashback</a></li>
+                <li><a href="#">Trocas e reembolso</a></li>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Fale conosco</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+
+            <div class="redes-sociais">
+                <a href="#"><img src="./images/facebook-app-symbol.png" alt="Facebook"></a>
+                <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="./images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="./images/youtube.png" alt="YouTube"></a>
+            </div>
+
+            <p>&copy; 2025 Violet. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Funcionalidade básica para os carrosseis
+        document.querySelectorAll('.carrossel-container').forEach(container => {
+            const carrossel = container.querySelector('.carrossel');
+            const btnEsquerda = container.querySelector('.seta-esquerda');
+            const btnDireita = container.querySelector('.seta-direita');
+
+            btnDireita.addEventListener('click', () => {
+                carrossel.scrollBy({ left: 300, behavior: 'smooth' });
+            });
+
+            btnEsquerda.addEventListener('click', () => {
+                carrossel.scrollBy({ left: -300, behavior: 'smooth' });
+            });
+        });
+
+        // Funcionalidade para os filtros
+        document.querySelectorAll('.filtro-opcao').forEach(opcao => {
+            opcao.addEventListener('click', function () {
+                this.classList.toggle('ativo');
+            });
+        });
+
+        // Limpar filtros
+        document.querySelector('.limpar-filtros').addEventListener('click', function () {
+            document.querySelectorAll('.filtro-opcao').forEach(opcao => {
+                opcao.classList.remove('ativo');
+            });
+        });
+    </script>
+</body>
+
+</html>

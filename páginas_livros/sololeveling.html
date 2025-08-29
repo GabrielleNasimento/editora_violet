@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Solo leveling - Violet</title>
+  <title> Your Name - Violet</title>
     <link rel="stylesheet" href="../style.css">
  
 </head>
 <body>
-
+    
 <header>
-  <div class="container">
+    <div class="container">
     <nav class="nav-topo">
-        <div class="logo-nav">
+        <div class="logo-livros">
            <a href="../index.html">
             <img src="../images/violet_logo.png" alt="Logo da Violet" class="logo-img">
            </a>
@@ -20,10 +20,22 @@
         <div class="barra-pesquisa">
           <input type="text" placeholder="Buscar livros, autores..." class="search-bar">
         </div>
-      <div class="imagens">
-        <a href="#"><img src="../images/user.png" alt="Perfil"></a>
-        <a href="#"><img src="../images/heart.png" alt="Favoritos"></a>
+
+
+        <!-- Essa é as imagens que ficam na parte de cima -->
+       <div class="imagens">
+        <a href="../index.html"></a>
+        <a href="../paginas_topo/perfil.html"><img src="../images/user.png" alt="Perfil"></a>
+        <a href="../paginas_topo/wish2.html"><img src="../images/heart.png" alt="Favoritos"></a>
         <a href="#"><img src="../images/shopping-bag.png" alt="Carrinho"></a>
+
+        <!-- Essa parte é as linhas do menu, na responsividade -->
+        <div class="btn-menu-mob" id="btn-menu-mob">
+          <div class="line-menumob-1"></div>
+          <div class="line-menumob-2"></div>
+          <div class="line-menumob-3"></div>
+        </div>
+
       </div>
     </nav>
   </div>
@@ -44,11 +56,11 @@
 
   <div class="conteudo">
     <div class="produto">
-      <img src="../images/livros/solo_leveling.webp" alt="solo_leveling">
+      <img src="../images/livros/solo_leveling.webp">
 
       <div class="info">
 
-        <div class="coracao-para-nomesG">
+<div class="coracao-para-nomesG">
         <input type="checkbox" id="coracao" /> <!--Cria uma caixinha de marcar(checkbox), O id="coracao" ele relaciona o checkbox com o <label> -->
     <label for="coracao">  <!--Como o label está vinculado ao input pelo atributo for="coracao",quando o usuário clicar no conteúdo do label ele vai marcar ou desmarcar o checkbox  -->
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ffffff">  <!-- O SVG é o desenho do coração, tendo atributos, width e height definem o tamanho do ícone, viewBox  é a área do desenho do ícone, fill="none" que é sem preenchimento, stroke que é a cor da linha -->
@@ -56,9 +68,9 @@
         </svg>
     </label>
       </div>
-
-        <h1>Solo Leveling Vol. 2</h1>
-		<h2 style="font-size: 18px"> por Chu-gong </h2>
+    
+        <h1>Solo Leveling</h1>
+		<h2 style="font-size: 18px"> por Makoto Shinkai </h2>
 
         <ul class="avaliacao">
           <li class="star-icon ativo" data-avaliacao="1"></li>
@@ -67,31 +79,28 @@
           <li class="star-icon" data-avaliacao="4"></li>
           <li class="star-icon" data-avaliacao="5"></li>
         </ul>
-
-        <b><p class="preço">R$ 74,90</p></b>
+  
+        <p class="preço" >R$ 39,70  </p>
         <button id="compra_botao" class="compra_botao"><h2>Comprar</h2></button>
-
         <div class="detalhes">
-          <h3><strong>Gênero:</strong> Shounen</h3>
-          <h3><strong>Idioma:</strong> Português</h3>
-		      <h3><strong>Editora:</strong> NewPop</h3>
-		      <h3><strong>Data da publicação:</strong> 24 agosto 2020</h3>
-          <h3><strong>Páginas:</strong> 320</h3>
-		      <h3><strong>Classificação Indicativa:</strong> 16 anos</h3>
-          <h3><strong>Dimensões:</strong>20.8x14.2</h3>
-          <h3><strong>Peso:</strong> 500g</h3>
-          <h3><strong>Acabamento:</strong> Brochura</h3>
+          <p><strong>Gênero:</strong> Shounen</p>
+          <p><strong>Idioma:</strong> Português</p>
+		  <p><strong>Editora:</strong> NewPop</p>
+		  <p><strong>Data da publicação:</strong> 24 agosto 2020</p>
+         <p><strong>Páginas:</strong> 320</p>
+		 <p><strong>Classificação Indicativa:</strong> 16 anos</p>
+          <p><strong>Dimensões:</strong>20.8x14.2</p>
+          <p><strong>Peso:</strong> 500g</p>
+          <p><strong>Acabamento:</strong> Brochura</p>
           
         </div>
       </div>
     </div>
 
     <div class="description">
-    <br>  <h2>Descrição</h2>
+    <br>  <h3>Descrição</h3>
 	
       <p style="text-align:justify">Depois de um evento quase fatal em uma dessas masmorras, Jin-Woo desperta um sistema misterioso que lhe permite “levelar” sozinho, aumentando seus poderes e habilidades de forma extraordinária algo único e nunca visto antes entre os caçadores. Com isso, ele passa de um caçador fraco e subestimado para um dos mais poderosos do mundo, enfrentando monstros, outros caçadores e mistérios obscuros que envolvem os portais e seu próprio passado.</p>
-<br>
-<p  style="text-align:justify">Solo Leveling é conhecido por sua narrativa empolgante, cenas de ação intensas, evolução constante do protagonista e um universo rico em fantasia e suspense.</p>
 
     </div>
 <section>
@@ -158,7 +167,7 @@
         <div class="card-img-compra">
           <img src="../images/livros/kimetsu.webp">
           <div class="detalhes-hover">
-            <p><strong>Kimetsu no Yaiba é ruim</strong></p>
+            <p><strong>Kimetsu no Yaiba</strong></p>
             <p>R$ 39,99</p>
             <a href="#" class="botao-detalhes">Ver detalhes</a>
           </div>
@@ -169,14 +178,20 @@
   </div>
   
 </section>
+
+
 <footer>
   <div class="footer-container">
-    <div class="logo">Violet</div>
+    <div class="logo">
+           <a href="index.html">
+            <img src="../images/violet_logo.png" alt="Logo da Violet" class="logo-img">
+           </a>
+        </div>
     <ul>
-      <li><a href="PoliticaDePrivacidade.html">Política de Privacidade</a></li>
-      <li><a href="#">Política de pagamento</a></li>
-      <li><a href="#">Política de cashback</a></li>
-      <li><a href="#">Trocas e reembolso</a></li>
+      <li><a href="../PoliticaDePrivacidade.html">Política de Privacidade</a></li>
+      <li><a href="../pol_pag.html">Política de pagamento</a></li>
+      <li><a href="../PoíticaDeCashback.html">Política de cashback</a></li>
+      <li><a href="../trocas_reembolso.html">Trocas e reembolso</a></li>
       <li><a href="#">Sobre nós</a></li>
       <li><a href="#">Fale conosco</a></li>
       <li><a href="#">FAQ</a></li>
@@ -214,3 +229,6 @@ document.addEventListener('click',function(e){       //Criação do evento de cl
 });
 
 </script>
+
+</body>
+
