@@ -1,28 +1,50 @@
-<!DOCTYPE html> <!--Configuração padrão para site-->
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Haikyu!! - Violet</title>
-    <link rel="stylesheet" href="../style.css"> 
+    <link rel="stylesheet" href="../style.css">
+ 
 </head>
 <body>
-  <header>
-  <div class="container">
-    <nav>
-      <div class="imagens"> <!--Cabeçalho-->
-        <a href="../index.html">
-	    <img src="https://images.icon-icons.com/1673/PNG/512/arrowbackoutline_110825.png" alt="Voltar" style="width: 30px;">
-	    </a>
-        <a href="#"><img src="../images/user.png" alt="Perfil"></a>
-        <a href="#"><img src="../images/heart.png" alt="Favoritos"></a>
+    
+
+
+    <header>
+    <div class="container">
+    <nav class="nav-topo">
+        <div class="logo-livros">
+           <a href="../index.html">
+            <img src="../images/violet_logo.png" alt="Logo da Violet" class="logo-img">
+           </a>
+        </div>
+        <div class="barra-pesquisa">
+          <input type="text" placeholder="Buscar livros, autores..." class="search-bar">
+        </div>
+
+
+        <!-- Essa é as imagens que ficam na parte de cima -->
+       <div class="imagens">
+        <a href="../index.html"></a>
+        <a href="../paginas_topo/perfil.html"><img src="../images/user.png" alt="Perfil"></a>
+        <a href="../paginas_topo/wish2.html"><img src="../images/heart.png" alt="Favoritos"></a>
         <a href="#"><img src="../images/shopping-bag.png" alt="Carrinho"></a>
+
+        <!-- Essa parte é as linhas do menu, na responsividade -->
+        <div class="btn-menu-mob" id="btn-menu-mob">
+          <div class="line-menumob-1"></div>
+          <div class="line-menumob-2"></div>
+          <div class="line-menumob-3"></div>
+        </div>
+
       </div>
     </nav>
   </div>
 </header>
 
-  	<main> <!--Menu de navegação-->
+<!-- Essa parte é os nomes que ficam em baixo  -->
+<main>
   <div class="opcoes">
     <a href="#">Autores</a>
     <a href="#">Editora</a>
@@ -33,53 +55,87 @@
     <a href="#">Meus pedidos</a>
   </div>
 </main>
- 
-  <div class="conteudo"> <!--imagem do livro-->
+
+  <div class="conteudo">
     <div class="produto">
       <img src="../images/livros/haikyuu.jpg">
 
-      <div class="info"> <!--Título do livro, autor, preço e botão de compra-->
+      <div class="info">
+
+<div class="coracao-para-nomesG">
+        <input type="checkbox" id="coracao" /> <!--Cria uma caixinha de marcar(checkbox), O id="coracao" ele relaciona o checkbox com o <label> -->
+    <label for="coracao">  <!--Como o label está vinculado ao input pelo atributo for="coracao",quando o usuário clicar no conteúdo do label ele vai marcar ou desmarcar o checkbox  -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ffffff">  <!-- O SVG é o desenho do coração, tendo atributos, width e height definem o tamanho do ícone, viewBox  é a área do desenho do ícone, fill="none" que é sem preenchimento, stroke que é a cor da linha -->
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />  <!-- O path é o caminho vetorial que desenha o coração -->
+        </svg>
+    </label>
+      </div>
+      
         <h1>Haikyu!! Vol. 16</h1>
 		<h2 style="font-size: 18px"> por Ryoko Kui </h2>
-        <p class="preço" >R$ 57,51 </p>
-        <button id="compra_botao" class="compra_botao">Comprar</button>
 
-        <div class="detalhes"> <!--Informações do livro-->
-          <p><strong>Gênero:</strong> Esportes</p>
-          <p><strong>Idioma:</strong> Português</p>
-		  <p><strong>Editora:</strong> JBC</p>
-		  <p><strong>Data da publicação:</strong> 2 junho 2025</p>
-         <p><strong>Páginas:</strong> 384</p>
-		 <p><strong>Classificação Indicativa:</strong> 14 anos</p>
-          <p><strong>Dimensões:</strong>13.97 x 1.17 x 20.96 cm</p>
-          <p><strong>Peso:</strong> 370g</p>
-          <p><strong>Acabamento:</strong> Brochura</p>
+        <ul class="avaliacao">
+          <li class="star-icon ativo" data-avaliacao="1"></li>
+          <li class="star-icon" data-avaliacao="2"></li>
+          <li class="star-icon" data-avaliacao="3"></li>
+          <li class="star-icon" data-avaliacao="4"></li>
+          <li class="star-icon" data-avaliacao="5"></li>
+        </ul>
+
+        <p class="preço" >R$ 57,51 </p>
+        <button id="compra_botao" class="compra_botao"><h2>Comprar</h2></button>
+
+        <div class="detalhes">
+          <h3><strong>Gênero:</strong> Esportes</h3>
+          <h3><strong>Idioma:</strong> Português</h3>
+		      <h3><strong>Editora:</strong> JBC</h3>
+		      <h3><strong>Data da publicação:</strong> 2 junho 2025</h3>
+          <h3><strong>Páginas:</strong> 384</h3>
+		      <h3><strong>Classificação Indicativa:</strong> 14 anos</h3>
+          <h3><strong>Dimensões:</strong>13.97 x 1.17 x 20.96 cm</h3>
+          <h3><strong>Peso:</strong> 370g</h3>
+          <h3><strong>Acabamento:</strong> Brochura</h3>
+          
         </div>
       </div>
     </div>
 
     <div class="description">
     <br>  <h3>Descrição</h3>
+	
       <p style="text-align:justify">Atsumu Miya, do Inarizaki, encontrou um alvo favorito para atacar! Enquanto acumula pontos de serviço, Atsumu continua atacando... Nishinoya?! Mesmo com o Karasuno se afundando cada vez mais durante o segundo set, o time segue lentamente minando o avanço do Inarizaki. Conseguiria o Karasuno virar o jogo e manter vivo o sonho da Batalha do Lixão? Com o Inarizaki mantendo o ritmo, bem quando os gêmeos Miya consideram que pegaram o Karasuno de jeito, seu ataque é interrompido pela última pessoa que qualquer um poderia imaginar!</p>
+
     </div>
 
-    <div class="recomendações"> <!--Sugestão de outros 8 livros-->
+    <div class="recomendações">
       <h3>Veja também:</h3>
       <div class="items">
-        <img src="https://m.media-amazon.com/images/I/51NEYqHHyWL._SY445_SX342_.jpg">
+          <img src="https://m.media-amazon.com/images/I/51NEYqHHyWL._SY445_SX342_.jpg">
         <img src="https://m.media-amazon.com/images/I/51y3ujtATNL._SY445_SX342_.jpg">
         <img src="https://m.media-amazon.com/images/I/51uB5ILqw3L._SY445_SX342_.jpg">
         <img src="https://m.media-amazon.com/images/I/51FKU79WS7L._SY445_SX342_.jpg">
         <img src="https://m.media-amazon.com/images/I/51P3WZvSwIL._SY445_SX342_.jpg">
-	    	<img src="https://m.media-amazon.com/images/I/51p1S9i48wL._SY445_SX342_.jpg">
+		<img src="https://m.media-amazon.com/images/I/51p1S9i48wL._SY445_SX342_.jpg">
         <img src="https://m.media-amazon.com/images/I/415zzsfsSyL._SY445_SX342_.jpg">
         <img src="https://m.media-amazon.com/images/I/41m9ygQczNL._SY445_SX342_.jpg">
+		
       </div>
     </div>
   </div>
   
-  <footer> <!--Rodapé-->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  <footer>
   <div class="footer-container">
+
     <ul>
       <li><a href="#">Política de Privacidade</a></li>
       <li><a href="#">Política de pagamento</a></li>
@@ -94,22 +150,38 @@
       <li><a href="#">Contate o suporte</a></li>
     </ul>
 
-    <div class="redes-sociais"> <!--Ícones das redes sociais do site-->
+    <div class="redes-sociais">
       <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/20/20673.png" alt="Facebook"></a>
       <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" ></a>
       <a href="#"><img src="https://cdn-icons-png.flaticon.com/256/5968/5968958.png" alt="Twitter"></a>
       <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/87/87421.png" alt="YouTube"></a>
     </div>
-    <p>&copy; 2025 Violet. Todos os direitos reservados.</p> <!--Tudo nosso, nada deles-->
+
+    <p>&copy; 2025 Violet. Todos os direitos reservados.</p>
   </div>
 </footer>
 
-<!--Quando clicar no botão de compra. Abre uma caixa de diálogo mostrando que o pedido foi pro carrinho-->
+
 <script>
         var bu = document.getElementById("compra_botao");
         bu.onclick = function () {
             alert("Seu pedido foi encaminhado ao carrinho!");
         };
+
+//Parte das estrelinhas, avaliação //
+var stars = document.querySelectorAll('.star-icon');   //Seletando as estrelinhas //
+document.addEventListener('click',function(e){       //Criação do evento de clique //
+  var classStar = e.target.classList;                //Seletando a estrelinha principal  //
+  if(!classStar.contains('ativo')){                  //Uma condicional  //
+    stars.forEach(function(star){                    //Verificar se tem o ativo  //
+      star.classList.remove('ativo');  
+    });
+    classStar.add('ativo');
+    console.log(e.target.getAttribute('data-avaliacao'));
+
+  }
+});
+
 </script>
 
 </body>

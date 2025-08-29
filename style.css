@@ -42,14 +42,30 @@ nav {
   justify-content: flex-start;
 }
 
+.nav-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+
 .logo-nav {
   display: flex;
   align-items: center;
   z-index: 2;
 }
 
+.logo-livros {
+  position: flex;
+  padding-left: 50px;
+}
+
 .logo-img {
   height: 80px;
+  height: 55px;  
   width: auto;
 }
 
@@ -59,6 +75,11 @@ nav {
   transform: translateX(-50%);
   width: 100%;
   max-width: 500px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .search-bar {
@@ -173,6 +194,7 @@ nav {
   padding: 10px 110px;
 }
 
+
 .sessao h3 {
   font-size: 40px;
   margin-bottom: 20px;
@@ -212,6 +234,92 @@ nav {
   border-radius: 8px;
 }
 
+.card-grande {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  text-align: center;
+  width: 500px;
+  flex: 0 0 auto; 
+  cursor: pointer;
+}
+.card-grande img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+.card-granded {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  text-align: center;
+  width: 470px;
+  flex: 0 0 auto; 
+  cursor: pointer;
+}
+.card-granded img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.limitadas {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.politica {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #1e1e1e;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.politica h1 {
+  font-size: 2rem;
+  color: var(--fontes);
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--cor_fundo);
+  padding-bottom: 8px;
+}
+
+.politica h2 {
+  font-size: 1.4rem;
+  color: var(--fontes_efeito);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.politica p {
+  font-size: 20px;
+  color: #ddd;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.politica ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.politica ul li {
+  background: #2a2a2a;
+  margin: 8px 0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #fff;
+  border-left: 4px solid var(--cor_fundo);
+  transition: transform 0.2s, background 0.3s;
+}
+
+.politica ul li:hover {
+  background: #333;
+  transform: translateX(5px);
+  color: var(--fontes_efeito);
+}
+
+
 .seta {
   position: absolute;
   top: 50%;
@@ -227,7 +335,6 @@ nav {
   border-radius: 5px;
 }
 
-
 .seta-esquerda {
   left: -40px;
 }
@@ -235,7 +342,6 @@ nav {
 .seta-direita {
   right: -40px; 
 }
-
 
 .carrossel {
   display: flex;
@@ -370,27 +476,53 @@ nav {
 }
 
 
-.card-grande {
-  background-color: var(--categorias);
-  border-radius: 12px;
-  flex: 1 1 45%;
-  min-height: 180px;
+.card-img-compra {
+  margin-top: 20px;
+  position: relative;
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.card-img-compra img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.3s;
+  border-radius: 4px;
+}
+
+.livrosvejamais {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Centraliza os livros */
   padding: 20px;
-  text-align: center;
+}
+
+.livrosvejamais > div {
+  width: 200px;
+  flex-shrink: 0; /* Evita que os cards encolham */
+}
+
+.card-img-compra img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.text {
+  margin-top: 10px;
   font-size: 16px;
+  text-align: center;
 }
 
-.card-grande:hover {
-  transform: scale(1.02);
+.vejatambem {
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: left;
 }
-
-
 
 
 footer {
@@ -500,6 +632,82 @@ footer p {
       color: #ccc;
     }
 
+.conteudo {
+      max-width: 1200px;
+      margin: auto;
+      padding:  20px;
+    }
+
+    .produto {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .produto img {
+      width: 400px;
+      border-radius: 10px;
+      margin-left: 100px;
+    }
+
+    .info {
+      max-width: 600px;
+      margin-left: 30px;
+    }
+
+    .info h2 {
+      font-size: 25px;
+      margin-bottom: 2px;
+      color: #ffffff
+    }
+
+    .info h3 {
+      font-size: 15px;
+      margin-bottom: 2px;
+      color: #ffffff
+    }
+
+
+    h1 {
+    display:flex;
+    font-size: 50px; 
+  }
+  .grande {
+    font-size: 70px; 
+  }
+
+  
+    .preço {
+      font-size: 50px;
+      color: #fac904;
+      margin: 10px 0;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .compra_botao {
+      background-color:  var(--cor_fundo);
+      color: #fff;
+      border: none;
+      padding: 25px 150px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s;
+      
+    }
+
+  .compra_botao:hover {
+    background-color: var(--cor_fundo2);
+  }
+
+    .detalhes {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
     .recomendações {
       margin-top: 40px;
       transition: transform 0.3s;
@@ -526,3 +734,65 @@ footer p {
   transform: scale(1.05);
 }
 
+/*parte da avaliação, estrelinhas*/
+.avaliacao{
+  display:flex;
+}
+
+.star-icon{
+  list-style-type:none;
+  border: 1px solid #121212;
+  cursor:pointer;
+  color: #FFE500;
+  font-size: 25px;
+}
+
+.star-icon::before{
+  content:"\2605"; /*código das estrelinhas, cheia*/
+}
+
+.star-icon.ativo ~ .star-icon::before{
+  content:"\2606"; /*código das estrelinhas, vazia*/
+}
+
+.avaliacao:hover .star-icon::before{
+  content:"\2605"/*código das estrelinhas, cheia*/
+}
+
+.star-icon:hover ~ .star-icon::before{
+  content: "\2606"; /*código das estrelinhas, vazia*/
+}
+
+/*Coração, favoritar*/
+
+ label{ 
+  cursor: pointer; 
+}
+
+#coracao { 
+  display: none; /*Esconde o checkbox, deixando só visível o coração*/
+  margin-left: 5px;
+}
+        
+#coracao:checked+label>svg { /*Vai aplicar os estilos, apenas se o checkbox estiver marcado*/
+  animation: preencher; /*Define o nome da animação*/
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards; /*Mantém o último estado da animação*/
+}
+        
+@keyframes preencher { /*Define como o coração será preenchido*/
+  0% {
+  fill: transparent; /*Começa transparente*/
+  }
+  100% {
+  fill: #ffffff; /*Pra termina preenchido*/
+  }
+}
+   
+.coracao-para-nomesG{
+ position: FLEX; 
+}
+
+.coracao-final{
+ position: flex; 
+}
