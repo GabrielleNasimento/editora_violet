@@ -64,10 +64,9 @@ nav {
 }
 
 .logo-img {
- height: 55px;  /* mantenha apenas uma altura */
- width: auto;
- display: block;  /* <- ajuda a remover espaçamento "fantasma" abaixo da imagem */
- margin: 0 auto;  /* centraliza se necessário */
+  height: 80px;
+  height: 55px;  
+  width: auto;
 }
 
 .barra-pesquisa {
@@ -79,7 +78,8 @@ nav {
   flex: 1;
   display: flex;
   justify-content: center;
-  margin-right: 60px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .search-bar {
@@ -370,11 +370,11 @@ nav {
 }
 
 .carrossel-container .prev {
-  left: 1px;
+  left: 5px;
 }
 
 .carrossel-container .next {
-  right: 1px;
+  right: 5px;
 }
 
 
@@ -477,10 +477,10 @@ nav {
 
 
 .card-img-compra {
+  margin-top: 20px;
   position: relative;
   width: 200px;
   height: 300px;
-
   overflow: hidden;
   border-radius: 4px;
 }
@@ -489,7 +489,7 @@ nav {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  display: flex;
   border-radius: 4px;
 }
 
@@ -526,20 +526,14 @@ nav {
 
 
 footer {
-  width: 100vw;
   background-color: var(--cor_fundo);
   padding: 40px 20px;
   text-align: center;
-  border: none;
-  margin: 0;
-  box-shadow: none;
-  outline: none;
 }
 
 .footer-container {
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
 .footer-container .logo {
@@ -582,7 +576,6 @@ footer p {
   color: #e0e0e0;
   margin-top: 15px;
 }
-
 
 .conteudo {
       max-width: 1200px;
@@ -652,6 +645,7 @@ footer p {
 
     .produto img {
       width: 400px;
+     
       border-radius: 10px;
       margin-left: 100px;
     }
@@ -714,14 +708,22 @@ footer p {
       color: #ccc;
     }
 
+    .description h3 {
+          margin-bottom: 10px;
+          font-size: 2rem;
+        }
+  
     .recomendações {
       margin-top: 40px;
-      transition: transform 0.3s;
+      overflow: hidden;
+      border-radius: 4px;
+
     }
   
 
     .recomendações h3 {
       margin-bottom: 10px;
+      font-size: 2rem;
     }
 
     .recomendações .items {
@@ -729,18 +731,21 @@ footer p {
       gap: 20px;
       flex-wrap: wrap;
     }
+    
 
     .recomendações img {
-      width: 120px;
+      width: 200px ;
+      height: 300px;
       border-radius: 8px;
       cursor: pointer;
+      overflow: hidden;
+      border-radius: 4px;
+      object-fit: cover;
+      display: block;
+      border-radius: 4px;
     }
 
-    .recomendações:hover {
-  transform: scale(1.05);
-}
 
-/*parte da avaliação, estrelinhas*/
 .avaliacao{
   display:flex;
 }
@@ -795,10 +800,108 @@ footer p {
   }
 }
    
+
 .coracao-para-nomesG{
- position: FLEX; 
+ position: absolute; 
+  top: 185px;       
+  left: 730px;
 }
 
 .coracao-final{
- position: flex; 
+ position: absolute; 
+  top: 185px;       
+  left: 770px;
+}
+
+/* Estilos específicos para a Sociedade Secreta */
+.filtros-container {
+    background-color: #1f1f1f;
+    padding: 20px;
+    margin: 20px 110px;
+    border-radius: 8px;
+}
+
+.filtros-titulo {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.filtro-categoria {
+    margin-bottom: 20px;
+}
+
+.filtro-categoria h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.filtro-opcoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filtro-opcao {
+    background-color: #6e33aa;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filtro-opcao:hover,
+.filtro-opcao.ativo {
+    background-color: #975fce;
+    color: #1f1f1f;
+}
+
+.limpar-filtros {
+    color: #6e33aa;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.produtos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 110px;
+}
+
+.produtos-count {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.ordenar-por select {
+    background-color: #1f1f1f;
+    color: white;
+    border: 1px solid #6e33aa;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+.cashback-badge {
+    background-color: #6e33aa;
+    color: #1f1f1f;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.promo-banner {
+    background-color: #6e33aa;
+    color: #1f1f1f;
+    padding: 15px;
+    text-align: center;
+    margin: 20px 110px;
+    border-radius: 8px;
+    font-weight: bold;
 }

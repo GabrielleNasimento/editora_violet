@@ -24,6 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        alert("Login válido! (Aqui você pode redirecionar ou enviar os dados)");
+        alert("Login válido!");
     });
 });

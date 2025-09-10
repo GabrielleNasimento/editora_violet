@@ -40,6 +40,34 @@ searchInput.addEventListener('input', function () {
   });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  // Inicialmente mostra o conteúdo do autor ativo (Rick Riordan)
+  mostrarConteudoAutor('riordan');
+
+  // Adiciona evento de clique para cada imagem do slider
+  document.querySelectorAll('.slider-img').forEach(function (item) {
+    item.addEventListener('click', function () {
+      const autor = this.getAttribute('data-autor');
+      mostrarConteudoAutor(autor);
+    });
+  });
+
+  function mostrarConteudoAutor(autor) {
+    // Oculta todos os conteúdos de autores
+    document.querySelectorAll('.conteudo-autor').forEach(function (conteudo) {
+      conteudo.classList.remove('ativo');
+    });
+
+    // Oculta a mensagem de sem conteúdo
+    document.getElementById('sem-conteudo').style.display = 'none';
+
+    // Mostra o conteúdo do autor selecionado
+    const conteudoAutor = document.getElementById('conteudo-' + autor);
+    if (conteudoAutor) {
+      conteudoAutor.classList.add('ativo');
+    }
+  }
+});
 
 
 
