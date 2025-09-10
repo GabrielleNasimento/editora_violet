@@ -6,7 +6,7 @@ const scrollAmount = 270;
 
 btnDireita.addEventListener('click', () => {
   if (carrossel.scrollLeft + carrossel.offsetWidth >= carrossel.scrollWidth) {
-    // Se chegou ao fim, volta pro começo
+
     carrossel.scrollTo({ left: 0, behavior: 'smooth' });
   } else {
     carrossel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
@@ -15,7 +15,7 @@ btnDireita.addEventListener('click', () => {
 
 btnEsquerda.addEventListener('click', () => {
   if (carrossel.scrollLeft <= 0) {
-    // Se está no início, vai pro fim
+
     carrossel.scrollTo({ left: carrossel.scrollWidth, behavior: 'smooth' });
   } else {
     carrossel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
@@ -23,50 +23,61 @@ btnEsquerda.addEventListener('click', () => {
 });
 
 
-const searchInput = document.querySelector('.search-bar');
-const cards = document.querySelectorAll('.card');
+// barra de pesquisa
 
-function normalizeText(text) {
-  return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById("searchInput");
+  const sugestoesLista = document.getElementById("sugestoes");
 
-searchInput.addEventListener('input', function () {
-  const value = normalizeText(this.value);
 
-  cards.forEach(card => {
-    const titleElement = card.querySelector('.text');
-    const title = normalizeText(titleElement.textContent);
-    card.style.display = title.includes(value) ? 'block' : 'none';
-  });
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  // Inicialmente mostra o conteúdo do autor ativo (Rick Riordan)
-  mostrarConteudoAutor('riordan');
-
-  // Adiciona evento de clique para cada imagem do slider
-  document.querySelectorAll('.slider-img').forEach(function (item) {
-    item.addEventListener('click', function () {
-      const autor = this.getAttribute('data-autor');
-      mostrarConteudoAutor(autor);
-    });
+  const livros = Array.from(document.querySelectorAll(".card")).map(card => {
+    return {
+      titulo: card.querySelector(".text").textContent.trim(),
+      img: card.querySelector("img").src,
+      link: card.querySelector("a").href
+    };
   });
 
-  function mostrarConteudoAutor(autor) {
-    // Oculta todos os conteúdos de autores
-    document.querySelectorAll('.conteudo-autor').forEach(function (conteudo) {
-      conteudo.classList.remove('ativo');
-    });
+  searchInput.addEventListener("input", () => {
+    const termo = searchInput.value.toLowerCase();
+    sugestoesLista.innerHTML = "";
 
-    // Oculta a mensagem de sem conteúdo
-    document.getElementById('sem-conteudo').style.display = 'none';
-
-    // Mostra o conteúdo do autor selecionado
-    const conteudoAutor = document.getElementById('conteudo-' + autor);
-    if (conteudoAutor) {
-      conteudoAutor.classList.add('ativo');
+    if (termo.length === 0) {
+      sugestoesLista.style.display = "none";
+      return;
     }
-  }
+
+    const resultados = livros.filter(livro =>
+      livro.titulo.toLowerCase().includes(termo)
+    );
+
+    if (resultados.length > 0) {
+      sugestoesLista.style.display = "block";
+      resultados.forEach(livro => {
+        const li = document.createElement("li");
+
+        li.innerHTML = `
+          <img src="${livro.img}" alt="${livro.titulo}">
+          <span>${livro.titulo}</span>
+        `;
+
+        li.addEventListener("click", () => {
+          window.location.href = livro.link; 
+        });
+
+        sugestoesLista.appendChild(li);
+      });
+    } else {
+      sugestoesLista.style.display = "none";
+    }
+  });
+
+
+  document.addEventListener("click", (e) => {
+    if (!document.getElementById("barra").contains(e.target)) {
+      sugestoesLista.style.display = "none";
+    }
+  });
 });
 
 
