@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> ThunderBolts - Violet</title>
+  <title> Sakamoto Days - Violet</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="script.js" async></script>
  
 </head>
 <body>
-
+    
 <header>
     <div class="container">
     <nav class="nav-topo">
@@ -17,8 +18,10 @@
             <img src="../images/violet_logo.png" alt="Logo da Violet" class="logo-img">
            </a>
         </div>
-        <div class="barra-pesquisa">
-          <input type="text" placeholder="Buscar livros, autores..." class="search-bar">
+        
+        <div class="barra-pesquisa" id="barra">
+            <input type="text" placeholder="Buscar livros, autores..." class="search-bar" id="searchInput">
+            <ul id="sugestoes" class="sugestoes-lista"></ul>
         </div>
 
 
@@ -41,9 +44,22 @@
   </div>
 </header>
 
+<!-- Essa parte é os nomes que ficam em baixo  -->
+<main>
+  <div class="opcoes">
+    <a href="../pagina_autores/tentativa.html">Autores</a>
+    <a href="#">Editora</a>
+    <a href="#">Livros</a>
+    <a href="#">Pré-venda</a>
+    <a href="#">Lançamentos</a>
+    <a href="../paginas_topo/wish2.html">Wishlist</a>
+    <a href="#">Meus pedidos</a>
+  </div>
+</main>
+
   <div class="conteudo">
     <div class="produto">
-      <img src="../images/livros/thunderbolts.webp">
+      <img src="../images/livros/Sakamoto Days.webp">
 
       <div class="info">
 
@@ -55,9 +71,9 @@
         </svg>
     </label>
       </div>
-
-        <h1>ThunderBolts</h1>
-		<h2 style="font-size: 18px"> por Warren Ellis </h2>
+    
+        <h1>Sakamoto Days</h1>
+		<h2 style="font-size: 18px"> por Yuuto Suzuke </h2>
 
         <ul class="avaliacao">
           <li class="star-icon ativo" data-avaliacao="1"></li>
@@ -66,20 +82,19 @@
           <li class="star-icon" data-avaliacao="4"></li>
           <li class="star-icon" data-avaliacao="5"></li>
         </ul>
-
-        <p class="preço" >R$ 148,90 </p>
+  
+        <p class="preço" >R$ 29,16  </p>
         <button id="compra_botao" class="compra_botao"><h2>Comprar</h2></button>
-
         <div class="detalhes">
-          <h3><strong>Gênero:</strong> Ação</h3>
-          <h3><strong>Idioma:</strong> Português</h3>
-		      <h3><strong>Editora:</strong> Panini</h3>
-		      <h3><strong>Data da publicação:</strong> 31 agosto 2025</h3>
-          <h3><strong>Páginas:</strong> 296</h3>
-		      <h3><strong>Classificação Indicativa:</strong> 18 anos</h3>
-          <h3><strong>Dimensões:</strong>17 x 1.85 x 26 cm</h3>
-          <h3><strong>Peso:</strong> 650g</h3>
-          <h3><strong>Acabamento:</strong> Brochura</h3>
+          <p><strong>Gênero:</strong> Shounen</p>
+          <p><strong>Idioma:</strong> Português</p>
+		  <p><strong>Editora:</strong> Panini</p>
+		  <p><strong>Data da publicação:</strong> 27 de dezembro 2024</p>
+         <p><strong>Páginas:</strong> 192</p>
+		 <p><strong>Classificação Indicativa:</strong> 16 anos</p>
+          <p><strong>Dimensões:</strong>20.8x14.2</p>
+          <p><strong>Peso:</strong> 500g</p>
+          <p><strong>Acabamento:</strong> Brochura</p>
           
         </div>
       </div>
@@ -88,17 +103,17 @@
     <div class="description">
     <br>  <h3>Descrição</h3>
 	
-      <p style="text-align:justify">Os Thunderbolts sempre sofreram com a desconfiança do público e não é para menos, pois o grupo não passava de um bando de supervilões fingindo ser super-heróis. Porém, a mentira se tornou realidade, e muitos dos integrantes da equipe realmente mudaram de lado, atuando ao lado dos mocinhos.<br>Mesmo assim, seus esforços para reconquistar a confiança do povo passou por um progresso lento, e a redenção sempre foi um prêmio difícil de alcançar.Para a sorte da nova formação do grupo, uma guerra civil entre super-heróis mudou tudo, e foi a vez de os Thunderbolts imporem um pouco de justiça. Em um momento em que as pessoas perderam a fé em seus campeões, elas, finalmente, estão prontas para depositar sua fé em monstros.</p>
+      <p style="text-align:justify">Os jovens Sakamoto, Nagumo e Akao eram um trio superproblemático na JCC! Para não serem expulsos, os três saem em uma missão especial com Uzuki, um homem misterioso. Eles invadem uma “loja de departamento de assassinos” para ir atrás de seu alvo, mas...!!Vem aí um chocante e arrepiante arco do passado!!</p>
 
     </div>
 
     <div class="recomendações">
       <h3>Veja também:</h3>
       <div class="items">
-        <img src="https://m.media-amazon.com/images/I/51EGSCwV8EL._SY445_SX342_.jpg">
-        <img src="https://m.media-amazon.com/images/I/71pUEVRZB1L._SY466_.jpg">
-        <img src="https://m.media-amazon.com/images/I/81hyOZJL26L._SY466_.jpg">
-        <img src="https://m.media-amazon.com/images/I/51AKYh1x60L._SY445_SX342_.jpg">
+        <a href="./sololeveling.html"><img src="../images/livros/solo_leveling.webp" alt="Solo leveling"></a>
+        <a href="./chainsawman.html"><img src="../images/livros/chainsaw.jpg" alt="Chainsaw Man"></a>
+        <a href="./jujustu.html"><img src="../images/livros/jujutsu.webp" alt="Jujutsu Kaisen"></a>
+        <a href="./blackclover.html"><img src="../images/livros/Black clover.webp" alt="Black Clover"></a>
       </div>
     </div>
   </div>
@@ -137,6 +152,7 @@
   </div>
 </footer>
 
+
 <script>
         var bu = document.getElementById("compra_botao");
         bu.onclick = function () {
@@ -158,3 +174,6 @@ document.addEventListener('click',function(e){       //Criação do evento de cl
 });
 
 </script>
+
+</body>
+

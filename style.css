@@ -260,6 +260,8 @@ nav {
   overflow: visible; 
 }
 
+
+
 .carrossel {
   display: flex;
   gap: 20px;
@@ -267,6 +269,8 @@ nav {
   flex-wrap: nowrap; 
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 }
 
 .carrossel::-webkit-scrollbar {
@@ -764,7 +768,7 @@ footer p {
 
     .recomendações {
       margin-top: 40px;
-      transition: transform 0.3s;
+      
     }
   
 
@@ -779,14 +783,21 @@ footer p {
     }
 
     .recomendações img {
-      width: 120px;
+      width: 240px;
       border-radius: 8px;
       cursor: pointer;
+      margin-left: 15px;
     }
 
-    .recomendações:hover {
-  transform: scale(1.05);
-}
+        .recomendações img {
+      width: 240px;
+      height: 350px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-left: 15px;
+    }
+
+
 
 /*parte da avaliação, estrelinhas*/
 .avaliacao{

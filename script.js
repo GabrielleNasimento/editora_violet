@@ -4,80 +4,87 @@ const btnDireita = document.querySelector('.seta-direita');
 
 const scrollAmount = 270;
 
-btnDireita.addEventListener('click', () => {
+// Funções de scroll
+function scrollDireita() {
   if (carrossel.scrollLeft + carrossel.offsetWidth >= carrossel.scrollWidth) {
-
     carrossel.scrollTo({ left: 0, behavior: 'smooth' });
   } else {
     carrossel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
   }
-});
+}
 
-btnEsquerda.addEventListener('click', () => {
+function scrollEsquerda() {
   if (carrossel.scrollLeft <= 0) {
-
     carrossel.scrollTo({ left: carrossel.scrollWidth, behavior: 'smooth' });
   } else {
     carrossel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
   }
+}
+
+// Eventos de clique
+btnDireita.addEventListener('click', scrollDireita);
+btnEsquerda.addEventListener('click', scrollEsquerda);
+
+// Auto-scroll
+let autoScroll = setInterval(scrollDireita, 3000);
+
+// Pausar ao passar o mouse
+carrossel.addEventListener('mouseenter', () => {
+  clearInterval(autoScroll);
 });
 
+// Retomar quando o mouse sair
+carrossel.addEventListener('mouseleave', () => {
+  autoScroll = setInterval(scrollDireita, 3000);
+});
 
-// barra de pesquisa
-
-document.addEventListener("DOMContentLoaded", () => {
-  const searchInput = document.getElementById("searchInput");
-  const sugestoesLista = document.getElementById("sugestoes");
+// Barra
 
 
-  const livros = Array.from(document.querySelectorAll(".card")).map(card => {
-    return {
-      titulo: card.querySelector(".text").textContent.trim(),
-      img: card.querySelector("img").src,
-      link: card.querySelector("a").href
-    };
+const searchInput = document.querySelector('.search-bar');
+const cards = document.querySelectorAll('.card');
+
+function normalizeText(text) {
+  return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+}
+
+searchInput.addEventListener('input', function () {
+  const value = normalizeText(this.value);
+
+  cards.forEach(card => {
+    const titleElement = card.querySelector('.text');
+    const title = normalizeText(titleElement.textContent);
+    card.style.display = title.includes(value) ? 'block' : 'none';
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Inicialmente mostra o conteúdo do autor ativo (Rick Riordan)
+  mostrarConteudoAutor('riordan');
+
+  // Adiciona evento de clique para cada imagem do slider
+  document.querySelectorAll('.slider-img').forEach(function (item) {
+    item.addEventListener('click', function () {
+      const autor = this.getAttribute('data-autor');
+      mostrarConteudoAutor(autor);
+    });
   });
 
-  searchInput.addEventListener("input", () => {
-    const termo = searchInput.value.toLowerCase();
-    sugestoesLista.innerHTML = "";
+  function mostrarConteudoAutor(autor) {
+    // Oculta todos os conteúdos de autores
+    document.querySelectorAll('.conteudo-autor').forEach(function (conteudo) {
+      conteudo.classList.remove('ativo');
+    });
 
-    if (termo.length === 0) {
-      sugestoesLista.style.display = "none";
-      return;
+    // Oculta a mensagem de sem conteúdo
+    document.getElementById('sem-conteudo').style.display = 'none';
+
+    // Mostra o conteúdo do autor selecionado
+    const conteudoAutor = document.getElementById('conteudo-' + autor);
+    if (conteudoAutor) {
+      conteudoAutor.classList.add('ativo');
     }
-
-    const resultados = livros.filter(livro =>
-      livro.titulo.toLowerCase().includes(termo)
-    );
-
-    if (resultados.length > 0) {
-      sugestoesLista.style.display = "block";
-      resultados.forEach(livro => {
-        const li = document.createElement("li");
-
-        li.innerHTML = `
-          <img src="${livro.img}" alt="${livro.titulo}">
-          <span>${livro.titulo}</span>
-        `;
-
-        li.addEventListener("click", () => {
-          window.location.href = livro.link; 
-        });
-
-        sugestoesLista.appendChild(li);
-      });
-    } else {
-      sugestoesLista.style.display = "none";
-    }
-  });
-
-
-  document.addEventListener("click", (e) => {
-    if (!document.getElementById("barra").contains(e.target)) {
-      sugestoesLista.style.display = "none";
-    }
-  });
+  }
 });
 
 
