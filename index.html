@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Violet - Página Inicial</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="script.js" async></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <nav class="nav-topo">
+        <div class="logo-nav">
+          <a href="index.html">
+            <img src="./images/violet_logo.png" alt="Logo da Violet" class="logo-img">
+          </a>
+        </div>
+        <div class="barra-pesquisa">
+          <input type="text" placeholder="Buscar livros, autores..." class="search-bar">
+        </div>
+        <div class="imagens">
+          <a href="../editora_violet/paginas_topo/perfil.html"><img src="./images/user.png" alt="Perfil"></a>
+          <a href="../editora_violet/paginas_topo/wish2.html"><img src="./images/heart.png" alt="Favoritos"></a>
+          <a href="#"><img src="./images/shopping-bag.png" alt="Carrinho"></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Essa parte é os nomes que ficam em baixo  -->
+  <main>
+    <div class="opcoes">
+      <a href="./pagina_autores/tentativa.html">Autores</a>
+      <a href="#">Livros</a>
+      <a href="#">Pré-venda</a>
+      <a href="#">Lançamentos</a>
+      <a href="./paginas_topo/wish2.html">Wishlist</a>
+      <a href="#">Meus pedidos</a>
+    </div>
+  </main>
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/banner5.jpg" class="d-block w-100" alt="Jacksonlindo">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/banner3.png" class="d-block w-100" alt="bruxinha">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/banner4.png" class="d-block w-100" alt="pirisite">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <section class="sessao-banner">
+  </section>
+
+  <section class="sessao">
+    <h3>Lançamentos</h3>
+
+    <div class="carrossel-container">
+
+
+      <div class="carrossel">
+        <button class="seta seta-esquerda">&#10094;</button>
+        <div class="card">
+          <a href="/páginas_livros/sololeveling.html">
+            <div class="card-img-wrapper">
+              <img src="./images/livros/solo_leveling.webp" alt="Solo Leveling">
+              <div class="detalhes-hover">
+                <p><strong>Solo Leveling</strong></p>
+                <p>R$ 74,90</p>
+                <a href="./páginas_livros/sololeveling.html" class="botao-detalhes">Ver detalhes</a>
+              </div>
+            </div>
+            <p class="text">Solo leveling</p>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="/páginas_livros/sololeveling.html">
+            <div class="card-img-wrapper">
+              <img src="./images/livros/solo_leveling.webp" alt="Solo Leveling">
+              <div class="detalhes-hover">
+                <p><strong>Solo Leveling</strong></p>
+                <p>R$ 74,90</p>
+                <a href="./páginas_livros/sololeveling.html" class="botao-detalhes">Ver detalhes</a>
+              </div>
+            </div>
+            <p class="text">Solo leveling</p>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="./páginas_livros/pelasentranhas.html">
+            <div class="card-img-wrapper">
+              <img src="./images/livros/pelas_entranhas.png">
+              <div class="detalhes-hover">
+                <p><strong>Pelas entranhas</strong></p>
+                <p>R$ 50,00</p>
+                <a href="./páginas_livros/pelasentranhas.html" class="botao-detalhes">Ver detalhes</a>
+              </div>
+            </div>
+            <p class="text">Pelas entranhas</p>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="./páginas_livros/pelasentranhas.html">
+            <div class="card-img-wrapper">
+              <img src="./images/livros/pelas_entranhas.png">
+              <div class="detalhes-hover">
+                <p><strong>Pelas entranhas</strong></p>
+                <p>R$ 50,00</p>
+                <a href="./páginas_livros/pelasentranhas.html" class="botao-detalhes">Ver detalhes</a>
+              </div>
+            </div>
+            <p class="text">Pelas entranhas</p>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="./páginas_livros/ocaraqueestouafim.html">
+            <div class="card-img-wrapper">
+              <img src="./images/livros/o cara que eu estou não é um cara.jpg">
+              <div class="detalhes-hover">
+                <p><strong>O cara que eu estou não é um cara</strong></p>
+                <p>R$ 39,69</p>
+                <a href="./páginas_livros/ocaraqueestouafim.html" class="botao-detalhes">Ver detalhes</a>
+              </div>
+            </div>
+            <p class="text">O cara que estou a fim não é um cara?!</p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="./páginas_livros/thunderbolts.html">
+            <div class="card-img-wrapper">
+              <img src="./images/livros/thunderbolts.webp">
+              <div class="detalhes-hover">
+                <p><strong>Thunderbolts</strong></p>
+                <p>R$ 148,90</p>
+                <a href="./páginas_livros/thunderbolts.html" class="botao-detalhes">Ver detalhes</a>
+              </div>
+            </div>
+            <p class="text">Thunderbolts</p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="./páginas_livros/osdoismorrem.html">
+            <div class="card-img-wrapper">
+              <img src="./images/livros/os_dois_morrem.jpeg">
+              <div class="detalhes-hover">
+                <p><strong>Os dois morrem no final</strong></p>
+                <p>R$ 39,60</p>
+                <a href="./páginas_livros/osdoismorrem.html" class="botao-detalhes">Ver detalhes</a>
+              </div>
+            </div>
+            <p class="text">Os dois morrem no final</p>
+          </a>
+        </div>
+      </div>
+      <button class="seta seta-direita">&#10095;</button>
+    </div>
+  </section>
+
+
+  <section class="sessao">
+    <h3>Sucessos antigos</h3>
+
+    <div class="carrossel-container">
+      <button class="seta seta-esquerda">&#10094;</button>
+
+      <div class="carrossel">
+
+        <div class="card">
+          <a href="./páginas_livros/authenticgames.html">
+            <div class="card-img-wrapper">
+              <img src="./images/livros/authentic.jpg">
+              <div class="detalhes-hover">
+                <p><strong>Authenticgames: vivendo uma vida autêntica</strong></p>
+                <p>R$ 39,70</p>
+                <a href="./páginas_livros/authenticgames.html" class="botao-detalhes">Ver detalhes</a>
+              </div>
+            </div>
+            <p class="text">Authenticgames: vivendo uma vida autêntica</p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="./páginas_livros/inuyasha.html">
+            <div class="card-img-wrapper">
+              <img src="./images/livros/inuyasha.jpg">
+              <div class="detalhes-hover">
+                <p><strong>Inuyasha</strong></p>
+                <p>R$ 38,50</p>
+                <a href="./páginas_livros/inuyasha.html" class="botao-detalhes">Ver detalhes</a>
+              </div>
+            </div>
+            <p class="text">Inuyasha</p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="./páginas_livros/akira.html">
+            <div class="card-img-wrapper">
+              <img src="./images/livros/Akira.png">
+              <div class="detalhes-hover">
+                <p><strong>AKIRA</strong></p>
+                <p>R$ 66,40</p>
+                <a href="./páginas_livros/akira.html" class="botao-detalhes">Ver detalhes</a>
+              </div>
+            </div>
+            <p class="text">AKIRA</p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="./páginas_livros/sailor.html">
+            <div class="card-img-wrapper">
+              <img src="./images/livros/sailor_moon.jpg">
+              <div class="detalhes-hover">
+                <p><strong>Sailor Moon</strong></p>
+                <p>R$ 45,00</p>
+                <a href="./páginas_livros/sailor.html" class="botao-detalhes">Ver detalhes</a>
+              </div>
+            </div>
+            <p class="text">Sailor Moon</p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="./páginas_livros/herobrine.html">
+            <div class="card-img-wrapper">
+              <img src="./images/livros/herobrine.jpg">
+              <div class="detalhes-hover">
+                <p><strong>Herobrine: A lenda: 1 </strong></p>
+                <p>R$ 39,70</p>
+                <a href="./páginas_livros/herobrine.html" class="botao-detalhes">Ver detalhes</a>
+              </div>
+            </div>
+            <p class="text">Herobrine: A lenda: 1 </p>
+          </a>
+        </div>
+      </div>
+
+      <button class="seta seta-direita">&#10095;</button>
+    </div>
+  </section>
+
+
+  <section class="sessao">
+    <h3>Edições Limitadas</h3>
+    <div class="limitadas">
+      <div class="card-grande">
+        <img src="./images/livros/harrypotter.jpg">
+
+      </div>
+      <div class="card-granded">
+        <img src="./images/livros/senhordosaneis.jpg">
+      </div>
+    </div>
+  </section>
+
+
+  <section class="sessao">
+    <h3>Mangás em Alta</h3>
+
+    <div class="carrossel-container">
+      <button class="seta seta-esquerda">&#10094;</button>
+
+      <div class="carrossel">
+
+        <div class="card">
+          <a href="./páginas_livros/yourname.html">
+            <div class="card-img-wrapper">
+              <img src="./images/livros/your_name.jpg">
+              <div class="detalhes-hover">
+                <p><strong>Your Name</strong></p>
+                <p>R$ 39,70</p>
+                <a href="./páginas_livros/yourname.html" class="botao-detalhes">Ver detalhes</a>
+              </div>
+            </div>
+            <p class="text">Your Name </p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="./páginas_livros/dugeon_meshi.html">
+            <div class="card-img-wrapper">
+              <img src="./images/livros/dugeon_meshi.webp">
+              <div class="detalhes-hover">
+                <p><strong>Delicious in Dungeon</strong></p>
+                <p>R$ 72,74</p>
+                <a href="./páginas_livros/dugeon_meshi.html" class="botao-detalhes">Ver detalhes</a>
+              </div>
+            </div>
+            <p class="text">Delicious in Dungeon</p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="./páginas_livros/tatsu.html">
+            <div class="card-img-wrapper">
+              <img src="./images/livros/tatsu_imortal.webp">
+              <div class="detalhes-hover">
+                <p><strong>Tatsu Imortal</strong></p>
+                <p>R$ 36,90</p>
+                <a href="./páginas_livros/tatsu.html" class="botao-detalhes">Ver detalhes</a>
+              </div>
+            </div>
+            <p class="text">Tatsu Imortal</p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="./páginas_livros/evangelion.html">
+            <div class="card-img-wrapper">
+              <img src="./images/livros/evangelion.png">
+              <div class="detalhes-hover">
+                <p><strong>Neon Genesis Evangelion</strong></p>
+                <p>R$ 53,24</p>
+                <a href="./páginas_livros/evangelion.html" class="botao-detalhes">Ver detalhes</a>
+              </div>
+            </div>
+            <p class="text">Neon Genesis Evangelion</p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="./páginas_livros/haikyuu.html">
+            <div class="card-img-wrapper">
+              <img src="./images/livros/haikyuu.jpg">
+              <div class="detalhes-hover">
+                <p><strong>Haikyuu!!</strong></p>
+                <p>R$ 57,51</p>
+                <a href="./páginas_livros/haikyuu.html" class="botao-detalhes">Ver detalhes</a>
+              </div>
+            </div>
+            <p class="text">Haikyuu!!</p>
+          </a>
+        </div>
+      </div>
+
+      <button class="seta seta-direita">&#10095;</button>
+    </div>
+  </section>
+  <section class="sessao">
+    <h3>Favoritos do Público</h3>
+
+    <div class="carrossel-container">
+      <button class="seta seta-esquerda">&#10094;</button>
+
+      <div class="carrossel">
+
+        <div class="card">
+          <a href="./páginas_livros/yourname.html">
+            <div class="card-img-wrapper">
+              <img src="./images/livros/your_name.jpg">
+              <div class="detalhes-hover">
+                <p><strong>Your Name</strong></p>
+                <p>R$ 39,70</p>
+                <a href="./páginas_livros/yourname.html" class="botao-detalhes">Ver detalhes</a>
+              </div>
+            </div>
+            <p class="text">Your Name </p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="./páginas_livros/dugeon_meshi.html">
+            <div class="card-img-wrapper">
+              <img src="./images/livros/dugeon_meshi.webp">
+              <div class="detalhes-hover">
+                <p><strong>Delicious in Dungeon</strong></p>
+                <p>R$ 72,74</p>
+                <a href="./páginas_livros/dugeon_meshi.html" class="botao-detalhes">Ver detalhes</a>
+              </div>
+            </div>
+            <p class="text">Delicious in Dungeon</p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="./páginas_livros/tatsu.html">
+            <div class="card-img-wrapper">
+              <img src="./images/livros/tatsu_imortal.webp">
+              <div class="detalhes-hover">
+                <p><strong>Tatsu Imortal</strong></p>
+                <p>R$ 36,90</p>
+                <a href="./páginas_livros/tatsu.html" class="botao-detalhes">Ver detalhes</a>
+              </div>
+            </div>
+            <p class="text">Tatsu Imortal</p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="./páginas_livros/evangelion.html">
+            <div class="card-img-wrapper">
+              <img src="./images/livros/evangelion.png">
+              <div class="detalhes-hover">
+                <p><strong>Neon Genesis Evangelion</strong></p>
+                <p>R$ 36,90</p>
+                <a href="./páginas_livros/evangelion.html" class="botao-detalhes">Ver detalhes</a>
+              </div>
+            </div>
+            <p class="text">Neon Genesis Evangelion</p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="./páginas_livros/haikyuu.html">
+            <div class="card-img-wrapper">
+              <img src="./images/livros/haikyuu.jpg">
+              <div class="detalhes-hover">
+                <p><strong>Haikyuu!!</strong></p>
+                <p>R$ 36,90</p>
+                <a href="./páginas_livros/haikyuu.html" class="botao-detalhes">Ver detalhes</a>
+              </div>
+            </div>
+            <p class="text">Haikyuu!!</p>
+          </a>
+        </div>
+      </div>
+      <button class="seta seta-direita">&#10095;</button>
+    </div>
+  </section>
+  </section>
+  <footer>
+    <div class="footer-container">
+      <div class="logo">Violet</div>
+      <ul>
+        <li><a href="../editora_violet/página_footer/PoliticaDePrivacidade.html">Política de Privacidade</a></li>
+        <li><a href="./pol_pag.html">Política de pagamento</a></li>
+        <li><a href="#">Política de cashback</a></li>
+        <li><a href="./trocas_reembolso.html">Trocas e reembolso</a></li>
+        <li><a href="../editora_violet/página_footer/sobrenos.html">Sobre nós</a></li>
+        <li><a href="../editora_violet/página_footer/contate-nos.html">Fale conosco</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+
+      <div class="redes-sociais">
+        <a href="#"><img src="./images/facebook-app-symbol.png" alt="Facebook"></a>
+        <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="./images/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="./images/youtube.png" alt="YouTube"></a>
+      </div>
+
+      <p>&copy; 2025 Violet. Todos os direitos reservados.</p>
+    </div>
+  </footer>
