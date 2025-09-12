@@ -78,8 +78,7 @@ nav {
   flex: 1;
   display: flex;
   justify-content: center;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-right: 60px;
 }
 
 .search-bar {
