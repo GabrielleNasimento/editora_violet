@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Violet - Autores</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styleautores.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="script.js" async></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav class="nav-topo">
+                <div class="logo-nav">
+                    <a href="./index.html">
+                        <img src="./images/violet_logo.png" alt="Logo da Violet" class="logo-img">
+                    </a>
+                </div>
+                <div class="barra-pesquisa">
+                    <input type="text" placeholder="Buscar livros, autores..." class="search-bar">
+                </div>
+                <div class="imagens">
+                    <a href="../editora_violet/paginas_topo/perfil.html"><img src="./images/user.png" alt="Perfil"></a>
+                    <a href="../editora_violet/paginas_topo/wish2.html"><img src="./images/heart.png"
+                            alt="Favoritos"></a>
+                    <a href="#"><img src="./images/shopping-bag.png" alt="Carrinho"></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Essa parte é os nomes que ficam em baixo  -->
+    <main>
+        <div class="opcoes">
+            <a href="#">Autores</a>
+            <a href="#">Livros</a>
+            <a href="#">Pré-venda</a>
+            <a href="#">Lançamentos</a>
+            <a href="./paginas_topo/wish2.html">Wishlist</a>
+            <a href="#">Meus pedidos</a>
+        </div>
+    </main>
+    <!-- Autores  -->
+    <section class="slider-container">
+        <div class="slider-images">
+            <div class="slider-img" data-autor="tolkien">
+                <img src="Images/1.jpg" alt="1" />
+                <h1>J.R.R Tolkien</h1>
+                <div class="details">
+                    <h2>J.R.R Tolkien</h2>
+                    <p>Autor do Universo de Senhor dos anéis</p>
+                </div>
+            </div>
+            <div class="slider-img" data-autor="toriyama">
+                <img src="Images/2.webp" alt="2" />
+                <h1>Akira Toriyama</h1>
+                <div class="details">
+                    <h2>Akira Toriyama</h2>
+                    <p>Autor de Dragon Ball</p>
+                </div>
+            </div>
+            <div class="slider-img" data-autor="oda">
+                <img src="Images/3.png" alt="3" />
+                <h1>Eiichiro Oda</h1>
+                <div class="details">
+                    <h2>Eiichiro Oda</h2>
+                    <p>Autor de One Piece</p>
+                </div>
+            </div>
+            <div class="slider-img active" data-autor="riordan">
+                <img src="Images/4.jpg" alt="4" />
+                <h1>Rick Riordan</h1>
+                <div class="details">
+                    <h2>Rick Riordan</h2>
+                    <p>Autor de Percy Jackson</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Conteudo dos autores  -->
+    <section id="conteudo-tolkien" class="conteudo-autor">
+        <div class="autor-header">
+            <img src="Images/1.jpg" alt="J.R.R Tolkien" class="autor-imagem">
+            <div class="autor-info">
+                <h2 class="autor-nome">J.R.R Tolkien</h2>
+                <p class="autor-descricao">
+                    John Ronald Reuel Tolkien (1892-1973) foi um escritor, professor universitário e filólogo britânico,
+                    mais conhecido como o autor das obras clássicas de alta fantasia "O Hobbit", "O Senhor dos Anéis" e
+                    "O Silmarillion".
+                </p>
+                <div class="autor-detalhes">
+                    <p><strong>Nascimento:</strong> 3 de janeiro de 1892, Bloemfontein, África do Sul</p>
+                    <p><strong>Falecimento:</strong> 2 de setembro de 1973, Bournemouth, Reino Unido</p>
+                    <p><strong>Obras principais:</strong> O Hobbit, O Senhor dos Anéis, O Silmarillion</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="obras-destaque">
+            <h3>Obras em Destaque</h3>
+            <div class="obras-lista">
+                <div class="obra-item">
+                    <img src="./images/livros/senhordosaneis.jpg" alt="O Senhor dos Anéis">
+                    <p class="obra-titulo">O Senhor dos Anéis</p>
+                </div>
+                <div class="obra-item">
+                    <img src="./images/livros/hobbit.jpg" alt="O Hobbit">
+                    <p class="obra-titulo">O Hobbit</p>
+                </div>
+                <div class="obra-item">
+                    <img src="./images/livros/silmarillion.jpg" alt="O Silmarillion">
+                    <p class="obra-titulo">O Silmarillion</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="conteudo-toriyama" class="conteudo-autor">
+        <div class="autor-header">
+            <img src="Images/2.webp" alt="Akira Toriyama" class="autor-imagem">
+            <div class="autor-info">
+                <h2 class="autor-nome">Akira Toriyama</h2>
+                <p class="autor-descricao">
+                    Akira Toriyama (1955-2024) foi um mangaká e designer de personagens japonês,
+                    mundialmente famoso por ser o criador de Dragon Ball. Sua obra é considerada uma das mais
+                    influentes e bem-sucedidas da história dos mangás.
+                </p>
+                <div class="autor-detalhes">
+                    <p><strong>Nascimento:</strong> 5 de abril de 1955, Nagoya, Japão</p>
+                    <p><strong>Falecimento:</strong> 1 de março de 2024, Japão</p>
+                    <p><strong>Obras principais:</strong> Dragon Ball, Dr. Slump, Chrono Trigger (design de personagens)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="obras-destaque">
+            <h3>Obras em Destaque</h3>
+            <div class="obras-lista">
+                <div class="obra-item">
+                    <img src="./images/livros/dragonball.jpg" alt="Dragon Ball">
+                    <p class="obra-titulo">Dragon Ball</p>
+                </div>
+                <div class="obra-item">
+                    <img src="./images/livros/slump.jpg" alt="Dr. Slump">
+                    <p class="obra-titulo">Dr. Slump</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="conteudo-oda" class="conteudo-autor">
+        <div class="autor-header">
+            <img src="Images/3.png" alt="Eiichiro Oda" class="autor-imagem">
+            <div class="autor-info">
+                <h2 class="autor-nome">Eiichiro Oda</h2>
+                <p class="autor-descricao">
+                    Eiichiro Oda (nascido em 1975) é um mangaká japonês, mais conhecido como o criador de One Piece.
+                    A série detém o recorde mundial de mangá mais vendido de todos os tempos, com mais de 500 milhões de
+                    cópias vendidas.
+                </p>
+                <div class="autor-detalhes">
+                    <p><strong>Nascimento:</strong> 1 de janeiro de 1975, Kumamoto, Japão</p>
+                    <p><strong>Obras principais:</strong> One Piece, Wanted!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="obras-destaque">
+            <h3>Obras em Destaque</h3>
+            <div class="obras-lista">
+                <div class="obra-item">
+                    <img src="./images/livros/onepiece.jpg" alt="One Piece">
+                    <p class="obra-titulo">One Piece</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="conteudo-riordan" class="conteudo-autor ativo">
+        <div class="autor-header">
+            <img src="Images/4.jpg" alt="Rick Riordan" class="autor-imagem">
+            <div class="autor-info">
+                <h2 class="autor-nome">Rick Riordan</h2>
+                <p class="autor-descricao">
+                    Richard Russell Riordan Jr. (nascido em 1964) é um escritor americano, mais conhecido por ser o
+                    autor da série Percy Jackson e os Olimpianos.
+                    Seus livros exploram a mitologia moderna, misturando aventura contemporânea com elementos
+                    mitológicos.
+                </p>
+                <div class="autor-detalhes">
+                    <p><strong>Nascimento:</strong> 5 de junho de 1964, San Antonio, Texas, EUA</p>
+                    <p><strong>Obras principais:</strong> Percy Jackson, Os Heróis do Olimpo, As Crônicas dos Kane</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="obras-destaque">
+            <h3>Obras em Destaque</h3>
+            <div class="obras-lista">
+                <div class="obra-item">
+                    <img src="./images/livros/percyjackson.jpg" alt="Percy Jackson">
+                    <p class="obra-titulo">Percy Jackson</p>
+                </div>
+                <div class="obra-item">
+                    <img src="./images/livros/osheroisdoolimpo.jpg" alt="Os Heróis do Olimpo">
+                    <p class="obra-titulo">Os Heróis do Olimpo</p>
+                </div>
+                <div class="obra-item">
+                    <img src="./images/livros/ascronicasdekane.jpg" alt="As Crônicas dos Kane">
+                    <p class="obra-titulo">As Crônicas dos Kane</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="js/jQuery.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".slider-img").on("click", function () {
+                $(".slider-img").removeClass("active");
+                $(this).addClass("active");
+            });
+        });
+    </script>
+    <section class="sessao-banner">
+    </section>
+
+<footer>
+  <div class="footer-container">
+    <div class="logo">
+           <a href="index.html">
+            <img src="./images/violet_logo.png" alt="Logo da Violet" class="logo-img">
+           </a>
+        </div>
+    <ul>
+      <li><a href="../PoliticaDePrivacidade.html">Política de Privacidade</a></li>
+      <li><a href="../pol_pag.html">Política de pagamento</a></li>
+      <li><a href="../PoíticaDeCashback.html">Política de cashback</a></li>
+      <li><a href="../trocas_reembolso.html">Trocas e reembolso</a></li>
+      <li><a href="#">Sobre nós</a></li>
+      <li><a href="#">Fale conosco</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+
+    <div class="redes-sociais">
+      <a href="#"><img src="./images/facebook-app-symbol.png" alt="Facebook"></a>
+      <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="./images/twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="./images/youtube.png" alt="YouTube"></a>
+    </div>
+
+    <p>&copy; 2025 Violet. Todos os direitos reservados.</p>
+  </div>
+</footer>
