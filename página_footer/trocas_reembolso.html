@@ -5,31 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Violet - Página Inicial</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script src="script.js" async></script>
+  <script src="../script.js" async></script>
 </head>
 <body>
-<header>
-  <div class="container">
-    <nav class="nav-topo">
+    <header>  <!--Cabeçalho-->
+    <!--Adiciona o logo a tela inicial do site-->
+    <div class="container">
+      <nav class="nav-topo">
         <div class="logo-nav">
-           <a href="index.html">
-            <img src="./images/violet_logo.png" alt="Logo da Violet" class="logo-img">
-           </a>
+          <a href="../index.html">
+            <img src="../images/violet_logo.png" alt="Logo da Violet" class="logo-img">
+          </a>
         </div>
         <div class="barra-pesquisa">
           <input type="text" placeholder="Buscar livros, autores..." class="search-bar">
         </div>
       <div class="imagens">
-        <a href="#"><img src="./images/user.png" alt="Perfil"></a>
-        <a href="#"><img src="./images/heart.png" alt="Favoritos"></a>
-        <a href="#"><img src="./images/shopping-bag.png" alt="Carrinho"></a>
+        <!-- Logo do usuário-->
+        <a href="../paginas_topo/perfil.html"><img src="../images/user.png" alt="Perfil"></a>
+        <!-- Logo dos favoritos-->
+        <a href="#"><img src="../images/heart.png" alt="Favoritos"></a>
+        <!-- Logo do carrinho-->
+        <a href="#"><img src="../images/shopping-bag.png" alt="Carrinho"></a>
       </div>
     </nav>
   </div>
 </header>
-<main>
+
+<main> <!--Menu de navegação-->
+  <!--Cria o menu de navegaçao com 7 opções-->
+  <div class="opcoes">
+    <a href="#">Autores</a>
+    <a href="#">Editora</a>
+    <a href="#">Livros</a>
+    <a href="#">Pré-venda</a>
+    <a href="#">Lançamentos</a>
+    <a href="#">Wishlist</a>
+    <a href="#">Meus pedidos</a>
+  </div>
 <div class="conteudo">
   <div class="politica">
     <h1>Política de Trocas e Reembolsos</h1>
@@ -50,30 +65,27 @@
     <p>Para iniciar uma troca ou solicitar um reembolso, entre em contato com nosso atendimento ao cliente pelo e-mail
     </div>
 </div>
+</main>
 <footer>
-  <div class="footer-container">
-    <div class="logo">Violet</div>
-    <ul>
-      <li><a href="#">Política de Privacidade</a></li>
-      <li><a href="./pol_pag.html">Política de pagamento</a></li>
-      <li><a href="#">Trocas e reembolso</a></li>
-      <li><a href="#">Política de cashback</a></li>
-      <li><a href="#">Encontre seu pedido</a></li>
-      <li><a href="#">Mapa do site</a></li>
-      <li><a href="#">Sobre nós</a></li>
-      <li><a href="#">Editoras</a></li>
-      <li><a href="#">Nos contate</a></li>
-      <li><a href="#">FAQ</a></li>
-      <li><a href="#">Contate o suporte</a></li>
-    </ul>
+    <div class="footer-container">
+      <div class="logo">Violet</div>
+      <ul>
+        <li><a href="./página_footer/PoliticaDePrivacidade.html">Política de Privacidade</a></li>
+        <li><a href="./página_footer/pol_pag.html">Política de pagamento</a></li>
+        <li><a href="./página_footer/PoíticaDeCashback.html">Política de cashback</a></li>
+        <li><a href="./página_footer/trocas_reembolso.html">Trocas e reembolso</a></li>
+        <li><a href="./página_footer/sobrenos.html">Sobre nós</a></li>
+        <li><a href="./página_footer/contate-nos.html">Fale conosco</a></li>
+        <li><a href="">FAQ</a></li>
+      </ul>
 
-    <div class="redes-sociais">
-      <a href="#"><img src="./images/facebook-app-symbol.png" alt="Facebook"></a>
-      <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
-      <a href="#"><img src="./images/twitter.png" alt="Twitter"></a>
-      <a href="#"><img src="./images/youtube.png" alt="YouTube"></a>
+      <div class="redes-sociais">
+        <a href="#"><img src="../images/facebook-app-symbol.png" alt="Facebook"></a>
+        <a href="#"><img src="../images/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="../images/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="../images/youtube.png" alt="YouTube"></a>
+      </div>
+
+      <p>&copy; 2025 Violet. Todos os direitos reservados.</p>
     </div>
-
-    <p>&copy; 2025 Violet. Todos os direitos reservados.</p>
-  </div>
-</footer>
+  </footer>
