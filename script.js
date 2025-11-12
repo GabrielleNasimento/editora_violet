@@ -4,23 +4,41 @@ const btnDireita = document.querySelector('.seta-direita');
 
 const scrollAmount = 270;
 
-btnDireita.addEventListener('click', () => {
+// Funções de scroll
+function scrollDireita() {
   if (carrossel.scrollLeft + carrossel.offsetWidth >= carrossel.scrollWidth) {
-    // Se chegou ao fim, volta pro começo
     carrossel.scrollTo({ left: 0, behavior: 'smooth' });
   } else {
     carrossel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
   }
-});
+}
 
-btnEsquerda.addEventListener('click', () => {
+function scrollEsquerda() {
   if (carrossel.scrollLeft <= 0) {
-    // Se está no início, vai pro fim
     carrossel.scrollTo({ left: carrossel.scrollWidth, behavior: 'smooth' });
   } else {
     carrossel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
   }
+}
+
+// Eventos de clique
+btnDireita.addEventListener('click', scrollDireita);
+btnEsquerda.addEventListener('click', scrollEsquerda);
+
+// Auto-scroll
+let autoScroll = setInterval(scrollDireita, 3000);
+
+// Pausar ao passar o mouse
+carrossel.addEventListener('mouseenter', () => {
+  clearInterval(autoScroll);
 });
+
+// Retomar quando o mouse sair
+carrossel.addEventListener('mouseleave', () => {
+  autoScroll = setInterval(scrollDireita, 3000);
+});
+
+// Barra
 
 
 const searchInput = document.querySelector('.search-bar');
