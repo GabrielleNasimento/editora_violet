@@ -1,7 +1,7 @@
 
 :root {
   --cor_fundo: #8502d2;
-  --cor_fundo2:#7b06be;
+  --cor_fundo2:#541970;
   --fontes: #ffffff; 
   --fontes_efeito: #ffccff;
   --categorias: #1f1f1f;
@@ -69,27 +69,82 @@ nav {
   width: auto;
 }
 
+
+
 .barra-pesquisa {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 500px;
-  flex: 1;
+  position: relative; 
   display: flex;
   justify-content: center;
-  margin-right: 60px;
+  width: 100%;
+  max-width: 600px; 
+  margin: 0 auto;
 }
 
 .search-bar {
   width: 100%;
-  padding: 10px 20px;
-  border-radius: 20px;
-  border: none;
-  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 1px solid #5a2d82;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   background-color: #fff;
   color: #000;
 }
+
+.search-bar:focus {
+  border-color: #9c4dd0;
+  box-shadow: 0 2px 12px var(--cor_fundo2)
+}
+
+.sugestoes-lista {
+  position: absolute;
+  top: 50px; 
+  left: 0;
+  background: #1e1e1e;
+  border: 1px solid var(--cor_fundo2);
+  border-radius: 10px;
+  width: 320px;
+  list-style: none;
+  padding: 0;
+  max-height: 220px;
+  overflow-y: auto;
+  z-index: 1000;
+  display: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+
+.sugestoes-lista::-webkit-scrollbar {
+  width: 6px;
+}
+.sugestoes-lista::-webkit-scrollbar-thumb {
+  background: var(--cor_fundo2);
+  border-radius: 10px;
+}
+
+.sugestoes-lista li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.sugestoes-lista li img {
+  width: 35px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.sugestoes-lista li:hover {
+  background: var(--cor_fundo2)
+}
+
+
 
 
 .logo {
@@ -189,15 +244,20 @@ nav {
   padding: 40px 110px;
 }
 
-.sessao {
-  padding: 10px 110px;
+.sessao-grid {
+  padding: 20px;
 }
 
+.sessao {
+  position: relative;
+    padding: 10px 110px;
+}
 
 .sessao h3 {
   font-size: 40px;
   margin-bottom: 20px;
   color: #ffffff;
+  display: inline-block;
 }
 
 .carrossel-container {
@@ -212,6 +272,8 @@ nav {
   flex-wrap: nowrap; 
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 }
 
 .carrossel::-webkit-scrollbar {
@@ -524,6 +586,123 @@ nav {
 }
 
 
+
+.botao-veja {
+  position: absolute;
+  top: 20px; /* Ajuste conforme necessário */
+  right: 110px; /* Mesmo padding lateral da sessão */
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: color 0.3s ease; /* Suaviza a mudança de cor */
+  background: none; /* Remove o fundo */
+  border: 2px solid transparent; /* Opcional: para manter estrutura */
+}
+
+
+
+.botao-veja:hover {
+  color: var(--cor_fundo);
+}
+
+/* grade dos livros */
+.livros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 25px;
+}
+
+.livros-grid .card {
+  background: none;
+  border: none;
+  text-align: center;
+}
+
+.livros-grid .card img {
+  width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  transition: transform 0.3s;
+}
+
+.livros-grid .card img:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+/* --- Paginas carrosel css --- */
+.livros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  margin-top: 30px;
+  padding: 10px 0;
+}
+
+.livros-grid .card {
+  background: none;
+  border: none;
+  text-align: center;
+  width: 220px;
+  transition: transform 0.3s ease;
+}
+
+.livros-grid .card-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 0; 
+}
+
+.livros-grid .card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.livros-grid .detalhes-hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.livros-grid .card-img-wrapper:hover .detalhes-hover {
+  opacity: 1;
+}
+
+.livros-grid .botao-detalhes {
+  margin-top: 8px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.livros-grid .botao-detalhes:hover {
+  background: var(--cor_fundo2);
+  border-color: var(--cor_fundo2);
+}
+
 footer {
   background-color: var(--cor_fundo);
   padding: 40px 20px;
@@ -644,7 +823,6 @@ footer p {
 
     .produto img {
       width: 400px;
-     
       border-radius: 10px;
       margin-left: 100px;
     }
@@ -707,22 +885,14 @@ footer p {
       color: #ccc;
     }
 
-    .description h3 {
-          margin-bottom: 10px;
-          font-size: 2rem;
-        }
-  
     .recomendações {
       margin-top: 40px;
-      overflow: hidden;
-      border-radius: 4px;
-
+      
     }
   
 
     .recomendações h3 {
       margin-bottom: 10px;
-      font-size: 2rem;
     }
 
     .recomendações .items {
@@ -730,21 +900,25 @@ footer p {
       gap: 20px;
       flex-wrap: wrap;
     }
-    
 
     .recomendações img {
-      width: 200px ;
-      height: 300px;
+      width: 240px;
       border-radius: 8px;
       cursor: pointer;
-      overflow: hidden;
-      border-radius: 4px;
-      object-fit: cover;
-      display: block;
-      border-radius: 4px;
+      margin-left: 15px;
+    }
+
+        .recomendações img {
+      width: 240px;
+      height: 350px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-left: 15px;
     }
 
 
+
+/*parte da avaliação, estrelinhas*/
 .avaliacao{
   display:flex;
 }
@@ -799,108 +973,67 @@ footer p {
   }
 }
    
-
 .coracao-para-nomesG{
- position: absolute; 
-  top: 185px;       
-  left: 730px;
+ position: FLEX; 
 }
 
 .coracao-final{
- position: absolute; 
-  top: 185px;       
-  left: 770px;
+ position: flex; 
 }
 
-/* Estilos específicos para a Sociedade Secreta */
-.filtros-container {
-    background-color: #1f1f1f;
-    padding: 20px;
-    margin: 20px 110px;
-    border-radius: 8px;
+.barra-pesquisa {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* largura da barra */
+  margin: 0 auto;
 }
 
-.filtros-titulo {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #ffffff;
+.sugestoes-lista {
+  list-style: none;
+  margin: 4px 0 0 0;
+  padding: 0;
+  background-color: #1c1c1c;
+  border: 1px solid #444;
+  border-radius: 6px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: none;
+  max-height: 220px;
+  overflow-y: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-.filtro-categoria {
-    margin-bottom: 20px;
+.sugestao-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  cursor: pointer;
+  color: #ddd;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-.filtro-categoria h4 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #ffffff;
+.sugestao-item:hover {
+  background-color: #5a2a7a;
+  color: #fff;
 }
 
-.filtro-opcoes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.sugestao-item img {
+  width: 36px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
 }
 
-.filtro-opcao {
-    background-color: #6e33aa;
-    padding: 8px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.filtro-opcao:hover,
-.filtro-opcao.ativo {
-    background-color: #975fce;
-    color: #1f1f1f;
-}
-
-.limpar-filtros {
-    color: #6e33aa;
-    text-decoration: underline;
-    cursor: pointer;
-    margin-top: 10px;
-    display: inline-block;
-}
-
-.produtos-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 110px;
-}
-
-.produtos-count {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.ordenar-por select {
-    background-color: #1f1f1f;
-    color: white;
-    border: 1px solid #6e33aa;
-    padding: 8px 15px;
-    border-radius: 20px;
-}
-
-.cashback-badge {
-    background-color: #6e33aa;
-    color: #1f1f1f;
-    padding: 3px 8px;
-    border-radius: 4px;
-    font-size: 12px;
-    display: inline-block;
-    margin-top: 5px;
-    font-weight: bold;
-}
-
-.promo-banner {
-    background-color: #6e33aa;
-    color: #1f1f1f;
-    padding: 15px;
-    text-align: center;
-    margin: 20px 110px;
-    border-radius: 8px;
-    font-weight: bold;
+.sugestao-item span {
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

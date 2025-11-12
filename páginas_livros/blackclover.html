@@ -5,25 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Black Clover - Violet</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="script.js" async></script>
  
 </head>
 <body>
-
-  <header>
-  <div class="container">
+    
+<header>
+    <div class="container">
     <nav class="nav-topo">
-        <div class="logo-nav">
-           <a href="index.html">
-            <img src="./images/violet_logo.png" alt="Logo da Violet" class="logo-img">
+        <div class="logo-livros">
+           <a href="../index.html">
+            <img src="../images/violet_logo.png" alt="Logo da Violet" class="logo-img">
            </a>
         </div>
-        <div class="barra-pesquisa">
-          <input type="text" placeholder="Buscar livros, autores..." class="search-bar">
+        
+        <div class="barra-pesquisa" id="barra">
+            <input type="text" placeholder="Buscar livros, autores..." class="search-bar" id="searchInput">
+            <ul id="sugestoes" class="sugestoes-lista"></ul>
         </div>
-      <div class="imagens">
-        <a href="../editora_violet/paginas_topo/perfil.html"><img src="./images/user.png" alt="Perfil"></a>
-        <a href="../editora_violet/paginas_topo/wish2.html"><img src="./images/heart.png" alt="Favoritos"></a>
-        <a href="#"><img src="./images/shopping-bag.png" alt="Carrinho"></a>
+
+
+        <!-- Essa é as imagens que ficam na parte de cima -->
+       <div class="imagens">
+        <a href="../index.html"></a>
+        <a href="../paginas_topo/perfil.html"><img src="../images/user.png" alt="Perfil"></a>
+        <a href="../paginas_topo/wish2.html"><img src="../images/heart.png" alt="Favoritos"></a>
+        <a href="#"><img src="../images/shopping-bag.png" alt="Carrinho"></a>
+
+        <!-- Essa parte é as linhas do menu, na responsividade -->
+        <div class="btn-menu-mob" id="btn-menu-mob">
+          <div class="line-menumob-1"></div>
+          <div class="line-menumob-2"></div>
+          <div class="line-menumob-3"></div>
+        </div>
+
       </div>
     </nav>
   </div>
@@ -32,15 +47,16 @@
 <!-- Essa parte é os nomes que ficam em baixo  -->
 <main>
   <div class="opcoes">
-    <a href="#">Autores</a>
+    <a href="../pagina_autores/tentativa.html">Autores</a>
+    <a href="#">Editora</a>
     <a href="#">Livros</a>
     <a href="#">Pré-venda</a>
     <a href="#">Lançamentos</a>
-    <a href="./paginas_topo/wish2.html">Wishlist</a>
+    <a href="../paginas_topo/wish2.html">Wishlist</a>
     <a href="#">Meus pedidos</a>
   </div>
 </main>
- 
+
   <div class="conteudo">
     <div class="produto">
       <img src="../images/livros/Black clover.webp">
@@ -55,9 +71,9 @@
         </svg>
     </label>
       </div>
-
+    
         <h1>Black Clover</h1>
-		<h2 style="font-size: 18px"> por Yūki Tabata </h2>
+		<h2 style="font-size: 18px"> por Yûki Tabata </h2>
 
         <ul class="avaliacao">
           <li class="star-icon ativo" data-avaliacao="1"></li>
@@ -66,20 +82,19 @@
           <li class="star-icon" data-avaliacao="4"></li>
           <li class="star-icon" data-avaliacao="5"></li>
         </ul>
-
-        <p class="preço" >R$ 33,90 </p>
+  
+        <p class="preço" >R$ 34,15  </p>
         <button id="compra_botao" class="compra_botao"><h2>Comprar</h2></button>
-
         <div class="detalhes">
-          <h3><strong>Gênero:</strong> Manga/Fantasia</h3>
-          <h3><strong>Idioma:</strong> Português</h3>
-		      <h3><strong>Editora:</strong> Panini</h3>
-		      <h3><strong>Data da publicação:</strong> 3 de outubro de 2017</h3>
-          <h3><strong>Páginas:</strong> 192</h3>
-		      <h3><strong>Classificação Indicativa:</strong> 14 anos</h3>
-          <h3><strong>Dimensões:</strong>13,5 x 1 x 20 cm</h3>
-          <h3><strong>Peso:</strong> 190g</h3>
-          <h3><strong>Acabamento:</strong> Brochura</h3>
+          <p><strong>Gênero:</strong> Shounen</p>
+          <p><strong>Idioma:</strong> Português</p>
+		  <p><strong>Editora:</strong> Panini</p>
+		  <p><strong>Data da publicação:</strong> 27 de dezembro 2024</p>
+         <p><strong>Páginas:</strong> 192</p>
+		 <p><strong>Classificação Indicativa:</strong> 16 anos</p>
+          <p><strong>Dimensões:</strong>20.8x14.2</p>
+          <p><strong>Peso:</strong> 500g</p>
+          <p><strong>Acabamento:</strong> Brochura</p>
           
         </div>
       </div>
@@ -88,50 +103,38 @@
     <div class="description">
     <br>  <h3>Descrição</h3>
 	
-      <p style="text-align:justify">Asta é um jovem garoto que sonha em se tornar o maior mago do reino. Só há um problema — ele não tem magia alguma! Felizmente, Asta recebe o grimório raro de cinco folhas, que lhe concede o poder da Anti-Magia. Será que alguém que não consegue usar magia pode realmente se tornar o Rei Mago? Uma coisa é certa — Asta nunca vai desistir!</p>
+      <p style="text-align:justify">Asta enfrenta Baro, o responsável pelo sequestro de várias crianças. A cientista mágica Sally o transformou em um monstro com poder mágico inesgotável, e Asta se vê em uma árdua batalha. Porém, tudo muda quando Gauche, que luta ao seu lado, descobre um novo poder!! A vitória parece garantida, mas...?!</p>
 
     </div>
 
     <div class="recomendações">
       <h3>Veja também:</h3>
       <div class="items">
-        
-         <a href="/páginas_livros/ocaraqueestouafim.html">
-        <img src="../images/livros/o cara que eu estou não é um cara.jpg" alt="O cara que estou afim não é um cara" >
-        </a> 
-       
-        <a href="osdoismorrem.html">
-        <img src="../images/livros/os_dois_morrem.jpeg" alt="Os dois morrem no final" >
-        </a> 
-        
-        <a href="melhorfilmes.html">
-        <img src="../images/livros/melhor do que nos filmes.jpg" alt="Melhor do que nos filmes" >
-        </a>
-		
-        <a href="yourname.html">
-        <img src="../images/livros/your_name.jpg" alt="Your name" >
-        </a>
-
-        <a href="diariosdeapotecaria.html">
-        <img src="../images/livros/diariosdeapotecaria.webp" alt="O diário de uma apotecária" >
-        </a>
-
-		
+        <a href="./sololeveling.html"><img src="../images/livros/solo_leveling.webp" alt="Solo leveling"></a>
+        <a href="./sakamotodays.html"><img src="../images/livros/Sakamoto Days.webp" alt="Sakamoto Days"></a>
+        <a href="./jujustu.html"><img src="../images/livros/jujutsu.webp" alt="Jujutsu Kaisen"></a>
+        <a href="./chainsawman.html"><img src="../images/livros/chainsaw.jpg" alt="Chainsaw Man"></a>
       </div>
     </div>
   </div>
   
- <footer>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  <footer>
   <div class="footer-container">
-    <div class="logo">
-           <a href="index.html">
-            <img src="./images/violet_logo.png" alt="Logo da Violet" class="logo-img">
-           </a>
-        </div>
+    <div class="logo">Violet</div>
     <ul>
-      <li><a href="./PoliticaDePrivacidade.html">Política de Privacidade</a></li>
+      <li><a href="PoliticaDePrivacidade.html">Política de Privacidade</a></li>
       <li><a href="./pol_pag.html">Política de pagamento</a></li>
-      <li><a href="./PoíticaDeCashback.html">Política de cashback</a></li>
+      <li><a href="#">Política de cashback</a></li>
       <li><a href="./trocas_reembolso.html">Trocas e reembolso</a></li>
       <li><a href="#">Sobre nós</a></li>
       <li><a href="#">Fale conosco</a></li>
@@ -139,10 +142,10 @@
     </ul>
 
     <div class="redes-sociais">
-      <a href="#"><img src="./images/facebook-app-symbol.png" alt="Facebook"></a>
-      <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
-      <a href="#"><img src="./images/twitter.png" alt="Twitter"></a>
-      <a href="#"><img src="./images/youtube.png" alt="YouTube"></a>
+      <a href="#"><img src="../images/facebook-app-symbol.png" alt="Facebook"></a>
+      <a href="#"><img src="../images/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="../images/twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="../images/youtube.png" alt="YouTube"></a>
     </div>
 
     <p>&copy; 2025 Violet. Todos os direitos reservados.</p>
