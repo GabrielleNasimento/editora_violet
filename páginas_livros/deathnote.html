@@ -13,17 +13,17 @@
   <div class="container">
     <nav class="nav-topo">
         <div class="logo-nav">
-           <a href="index.html">
-            <img src="./images/violet_logo.png" alt="Logo da Violet" class="logo-img">
+           <a href="../index.html">
+            <img src="../images/violet_logo.png" alt="Logo da Violet" class="logo-img">
            </a>
         </div>
         <div class="barra-pesquisa">
           <input type="text" placeholder="Buscar livros, autores..." class="search-bar">
         </div>
       <div class="imagens">
-        <a href="../editora_violet/paginas_topo/perfil.html"><img src="./images/user.png" alt="Perfil"></a>
-        <a href="../editora_violet/paginas_topo/wish2.html"><img src="./images/heart.png" alt="Favoritos"></a>
-        <a href="#"><img src="./images/shopping-bag.png" alt="Carrinho"></a>
+        <a href="../editora_violet/paginas_topo/perfil.html"><img src="../images/user.png" alt="Perfil"></a>
+        <a href="../editora_violet/paginas_topo/wish2.html"><img src="../images/heart.png" alt="Favoritos"></a>
+        <a href="#"><img src="../images/shopping-bag.png" alt="Carrinho"></a>
       </div>
     </nav>
   </div>
@@ -43,24 +43,35 @@
  
   <div class="conteudo">
     <div class="produto">
-      <img src="../images/livros/deathnote.jpeg" alt="Os dois morrem no final">
+      <div class="todas_imagens">
+       <div class="principal">
+        <img src="../images/livros/deathnote.jpeg">
+       </div>
+         <div class="img_lado">
+          <img class="img1" src="../images/livros/deathnote1.jpeg" >
+         <div class="img2">
+          <img  src="../images/livros/deathnote2.jpeg" >
+         </div>
+      </div>
+
 
       <div class="info">
-
-<div class="coracao-para-nomesG">
+      <div class="coracao-para-nomesG">
         <input type="checkbox" id="coracao" /> <!--Cria uma caixinha de marcar(checkbox), O id="coracao" ele relaciona o checkbox com o <label> -->
-    <label for="coracao">  <!--Como o label está vinculado ao input pelo atributo for="coracao",quando o usuário clicar no conteúdo do label ele vai marcar ou desmarcar o checkbox  -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ffffff">  <!-- O SVG é o desenho do coração, tendo atributos, width e height definem o tamanho do ícone, viewBox  é a área do desenho do ícone, fill="none" que é sem preenchimento, stroke que é a cor da linha -->
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />  <!-- O path é o caminho vetorial que desenha o coração -->
-        </svg>
-    </label>
+        <label for="coracao">  <!--Como o label está vinculado ao input pelo atributo for="coracao",quando o usuário clicar no conteúdo do label ele vai marcar ou desmarcar o checkbox  -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ffffff">  <!-- O SVG é o desenho do coração, tendo atributos, width e height definem o tamanho do ícone, viewBox  é a área do desenho do ícone, fill="none" que é sem preenchimento, stroke que é a cor da linha -->
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />  <!-- O path é o caminho vetorial que desenha o coração -->
+          </svg>
+        </label>
       </div>
-  
-      
 
-        <h1>Death Note <br> Black Edition - Vol. 1</h1>
-		<h2 style="font-size: 18px"> por Adam Silvera </h2>
+        <h1>Death Note</h1>
+        <p style="font-size: 20px " style="color: rgba(255, 255, 255, 0.623);"> Capa dura – 12 de julho 2012</p>
+        <div class="autor_nome">
+		     <p style="font-size: 15px " > por Tsugumi Ohba (Autor)</p>
+        </div>
 
+      <div class="estrelinha_texto">
         <ul class="avaliacao">
           <li class="star-icon ativo" data-avaliacao="1"></li>
           <li class="star-icon" data-avaliacao="2"></li>
@@ -68,21 +79,25 @@
           <li class="star-icon" data-avaliacao="4"></li>
           <li class="star-icon" data-avaliacao="5"></li>
         </ul>
+        <h4>(4,9)</h4>
 
-        <p class="preço">R$ 46,10</p>
+      </div>
+
+        <p class="preço" >R$ 46,10</p>
         <button id="compra_botao" class="compra_botao"><h2>Comprar</h2></button>
 
-        <div class="detalhes">
-          <h3><strong>Gênero:</strong> Drama, mistério, terror</h3>
-          <h3><strong>Idioma:</strong> Português</h3>
-		  <h3><strong>Editora:</strong> JBC</h3>
-		  <h3><strong>Data da publicação:</strong> 23 setembro 2024</h3>
-          <h3><strong>Páginas:</strong> 400</h3>
-		  <h3><strong>Classificação Indicativa:</strong> 16 anos e acima</h3>
-          <h3><strong>Dimensões:</strong>20.6 x 13.4 x 2.8 cm</h3>
-          <h3><strong>Peso:</strong> 500g</h3>
-          <h3><strong>Acabamento:</strong> Brochura</h3>
-          
+        <div class="detalhes1">
+          <h3 ><strong>Gênero</strong><img style="margin-left: 15px;" src="../images/documento.png" alt="genero"></i> <br> Ação</h3>
+          <h3 ><strong>Idioma</strong> <img style="margin-left: 15px;" src="../images/mundo.png" alt="idioma"> Português</h3>
+		      <h3><strong>Editora</strong><img style="margin-left: 15px;" src="../images/construcao.png" alt="editora"> <br> Panini</h3>
+          <h3><strong>Dimensões</strong><img style="margin-left: 15px;" src="../images/marcador-de-livro (1).png" alt="dimensao"> <br >17.6 x 12.4 x 3 cm</h3>
+          <h3><strong>Páginas</strong><img style="margin-left: 15px;" src="../images/book-alt.png" alt="paginas"> <br >231</h3>
+        </div>
+
+        <div class="detalhes2">
+          <h3><strong>Peso</strong><br><img style="margin-left: 5px;" src="../images/camadas.png" alt="peso"> <br>387g</h3>
+		       <h3><strong>Classificação Indicativa</strong> <br> <img style="margin-left: 5px;" src="../images/usuarios-alt.png" src="../images/usuarios-alt.png" alt="classe"><br> 18 anos</h3>
+        </div>  
         </div>
       </div>
     </div>
@@ -124,25 +139,25 @@
    <footer>
   <div class="footer-container">
     <div class="logo">
-           <a href="index.html">
-            <img src="./images/violet_logo.png" alt="Logo da Violet" class="logo-img">
+           <a href="../index.html">
+            <img src="../images/violet_logo.png" alt="Logo da Violet" class="logo-img">
            </a>
         </div>
     <ul>
-      <li><a href="./PoliticaDePrivacidade.html">Política de Privacidade</a></li>
-      <li><a href="./pol_pag.html">Política de pagamento</a></li>
-      <li><a href="./PoíticaDeCashback.html">Política de cashback</a></li>
-      <li><a href="./trocas_reembolso.html">Trocas e reembolso</a></li>
+      <li><a href="../PoliticaDePrivacidade.html">Política de Privacidade</a></li>
+      <li><a href="../pol_pag.html">Política de pagamento</a></li>
+      <li><a href="../PoíticaDeCashback.html">Política de cashback</a></li>
+      <li><a href="../trocas_reembolso.html">Trocas e reembolso</a></li>
       <li><a href="#">Sobre nós</a></li>
       <li><a href="#">Fale conosco</a></li>
       <li><a href="#">FAQ</a></li>
     </ul>
 
     <div class="redes-sociais">
-      <a href="#"><img src="./images/facebook-app-symbol.png" alt="Facebook"></a>
-      <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
-      <a href="#"><img src="./images/twitter.png" alt="Twitter"></a>
-      <a href="#"><img src="./images/youtube.png" alt="YouTube"></a>
+      <a href="#"><img src="../images/facebook-app-symbol.png" alt="Facebook"></a>
+      <a href="#"><img src="../images/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="../images/twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="../images/youtube.png" alt="YouTube"></a>
     </div>
 
     <p>&copy; 2025 Violet. Todos os direitos reservados.</p>
