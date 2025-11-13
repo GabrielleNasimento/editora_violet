@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autores em Destaque</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/autores.css">
+    <link rel="stylesheet" href="styles/styleautores.css">
+</head>
+
+<body>
+    <!-- Header -->
+
+    <header>
+        <div class="container">
+            <nav class="nav-topo">
+                <div class="logo-nav">
+                    <a href="../../index.html">
+                        <img src="./images/violet_logo.png" alt="Logo da Violet" class="logo-img">
+                    </a>
+                </div>
+                <div class="barra-pesquisa">
+                    <input type="text" placeholder="Buscar livros, autores..." class="search-bar">
+                </div>
+                <div class="imagens">
+                    <a href="../editora_violet/paginas_topo/perfil.html"><img src="./images/user.png" alt="Perfil"></a>
+                    <a href="../editora_violet/paginas_topo/wish2.html"><img src="./images/heart.png"
+                            alt="Favoritos"></a>
+                    <a href="#"><img src="./images/shopping-bag.png" alt="Carrinho"></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Essa parte é os nomes que ficam em baixo  -->
+    <main>
+        <div class="opcoes">
+            <a href="../pagina_autores/autores/autores.html">Autores</a>
+            <a href="#">Livros</a>
+            <a href="#">Pré-venda</a>
+            <a href="#">Lançamentos</a>
+            <a href="./paginas_topo/wish2.html">Wishlist</a>
+            <a href="#">Meus pedidos</a>
+        </div>
+    </main>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h2 class="hero-title">Autores em Destaque</h2>
+            <p class="hero-subtitle">Conheça as mentes brilhantes que transformam histórias em arte</p>
+            <div class="hero-glow"></div>
+        </div>
+    </section>
+
+    <section class="slider-container">
+        <div class="slider-images">
+            <div class="slider-img" data-autor="tolkien">
+                <img src="Images/1.jpg" alt="1" />
+                <h1>J.R.R Tolkien</h1>
+                <div class="details">
+                    <h2>J.R.R Tolkien</h2>
+                    <p>Autor do Universo de Senhor dos anéis</p>
+                    <a href="tolkien.html" class="btn-primary">Ver Perfil</a>
+                </div>
+            </div>
+            <div class="slider-img" data-autor="toriyama">
+                <img src="Images/2.webp" alt="2" />
+                <h1>Akira Toriyama</h1>
+                <div class="details">
+                    <h2>Akira Toriyama</h2>
+                    <p>Autor de Dragon Ball</p>
+                    <a href="toriyama.html" class="btn-primary">Ver Perfil</a>
+                </div>
+            </div>
+            <div class="slider-img" data-autor="oda">
+                <img src="Images/3.png" alt="3" />
+                <h1>Eiichiro Oda</h1>
+                <div class="details">
+                    <h2>Eiichiro Oda</h2>
+                    <p>Autor de One Piece</p>
+                    <a href="oda.html" class="btn-primary">Ver Perfil</a>
+                </div>
+            </div>
+            <div class="slider-img active" data-autor="riordan">
+                <img src="Images/4.jpg" alt="4" />
+                <h1>Rick Riordan</h1>
+                <div class="details">
+                    <h2>Rick Riordan</h2>
+                    <p>Autor de Percy Jackson</p>
+                    <a href="riordan.html" class="btn-primary">Ver Perfil</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="logo">Violet</div>
+            <ul>
+                <li><a href="../editora_violet/página_footer/PoliticaDePrivacidade.html">Política de Privacidade</a>
+                </li>
+                <li><a href="./pol_pag.html">Política de pagamento</a></li>
+                <li><a href="#">Política de cashback</a></li>
+                <li><a href="./trocas_reembolso.html">Trocas e reembolso</a></li>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Fale conosco</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+
+            <div class="redes-sociais">
+                <a href="#"><img src="./images/facebook-app-symbol.png" alt="Facebook"></a>
+                <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="./images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="./images/youtube.png" alt="YouTube"></a>
+            </div>
+
+            <p>&copy; 2025 Violet. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/jQuery.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".slider-img").on("click", function () {
+                $(".slider-img").removeClass("active");
+                $(this).addClass("active");
+            });
+        });
+
+        const links = document.querySelectorAll('.opcoes a');
+        const currentPage = window.location.pathname.split('/').pop();
+
+        links.forEach(link => {
+            if (link.getAttribute('href').includes(currentPage)) {
+                link.classList.add('ativo');
+                link.style.pointerEvents = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
