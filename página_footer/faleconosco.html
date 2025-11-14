@@ -49,27 +49,31 @@
     </div>
   </main>
 
-  <div class="politica">
-    <h1>Nos contate</h1>
-    <h2>Endereço de Email</h2>
-
-    <form id="formEmail">
-      <div class="contate-email">
-        <input type="text" id="email" class="input-field" placeholder="E-mail" autocomplete="off" required>
-      </div>
-
-      <h2>Data de nascimento </h2>
-      <div class="calendario">
-        <input type="date" name="data">
-      </div>
-
-      <h2>Insira sua mensagem abaixo </h2>
-      <textarea name="feedback" placeholder="" rows="15" cols="70" required></textarea>
-
-      <button class="botaoenviar" id="Enviar" type="submit"><strong>Enviar</strong></button>
-    </form>
-  </div>
+  <div class="contato-header">
+    <div class="destaqueheader">
+    <h1>Nos contate!</h1>
+    </div>
+    <p class="intro-text">Tem alguma dúvida, sugestão ou apenas quer falar sobre livros? Estamos aqui para ouvir. Preencha o formulário abaixo e nossa equipe responderá o mais breve possível.</p>
 </div>
+
+<div class="contato-formulario-container">
+    <form id="formEmail"> <div class="form-grupo">
+            <label for="nome">Seu nome</label>
+            <input type="text" id="nome" name="nome" class="input-field" placeholder="Digite seu nome" required>
+        </div>
+
+        <div class="form-grupo">
+            <label for="email">Endereço de Email</label>
+            <input type="email" id="email" name="email" class="input-field" placeholder="Digite seu e-mail" autocomplete="off" required>
+        </div>
+
+        <div class="form-grupo">
+            <label for="mensagem">Insira sua mensagem abaixo</label>
+            <textarea id="mensagem" name="feedback" placeholder="Escreva sua mensagem..." rows="8" required></textarea>
+        </div>
+
+        <button class="botaoenviar" id="Enviar" type="submit"><strong>Enviar</strong></button>
+    </form>
 </div>
 
 <footer>
@@ -79,8 +83,8 @@
         <li><a href="../editora_violet/página_footer/PoliticaDePrivacidade.html">Política de Privacidade</a></li>
         <li><a href="./pol_pag.html">Política de pagamento</a></li>
         <li><a href="#">Política de cashback</a></li>
-        <li><a href="./trocas_reembolso.html">Trocas e reembolso</a></li>
-        <li><a href="#">Sobre nós</a></li>
+        <li><a href="./página_footer/sobrenos.html">Sobre nós</a></li>
+        <li><a href="./página_footer/faleconosco.html">Fale conosco</a></li>
         <li><a href="./contate-nos.html">Fale conosco</a></li>
         <li><a href="#">FAQ</a></li>
       </ul>
@@ -95,3 +99,25 @@
       <p>&copy; 2025 Violet. Todos os direitos reservados.</p>
     </div>
   </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const emailInput = document.getElementById("email");
+  const form = document.getElementById("formEmail");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const email = emailInput.value.trim();
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (regex.test(email)) {
+      alert("E-mail válido! Sua mensagem foi enviada.");
+      form.reset()
+    } else {
+      alert("E-mail inválido! Por favor, digite um e-mail correto.");
+    }
+  });
+});
+
+</script>
