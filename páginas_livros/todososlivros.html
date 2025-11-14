@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+    <link rel="stylesheet" href="../style.css">
+
+
+    <style>
+        :root {
+            --cor_principal: #8502d2;
+            --cor_secundaria: #7b06be;
+            --texto: #ffffff;
+            --efeito_texto: #ffccff;
+            --fundo: #1f1f1f;
+            --detalhes: #d4af37;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+
+        .barra-pesquisa {
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            font-size: 14px;
+            background-color: #fff;
+            color: #000;
+        }
+
+        .imagens {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .imagens img {
+            height: 28px;
+            width: auto;
+            cursor: pointer;
+            filter: brightness(0) invert(1);
+            transition: transform 0.2s;
+        }
+
+        .imagens img:hover {
+            transform: scale(1.1);
+        }
+
+        .opcoes {
+            background-color: var(--cor_secundaria);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px 20px;
+            gap: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .opcoes a {
+            color: var(--texto);
+            font-weight: 500;
+            font-size: 14px;
+            padding: 4px 10px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .opcoes a:hover {
+
+            background-color: var(--cor_principal);
+        }
+
+
+
+        .titulo-pagina {
+            font-size: 48px;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        .secao-filtros {
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        .filtros {
+            display: flex;
+            align-items: flex-end;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+
+        .filtro-grupo {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .filtro-grupo label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--efeito_texto);
+        }
+
+        .filtro-grupo select {
+            padding: 10px 15px;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            border: 2px solid var(--cor_principal);
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 180px;
+        }
+
+
+
+        .btn-limpar {
+            padding: 12px 25px;
+            background-color: transparent;
+            color: var(--texto);
+            border: 2px solid var(--detalhes);
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .btn-limpar:hover {
+            background-color: var(--detalhes);
+            color: #000;
+            transform: translateY(-2px);
+        }
+
+
+        .grid-livros {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .card {
+            background-color: #121212;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img-wrapper {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .card-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+
+        .card-img-wrapper:hover img {
+            transform: scale(1.05);
+        }
+
+        .detalhes-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            color: var(--texto);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-align: center;
+            padding: 15px;
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+
+        .card-img-wrapper:hover .detalhes-hover {
+            opacity: 1;
+        }
+
+        .detalhes-hover p {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        .detalhes-hover p:first-child {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .botao-detalhes {
+            margin-top: 12px;
+            background-color: transparent;
+            color: var(--texto);
+            border: 2px solid var(--texto);
+            padding: 8px 16px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .botao-detalhes:hover {
+            background-color: var(--cor_principal);
+            color: #fff;
+            border-color: var(--cor_principal);
+            transform: scale(1.05);
+        }
+
+        .text {
+            margin-top: 10px;
+            color: #fff;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .card:hover .text {
+            color: var(--efeito_texto);
+        }
+
+        .preco-card {
+            color: var(--detalhes);
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        .autor-card {
+            color: #aaa;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        .categoria-card {
+            display: none;
+        }
+
+        .mensagem-vazia {
+            text-align: center;
+            padding: 60px 20px;
+            color: #aaa;
+            font-size: 18px;
+        }
+
+        footer {
+            background-color: var(--cor_principal);
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-container .logo {
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        .footer-container ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .footer-container ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-container ul li a:hover {
+            color: var(--efeito_texto);
+        }
+
+        footer p {
+            font-size: 13px;
+            color: #e0e0e0;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-topo {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .barra-pesquisa {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .filtros {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .filtro-grupo {
+                width: 100%;
+            }
+
+            .filtro-grupo select {
+                width: 100%;
+            }
+
+            .titulo-pagina {
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+
+            .grid-livros {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav-topo">
+                <div class="logo-nav">
+                    <a href="../index.html">
+                        <img src="./images/violet_logo.png" alt="Logo da Violet" class="logo-img">
+                    </a>
+                </div>
+                <div class="barra-pesquisa">
+                    <input type="text" placeholder="Buscar livros, autores..." class="search-bar">
+                </div>
+                <div class="imagens">
+                    <a href="../editora_violet/paginas_topo/perfil.html"><img src="./images/user.png" alt="Perfil"></a>
+                    <a href="../editora_violet/paginas_topo/wish2.html"><img src="./images/heart.png"
+                            alt="Favoritos"></a>
+                    <a href="#"><img src="./images/shopping-bag.png" alt="Carrinho"></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Essa parte é os nomes que ficam em baixo  -->
+    <main>
+        <div class="opcoes">
+            <a href="../pagina_autores/autores/autores.html">Autores</a>
+            <a href="#">Livros</a>
+            <a href="#">Pré-venda</a>
+            <a href="#">Lançamentos</a>
+            <a href="./paginas_topo/wish2.html">Wishlist</a>
+            <a href="#">Meus pedidos</a>
+        </div>
+    </main>
+
+    <main>
+        <h1 class="titulo-pagina">Catálogo Completo</h1>
+
+        <div class="secao-filtros">
+            <div class="filtros">
+                <div class="filtro-grupo">
+                    <label for="filtro-categoria">Categoria</label>
+                    <select id="filtro-categoria">
+                        <option value="">Todas</option>
+                        <option value="manga">Mangá</option>
+                        <option value="romance">Romance</option>
+                        <option value="fantasia">Fantasia</option>
+                        <option value="ficção">Ficção Científica</option>
+                    </select>
+                </div>
+
+                <div class="filtro-grupo">
+                    <label for="filtro-autor">Autor</label>
+                    <select id="filtro-autor">
+                        <option value="">Todos</option>
+                        <option value="sum">SUM</option>
+                        <option value="clamp">Clamp</option>
+                        <option value="kaiju">Kaiju</option>
+                        <option value="reiichi">Reiichi</option>
+                    </select>
+                </div>
+
+                <div class="filtro-grupo">
+                    <label for="filtro-preco">Faixa de Preço</label>
+                    <select id="filtro-preco">
+                        <option value="">Todos</option>
+                        <option value="barato">Até R$ 50</option>
+                        <option value="medio">R$ 50 - R$ 100</option>
+                        <option value="caro">Acima de R$ 100</option>
+                    </select>
+                </div>
+
+                <button class="btn-limpar" onclick="limparFiltros()">Limpar Filtros</button>
+            </div>
+        </div>
+
+        <div class="grid-livros" id="grid-livros"></div>
+
+        <div class="mensagem-vazia" id="mensagem-vazia" style="display: none;">
+            Nenhum livro encontrado com os filtros selecionados.
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="logo">Violet</div>
+            <ul>
+                <li><a href="../../página_footer/PoliticaDePrivacidade.html">Política de Privacidade</a></li>
+                <li><a href="../../pol_pag.html">Política de pagamento</a></li>
+                <li><a href="#">Política de cashback</a></li>
+                <li><a href="../../trocas_reembolso.html">Trocas e reembolso</a></li>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Fale conosco</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+
+            <div class="redes-sociais">
+                <a href="#"><img src="./images/facebook-app-symbol.png" alt="Facebook"></a>
+                <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="./images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="./images/youtube.png" alt="YouTube"></a>
+            </div>
+
+            <p>&copy; 2025 Violet. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    </div>
+    </footer>
+
+    <script>
+
+        //os dados dos livros para fazer a filtragem e fazer
+        //os cards de forma mais facil aham aham
+        const livros = [
+            {
+                id: 1,
+                titulo: 'Solo Leveling',
+                autor: 'SUM',
+                preco: 74.90,
+                categoria: 'manga',
+                imagem: './images/livros/solo_leveling.webp',
+                faixaPreco: 'medio',
+                link: 'sololeveling.html'
+            },
+            {
+                id: 2,
+                titulo: 'Pelas Entranhas',
+                autor: 'Kaiju',
+                preco: 50.00,
+                categoria: 'romance',
+                imagem: './images/livros/pelas_entranhas.png',
+                faixaPreco: 'medio',
+                link: 'pelasentranhas.html'
+            },
+            {
+                id: 3,
+                titulo: 'O Cara que Estou a Fim',
+                autor: 'Reiichi',
+                preco: 39.69,
+                categoria: 'romance',
+                imagem: './images/livros/o cara que eu estou não é um cara.jpg',
+                faixaPreco: 'barato',
+                link: 'ocaraqueestouafim.html'
+            },
+            {
+                id: 4,
+                titulo: 'Thunderbolts',
+                autor: 'SUM',
+                preco: 148.90,
+                categoria: 'ficção',
+                imagem: './images/livros/thunderbolts.webp',
+                faixaPreco: 'caro',
+                link: 'thunderbolts.html'
+            },
+            {
+                id: 5,
+                titulo: 'Os Dois Morrem no Final',
+                autor: 'Clamp',
+                preco: 39.60,
+                categoria: 'romance',
+                imagem: './images/livros/os_dois_morrem.jpeg',
+                faixaPreco: 'barato',
+                link: 'osdoismorrem.html'
+            },
+            {
+                id: 6,
+                titulo: 'Authenticgames',
+                autor: 'SUM',
+                preco: 39.70,
+                categoria: 'fantasia',
+                imagem: './images/livros/authentic.jpg',
+                faixaPreco: 'barato',
+                link: 'authenticgames.html'
+            },
+            {
+                id: 7,
+                titulo: 'Inuyasha',
+                autor: 'Rumiko',
+                preco: 38.50,
+                categoria: 'manga',
+                imagem: './images/livros/inuyasha.jpg',
+                faixaPreco: 'barato',
+                link: 'inuyasha.html'
+            },
+            {
+                id: 8,
+                titulo: 'AKIRA',
+                autor: 'Katsuhiro',
+                preco: 66.40,
+                categoria: 'manga',
+                imagem: './images/livros/Akira.png',
+                faixaPreco: 'medio',
+                link: 'akira.html'
+            },
+            {
+                id: 9,
+                titulo: 'Sailor Moon',
+                autor: 'Clamp',
+                preco: 45.00,
+                categoria: 'manga',
+                imagem: './images/livros/sailor_moon.jpg',
+                faixaPreco: 'barato',
+                link: 'sailor.html'
+
+            },
+            {
+                id: 10,
+                titulo: 'Herobrine: A Lenda',
+                autor: 'Kaiju',
+                preco: 39.70,
+                categoria: 'ficção',
+                imagem: './images/livros/herobrine.jpg',
+                faixaPreco: 'barato',
+                link: 'herobrine.html'
+            },
+            {
+                id: 11,
+                titulo: 'Your Name',
+                autor: 'Makoto',
+                preco: 39.70,
+                categoria: 'manga',
+                imagem: './images/livros/your_name.jpg',
+                faixaPreco: 'barato',
+                link: 'yourname.html'
+            },
+            {
+                id: 12,
+                titulo: 'Delicious in Dungeon',
+                autor: 'Ryoko',
+                preco: 72.74,
+                categoria: 'manga',
+                imagem: './images/livros/dugeon_meshi.webp',
+                faixaPreco: 'medio',
+                link: 'dugeon_meshi.html'
+            },
+            {
+                id: 13,
+                titulo: 'Tatsu Imortal',
+                autor: 'Reiichi',
+                preco: 36.90,
+                categoria: 'manga',
+                imagem: './images/livros/tatsu_imortal.webp',
+                faixaPreco: 'barato',
+                link: 'tatsu.html'
+            },
+            {
+                id: 14,
+                titulo: 'Neon Genesis Evangelion',
+                autor: 'Hideaki',
+                preco: 53.24,
+                categoria: 'manga',
+                imagem: './images/livros/evangelion.png',
+                faixaPreco: 'medio',
+                link: 'evangelion.html'
+            },
+            {
+                id: 15,
+                titulo: 'Haikyuu!!',
+                autor: 'Haruichi',
+                preco: 57.51,
+                categoria: 'manga',
+                imagem: './images/livros/haikyuu.jpg',
+                faixaPreco: 'medio',
+                link: 'haikyuu.html'
+            }
+        ];
+
+        //Vai decidir quais livros vão pra tela
+        function renderizarLivros(lista = livros) {
+            const grid = document.getElementById('grid-livros'); //o lugar onde os livros ficam
+            const mensagem = document.getElementById('mensagem-vazia');
+
+            grid.innerHTML = ''; //limpa o lugar e joga lá
+
+            //se não tiver nada mostra uma mensagem falando que não tem nada
+            if (lista.length === 0) {
+                mensagem.style.display = 'block';
+                return;
+            }
+
+            mensagem.style.display = 'none';
+
+            //vai criar card por card, o js é bem chatin mas compensa na hora de fazer mais cards
+            lista.forEach(livro => {
+
+                //vão ser inseridos os dados como nome, imagem, link, faixa de preço e etc
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div class="card-img-wrapper">
+                        <img src="${livro.imagem}" alt="${livro.titulo}">
+                        <div class="detalhes-hover">
+                            <p><strong>${livro.titulo}</strong></p>
+                            <p>R$ ${livro.preco.toFixed(2)}</p>
+                            <a href="${livro.link}" class="botao-detalhes">Ver detalhes</a>
+                        </div>
+                    </div>
+                    <p class="text">${livro.titulo}</p>
+                    <p class="autor-card">${livro.autor}</p>
+                    <p class="preco-card">R$ ${livro.preco.toFixed(2)}</p>
+                    <p class="categoria-card">${livro.categoria} ${livro.faixaPreco}</p>
+                `;
+                grid.appendChild(card); //só encaixa os cards no grid
+            });
+        }
+
+        //pega genero, autor, faixa preço e filtra(obviamente)
+        function filtrarLivros() {
+            const categoria = document.getElementById('filtro-categoria').value;
+            const autor = document.getElementById('filtro-autor').value;
+            const preco = document.getElementById('filtro-preco').value;
+
+            let livrosFiltrados = livros.filter(livro => {
+                const passaCategoria = !categoria || livro.categoria === categoria; //se a pessoa não escolher uma categoria não muda nada e se escolher vai comparar
+                const passaAutor = !autor || livro.autor.toLowerCase() === autor.toLowerCase(); //mesma coisa só que com os autores
+                const passaPreco = !preco || livro.faixaPreco === preco; //meu filtro favorito, compara os preços e te mostra os mais baratin ou caros se vocÊ tiver dinheiro
+
+                return passaCategoria && passaAutor && passaPreco; //se o livro passar por eles, ele continua na tela
+            });
+
+            renderizarLivros(livrosFiltrados); //recarrega tudo de novo
+        }
+
+        //ele zera os selects e mostra tudo de novo
+        function limparFiltros() {
+            document.getElementById('filtro-categoria').value = '';
+            document.getElementById('filtro-autor').value = '';
+            document.getElementById('filtro-preco').value = '';
+            renderizarLivros();
+        }
+        //cada vez que tu mexer no filtro, vai recalcular tudo de novo
+        document.getElementById('filtro-categoria').addEventListener('change', filtrarLivros);
+        document.getElementById('filtro-autor').addEventListener('change', filtrarLivros);
+        document.getElementById('filtro-preco').addEventListener('change', filtrarLivros);
+
+        renderizarLivros(); //chama a função principal no inicio
+    </script>
+</body>
+
+</html>
