@@ -216,8 +216,6 @@ nav {
       border: none;
 }
 
-
-
 .categorias {
   display: flex;
   justify-content: center;
@@ -244,15 +242,20 @@ nav {
   padding: 40px 110px;
 }
 
-.sessao {
-  padding: 10px 110px;
+.sessao-grid {
+  padding: 20px;
 }
 
+.sessao {
+  position: relative;
+    padding: 10px 110px;
+}
 
 .sessao h3 {
   font-size: 40px;
   margin-bottom: 20px;
   color: #ffffff;
+  display: inline-block;
 }
 
 .carrossel-container {
@@ -583,6 +586,123 @@ nav {
 }
 
 
+
+.botao-veja {
+  position: absolute;
+  top: 20px; /* Ajuste conforme necessário */
+  right: 110px; /* Mesmo padding lateral da sessão */
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: color 0.3s ease; /* Suaviza a mudança de cor */
+  background: none; /* Remove o fundo */
+  border: 2px solid transparent; /* Opcional: para manter estrutura */
+}
+
+
+
+.botao-veja:hover {
+  color: var(--cor_fundo);
+}
+
+/* grade dos livros */
+.livros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 25px;
+}
+
+.livros-grid .card {
+  background: none;
+  border: none;
+  text-align: center;
+}
+
+.livros-grid .card img {
+  width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  transition: transform 0.3s;
+}
+
+.livros-grid .card img:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+/* --- Paginas carrosel css --- */
+.livros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  margin-top: 30px;
+  padding: 10px 0;
+}
+
+.livros-grid .card {
+  background: none;
+  border: none;
+  text-align: center;
+  width: 220px;
+  transition: transform 0.3s ease;
+}
+
+.livros-grid .card-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 0; 
+}
+
+.livros-grid .card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.livros-grid .detalhes-hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.livros-grid .card-img-wrapper:hover .detalhes-hover {
+  opacity: 1;
+}
+
+.livros-grid .botao-detalhes {
+  margin-top: 8px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.livros-grid .botao-detalhes:hover {
+  background: var(--cor_fundo2);
+  border-color: var(--cor_fundo2);
+}
+
 footer {
   background-color: var(--cor_fundo);
   padding: 40px 20px;
@@ -636,51 +756,9 @@ footer p {
 }
 
 .conteudo {
-      max-width: 1200px;
-      margin: auto;
-      padding:  20px;
-    }
-
-    .produto {
-      display: flex;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-
-    .produto img {
-      width: 250px;
-      border-radius: 10px;
-    }
-
-    .info {
-      max-width: 600px;
-    }
-
-    .info h2 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-
-    .preço {
-      font-size: 24px;
-      color: #8502d2;
-      margin: 10px 0;
-    }
-
-    .compra_botao {
-      background-color:  var(--cor_fundo);
-      color: #fff;
-      border: none;
-      padding: 12px 25px;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: transform 0.3s;
-      
-    }
-
-    .compra_botao:hover {
-  transform: scale(1.05);
+  max-width: 1200px;
+  margin-left: 100px;
+  padding: 20px;
 }
 
     .detalhes {
@@ -803,53 +881,216 @@ footer p {
   display:flex;
 }
 
-.star-icon{
-  list-style-type:none;
-  border: 1px solid #121212;
-  cursor:pointer;
-  color: #FFE500;
+.principal img {
+  margin-top: 25px;
+  width: 500px;
+  border-radius: 10px;
+}
+
+.todas_imagens {
+  display: flex;
+}
+
+.img_lado img {
+  width: 230px;
+  margin-left: 20px;
+  margin-top: 32px;
+  border-radius: 7px;
+}
+
+.img1:hover {
+  transform: scale(1.1);
+}
+
+.img2 {
+  margin-top: 10px;
+}
+
+.img2:hover {
+  transform: scale(1.1);
+}
+
+.info {
+  max-width: 600px;
+  margin-left: 90px;
+  margin-top: 10px;
+}
+
+.info h2 {
   font-size: 25px;
+  margin-bottom: 2px;
+  color: #ffffff;
 }
 
-.star-icon::before{
-  content:"\2605"; /*código das estrelinhas, cheia*/
+.autor_nome p {
+  font-size: 5px;
+  margin-top: 5px;
+  color: #ffffff49;
 }
 
-.star-icon.ativo ~ .star-icon::before{
-  content:"\2606"; /*código das estrelinhas, vazia*/
+.info h3 {
+  font-size: 17px;
+  margin-bottom: 2px;
+  color: #ffffff;
 }
 
-.avaliacao:hover .star-icon::before{
-  content:"\2605"/*código das estrelinhas, cheia*/
+h1 {
+  display: flex;
+  font-size: 50px;
 }
 
-.star-icon:hover ~ .star-icon::before{
+.grande {
+  font-size: 70px;
+}
+
+.preço {
+  font-size: 50px;
+  color: #fac904;
+  margin: 10px 0;
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.compra_botao {
+  background-color: var(--cor_fundo);
+  color: #fff;
+  border: none;
+  padding: 25px 150px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin-top: 40px;
+}
+
+.compra_botao:hover {
+  background-color: var(--cor_fundo2);
+}
+
+.detalhes1 {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #ccc;
+  display: flex;
+  gap: 30px;
+}
+
+.detalhes1 img {
+  margin-top: 5px;
+}
+
+.detalhes2 img {
+  margin-top: 5px;
+}
+
+.detalhes2 {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+  display: flex;
+  gap: 30px;
+}
+
+.description h3 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.recomendações {
+  margin-top: 40px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.recomendações h3 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.recomendações .items {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.recomendações img {
+  width: 200px;
+  height: 300px;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+
+/*parte da avaliação, estrelinhas*/
+.avaliacao {
+  display: flex;
+}
+
+.star-icon {
+  list-style-type: none;
+  border: 1px solid #121212;
+  cursor: pointer;
+  color: #ffe500;
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+.estrelinha_texto {
+  display: flex;
+}
+
+.estrelinha_texto h4 {
+  font-size: 10px;
+  margin-top: 34px;
+  margin-left: 5px;
+  color: #fac904; /*#ffea2b*/
+}
+
+.star-icon::before {
+  content: "\2605"; /*código das estrelinhas, cheia*/
+}
+
+.star-icon.ativo ~ .star-icon::before {
+  content: "\2606"; /*código das estrelinhas, vazia*/
+}
+
+.avaliacao:hover .star-icon::before {
+  content: "\2605"; /*código das estrelinhas, cheia*/
+}
+
+.star-icon:hover ~ .star-icon::before {
   content: "\2606"; /*código das estrelinhas, vazia*/
 }
 
 /*Coração, favoritar*/
-
- label{ 
-  cursor: pointer; 
+label {
+  cursor: pointer;
 }
 
-#coracao { 
+#coracao {
   display: none; /*Esconde o checkbox, deixando só visível o coração*/
   margin-left: 5px;
 }
-        
-#coracao:checked+label>svg { /*Vai aplicar os estilos, apenas se o checkbox estiver marcado*/
+
+#coracao:checked + label > svg {
+  /*Vai aplicar os estilos, apenas se o checkbox estiver marcado*/
   animation: preencher; /*Define o nome da animação*/
   animation-duration: 0.5s;
   animation-fill-mode: forwards; /*Mantém o último estado da animação*/
 }
-        
-@keyframes preencher { /*Define como o coração será preenchido*/
+
+@keyframes preencher {
+  /*Define como o coração será preenchido*/
   0% {
-  fill: transparent; /*Começa transparente*/
+    fill: transparent; /*Começa transparente*/
   }
   100% {
-  fill: #ffffff; /*Pra termina preenchido*/
+    fill: #ffffff; /*Pra termina preenchido*/
   }
 }
    

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -13,17 +14,17 @@
   <div class="container">
     <nav class="nav-topo">
         <div class="logo-nav">
-           <a href="index.html">
-            <img src="./images/violet_logo.png" alt="Logo da Violet" class="logo-img">
+           <a href="../index.html">
+            <img src="../images/violet_logo.png" alt="Logo da Violet" class="logo-img">
            </a>
         </div>
         <div class="barra-pesquisa">
           <input type="text" placeholder="Buscar livros, autores..." class="search-bar">
         </div>
       <div class="imagens">
-        <a href="../editora_violet/paginas_topo/perfil.html"><img src="./images/user.png" alt="Perfil"></a>
-        <a href="../editora_violet/paginas_topo/wish2.html"><img src="./images/heart.png" alt="Favoritos"></a>
-        <a href="#"><img src="./images/shopping-bag.png" alt="Carrinho"></a>
+        <a href="../editora_violet/paginas_topo/perfil.html"><img src="../images/user.png" alt="Perfil"></a>
+        <a href="../editora_violet/paginas_topo/wish2.html"><img src="../images/heart.png" alt="Favoritos"></a>
+        <a href="#"><img src="../images/shopping-bag.png" alt="Carrinho"></a>
       </div>
     </nav>
   </div>
@@ -36,29 +37,42 @@
     <a href="#">Livros</a>
     <a href="#">Pré-venda</a>
     <a href="#">Lançamentos</a>
-    <a href="./paginas_topo/wish2.html">Wishlist</a>
+    <a href="../paginas_topo/wish2.html">Wishlist</a>
     <a href="#">Meus pedidos</a>
   </div>
 </main>
 
   <div class="conteudo">
     <div class="produto">
-      <img src="../images/livros/20mil.jpg">
-
-      <div class="info">
-
-<div class="coracao-para-nomesG">
-        <input type="checkbox" id="coracao" /> <!--Cria uma caixinha de marcar(checkbox), O id="coracao" ele relaciona o checkbox com o <label> -->
-    <label for="coracao">  <!--Como o label está vinculado ao input pelo atributo for="coracao",quando o usuário clicar no conteúdo do label ele vai marcar ou desmarcar o checkbox  -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ffffff">  <!-- O SVG é o desenho do coração, tendo atributos, width e height definem o tamanho do ícone, viewBox  é a área do desenho do ícone, fill="none" que é sem preenchimento, stroke que é a cor da linha -->
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />  <!-- O path é o caminho vetorial que desenha o coração -->
-        </svg>
-    </label>
+      <div class="todas_imagens">
+       <div class="principal">
+        <img src="../images/livros/20mil.jpg">
+       </div>
+         <div class="img_lado">
+          <img class="img1" src="../images/livros/20mil1.jpeg" >
+         <div class="img2">
+          <img  src="../images/livros/20mil2.jpeg" >
+         </div>
       </div>
 
-        <h1>20 mil léguas submarinas: edição <br> bolso de luxo </h1>
-		<h2 style="font-size: 18px"> por Jules Verne  </h2>
 
+      <div class="info">
+      <div class="coracao-para-nomesG">
+        <input type="checkbox" id="coracao" /> <!--Cria uma caixinha de marcar(checkbox), O id="coracao" ele relaciona o checkbox com o <label> -->
+        <label for="coracao">  <!--Como o label está vinculado ao input pelo atributo for="coracao",quando o usuário clicar no conteúdo do label ele vai marcar ou desmarcar o checkbox  -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ffffff">  <!-- O SVG é o desenho do coração, tendo atributos, width e height definem o tamanho do ícone, viewBox  é a área do desenho do ícone, fill="none" que é sem preenchimento, stroke que é a cor da linha -->
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />  <!-- O path é o caminho vetorial que desenha o coração -->
+          </svg>
+        </label>
+      </div>
+
+        <h1>20 mil léguas submarinas </h1>
+        <p style="font-size: 20px " style="color: rgba(255, 255, 255, 0.623);"> Capa dura – 13 novembro 2014</p>
+        <div class="autor_nome">
+		     <p style="font-size: 15px " > por Jules Verne (Autor), André Telles (Tradutor) </p>
+        </div>
+
+      <div class="estrelinha_texto">
         <ul class="avaliacao">
           <li class="star-icon ativo" data-avaliacao="1"></li>
           <li class="star-icon" data-avaliacao="2"></li>
@@ -66,33 +80,37 @@
           <li class="star-icon" data-avaliacao="4"></li>
           <li class="star-icon" data-avaliacao="5"></li>
         </ul>
+        <h4>(4,9)</h4>
+
+      </div>
 
         <p class="preço" >R$ 50,71</p>
         <button id="compra_botao" class="compra_botao"><h2>Comprar</h2></button>
 
-        <div class="detalhes">
-          <h3><strong>Gênero:</strong> Ação</h3>
-          <h3><strong>Idioma:</strong> Português</h3>
-		  <h3><strong>Editora:</strong> Clássicos Zahar</h3>
-		  <h3><strong>Data da publicação:</strong> 13 novembro 2014</h3>
-          <h3><strong>Páginas:</strong> 504</h3>
-		  <h3><strong>Classificação Indicativa:</strong> 16 anos</h3>
-          <h3><strong>Dimensões:</strong>17.6 x 12.4 x 3 cm</h3>
-          <h3><strong>Peso:</strong> 764g</h3>
-          <h3><strong>Acabamento:</strong> Brochura</h3>
-          
+        <div class="detalhes1">
+          <h3 ><strong>Gênero</strong><img style="margin-left: 15px;" src="../images/documento.png" alt="genero"></i> <br> Ação</h3>
+          <h3 ><strong>Idioma</strong> <img style="margin-left: 15px;" src="../images/mundo.png" alt="idioma"> Português</h3>
+		      <h3><strong>Editora</strong><img style="margin-left: 15px;" src="../images/construcao.png" alt="editora"> <br> Clássicos Zahar</h3>
+          <h3><strong>Dimensões</strong><img style="margin-left: 15px;" src="../images/marcador-de-livro (1).png" alt="dimensao"> <br >17.6 x 12.4 x 3 cm</h3>
+          <h3><strong>Páginas</strong><img style="margin-left: 15px;" src="../images/book-alt.png" alt="paginas"> <br >504</h3>
+        </div>
+
+        <div class="detalhes2">
+          <h3><strong>Peso</strong><br><img style="margin-left: 5px;" src="../images/camadas.png" alt="peso"> <br>764g</h3>
+		       <h3><strong>Classificação Indicativa</strong> <br> <img style="margin-left: 5px;" src="../images/usuarios-alt.png" src="../images/usuarios-alt.png" alt="classe"><br> 16 anos</h3>
+        </div>  
         </div>
       </div>
     </div>
 
-    <div class="description">
-    <br>  <h3>Descrição</h3>
+      <div class="description">
+        <br>  <h3>Descrição</h3>
 	
-      <p style="text-align:justify">Jules Verne ajudou a criar um novo gênero literário, a ficção científica, e seus livros tinham um traço premonitório. Muitas das invenções humanas posteriores foram antecipadas em suas páginas. <br>
-        Resgatados do mar e feitos prisioneiros pelo enigmático capitão Nemo, o professor Aronnax, seu fiel ajudante e o exímio arpoador Ned Land passam a viver a bordo do prodigioso submarino Náutilus. <br>
-        Navegando águas remotas, lançando-se em ousadas caminhadas pelo fundo do mar, enfrentando criaturas das profundezas, esses homens viverão emoções conflituosas e descobrirão a exuberância da flora e da fauna marinhas, numa inesquecível viagem por 20 mil léguas submarinas!</p>
+         <p style="text-align:justify">Jules Verne ajudou a criar um novo gênero literário, a ficção científica, e seus livros tinham um traço premonitório. Muitas das invenções humanas posteriores foram antecipadas em suas páginas. <br>
+          Resgatados do mar e feitos prisioneiros pelo enigmático capitão Nemo, o professor Aronnax, seu fiel ajudante e o exímio arpoador Ned Land passam a viver a bordo do prodigioso submarino Náutilus. <br>
+          Navegando águas remotas, lançando-se em ousadas caminhadas pelo fundo do mar, enfrentando criaturas das profundezas, esses homens viverão emoções conflituosas e descobrirão a exuberância da flora e da fauna marinhas, numa inesquecível viagem por 20 mil léguas submarinas!</p>
 
-    </div>
+      </div>
 
     <div class="recomendações">
       <h3>Veja também:</h3>
@@ -121,12 +139,13 @@
       </div>
     </div>
   </div>
+
   
-   <footer>
+  <footer>
   <div class="footer-container">
     <div class="logo">
            <a href="index.html">
-            <img src="./images/violet_logo.png" alt="Logo da Violet" class="logo-img">
+            <img src="../images/violet_logo.png" alt="Logo da Violet" class="logo-img">
            </a>
         </div>
     <ul>
@@ -140,10 +159,10 @@
     </ul>
 
     <div class="redes-sociais">
-      <a href="#"><img src="./images/facebook-app-symbol.png" alt="Facebook"></a>
-      <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
-      <a href="#"><img src="./images/twitter.png" alt="Twitter"></a>
-      <a href="#"><img src="./images/youtube.png" alt="YouTube"></a>
+      <a href="#"><img src="../images/facebook-app-symbol.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com/violet.editora.ofc/"><img src="../images/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="../images/twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="../images/youtube.png" alt="YouTube"></a>
     </div>
 
     <p>&copy; 2025 Violet. Todos os direitos reservados.</p>

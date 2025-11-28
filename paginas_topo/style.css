@@ -2,35 +2,56 @@
 
 
 :root {
-  --cor_fundo: #7104b1;
-  --cor_fundo2:#8502d2;
-  --cor_fundo3: #c672fa;
-  --cor_fundo4: #d5b2f7;
+  --cor_fundo: #ffffff;
+  --cor_fundo2:#ffffff;
+  --cor_fundo3: #eac8ff;
+  --cor_fundo4: #a24df7;
   --fontes: #ffffff; 
-  --fontes_efeito: #ffccff;
+  --fontes_efeito: #ff3fff;
   --categorias: #1f1f1f;
   --fonte_escura: #2c143b;
-
-
-  
 }
 
 *{
-    margin: 0;
+    margin-right: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
 }
 body{
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
-    min-height: 100vh;
+    min-height: 85vh;
     background: var(--cor_fundo2);
+    margin-right: 220px;
 }
+
+.form-image{
+    width: 60%;
+    height: 100%;
+   justify-content: left;
+   background-color: #000;
+   margin-right: 100px;
+   margin-bottom: 100px;
+
+}
+
+.form-image img{
+    width: 74%;
+    height: 80%;
+    margin-top: 0;
+}
+
+.card {
+    height: 5rem;
+
+}
+
+
 .login-box{
     display: flex;
-    justify-content: center;
+    justify-content: right;
     flex-direction: column;
     width: 440px;
     height: 480px;

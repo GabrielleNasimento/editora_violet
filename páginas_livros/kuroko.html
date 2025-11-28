@@ -44,22 +44,35 @@
 
   <div class="conteudo">
     <div class="produto">
-      <img src="../images/livros/kuroku.jpg" alt="kuroko">
-
-      <div class="info">
-
-        <div class="coracao-para-nomesG">
-        <input type="checkbox" id="coracao" /> <!--Cria uma caixinha de marcar(checkbox), O id="coracao" ele relaciona o checkbox com o <label> -->
-    <label for="coracao">  <!--Como o label está vinculado ao input pelo atributo for="coracao",quando o usuário clicar no conteúdo do label ele vai marcar ou desmarcar o checkbox  -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ffffff">  <!-- O SVG é o desenho do coração, tendo atributos, width e height definem o tamanho do ícone, viewBox  é a área do desenho do ícone, fill="none" que é sem preenchimento, stroke que é a cor da linha -->
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />  <!-- O path é o caminho vetorial que desenha o coração -->
-        </svg>
-    </label>
+      <div class="todas_imagens">
+       <div class="principal">
+        <img src="../images/livros/kuroku.jpg">
+       </div>
+         <div class="img_lado">
+          <img class="img1" src="../images/livros/kuroko1.jpg" >
+         <div class="img2">
+          <img  src="../images/livros/kuroko2.jpg" >
+         </div>
       </div>
 
-        <h1>Kuroko no Basket - Vol. 1</h1>
-		<h2 style="font-size: 18px"> por Tadatoshi Fujimaki </h2>
 
+      <div class="info">
+      <div class="coracao-para-nomesG">
+        <input type="checkbox" id="coracao" /> <!--Cria uma caixinha de marcar(checkbox), O id="coracao" ele relaciona o checkbox com o <label> -->
+        <label for="coracao">  <!--Como o label está vinculado ao input pelo atributo for="coracao",quando o usuário clicar no conteúdo do label ele vai marcar ou desmarcar o checkbox  -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ffffff">  <!-- O SVG é o desenho do coração, tendo atributos, width e height definem o tamanho do ícone, viewBox  é a área do desenho do ícone, fill="none" que é sem preenchimento, stroke que é a cor da linha -->
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />  <!-- O path é o caminho vetorial que desenha o coração -->
+          </svg>
+        </label>
+      </div>
+
+        <h1>Kuroko no Basket</h1>
+        <p style="font-size: 20px " style="color: rgba(255, 255, 255, 0.623);"> Capa dura – 12 de maio 2008</p>
+        <div class="autor_nome">
+		     <p style="font-size: 15px " > por Tadatoshi Fushimaki (Autor)</p>
+        </div>
+
+      <div class="estrelinha_texto">
         <ul class="avaliacao">
           <li class="star-icon ativo" data-avaliacao="1"></li>
           <li class="star-icon" data-avaliacao="2"></li>
@@ -67,21 +80,25 @@
           <li class="star-icon" data-avaliacao="4"></li>
           <li class="star-icon" data-avaliacao="5"></li>
         </ul>
+        <h4>(4,9)</h4>
 
-        <b><p class="preço">R$ 35,00</p></b>
+      </div>
+
+        <p class="preço" >R$ 35,00</p>
         <button id="compra_botao" class="compra_botao"><h2>Comprar</h2></button>
 
-        <div class="detalhes">
-          <h3><strong>Gênero:</strong> Esporte, Shõnen</h3>
-          <h3><strong>Idioma:</strong> Português</h3>
-		  <h3><strong>Editora:</strong> Panini</h3>
-		  <h3><strong>Data da publicação:</strong> Julho de 2014</h3>
-          <h3><strong>Páginas:</strong> 200</h3>
-		  <h3><strong>Classificação Indicativa:</strong> 10 anos</h3>
-          <h3><strong>Dimensões:</strong>13.5x 20</h3>
-          <h3><strong>Peso:</strong> 260g</h3>
-          <h3><strong>Acabamento:</strong> Brochura</h3>
-          
+        <div class="detalhes1">
+          <h3 ><strong>Gênero</strong><img style="margin-left: 15px;" src="../images/documento.png" alt="genero"></i> <br> Ação</h3>
+          <h3 ><strong>Idioma</strong> <img style="margin-left: 15px;" src="../images/mundo.png" alt="idioma"> Português</h3>
+		      <h3><strong>Editora</strong><img style="margin-left: 15px;" src="../images/construcao.png" alt="editora"> <br> Panini</h3>
+          <h3><strong>Dimensões</strong><img style="margin-left: 15px;" src="../images/marcador-de-livro (1).png" alt="dimensao"> <br >17.6 x 12.4 x 3 cm</h3>
+          <h3><strong>Páginas</strong><img style="margin-left: 15px;" src="../images/book-alt.png" alt="paginas"> <br >231</h3>
+        </div>
+
+        <div class="detalhes2">
+          <h3><strong>Peso</strong><br><img style="margin-left: 5px;" src="../images/camadas.png" alt="peso"> <br>387g</h3>
+		       <h3><strong>Classificação Indicativa</strong> <br> <img style="margin-left: 5px;" src="../images/usuarios-alt.png" src="../images/usuarios-alt.png" alt="classe"><br> 18 anos</h3>
+        </div>  
         </div>
       </div>
     </div>
