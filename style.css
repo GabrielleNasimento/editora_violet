@@ -1158,3 +1158,176 @@ label {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* --- ESTILOS EXCLUSIVOS - PÁGINA "NOS CONTATE" --- */
+
+/* 1. Cabeçalho (Título e Intro) */
+.contato-header {
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 0 5%;
+}
+
+.contato-header h1 {
+    display: block; 
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+/* Reutilizando o estilo .intro-text da "Sobre Nós" */
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    color: #c0c0c0;
+    line-height: 1.5;
+}
+
+
+.destaqueheader {
+  color: #fac904
+}
+
+/* 2. Container do Formulário (Estilo Full-Width) */
+.contato-formulario-container {
+    background-color: var(--categorias); /* Cor de fundo escura */
+    border-radius: 12px;
+    padding: 30px 40px;
+    
+    /* Padrão Full-Width (Igual ao .sobrenaccordion) */
+    max-width: 100%; 
+    width: 80%; /* Usando 80% para centralizar (10% de padding em cada lado) */
+    margin: 40px auto;
+    
+    border-top: 4px solid var(--cor_fundo); /* Detalhe roxo no topo */
+}
+
+/* 3. Estilização dos Campos do Formulário */
+
+.form-grupo {
+    margin-bottom: 25px; /* Espaço entre os campos */
+}
+
+.form-grupo label {
+    display: block; /* Faz o label ocupar a linha inteira */
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #f0f0f0;
+    margin-bottom: 8px; /* Espaço entre o label e o input */
+}
+
+/* Estilo unificado para inputs e textarea */
+.input-field,
+.contato-formulario-container textarea {
+    width: 100%; /* << A MUDANÇA PRINCIPAL! */
+    padding: 12px 15px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #2a2a2a; /* Fundo do input um pouco mais claro */
+    border: 1px solid #444; /* Borda sutil */
+    border-radius: 8px;
+    box-sizing: border-box; /* Garante que o padding não quebre o layout */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito de Foco (quando clica no campo) */
+.input-field:focus,
+.contato-formulario-container textarea:focus {
+    outline: none;
+    border-color: var(--cor_fundo); /* Borda fica roxa */
+    box-shadow: 0 0 10px rgba(159, 43, 245, 0.5); /* Sombra roxa */
+}
+
+/* 4. Estilização do Botão Enviar */
+.botaoenviar {
+    width: 100%; /* << Botão com largura total */
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: var(--cor_fundo); /* Roxo */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.botaoenviar:hover {
+    background-color: var(--cor_fundo2); /* Roxo mais escuro no hover */
+    transform: scale(1.01); /* Leve zoom */
+}
+
+
+.violet-accordion {
+        max-width: 100%; 
+        margin: 40px auto;
+        font-family:'Segoe UI';
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .accordion-item {
+        background-color: var(--categorias);
+        border-radius: 8px;
+        margin-bottom: 15px;
+        border-left: 4px solid var(--cor_fundo); 
+    }
+  
+    .accordion-trigger {
+        background: none;
+        border: none;
+        width: 100%;
+        text-align: left;
+        padding: 18px 20px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #f0f0f0;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .accordion-trigger::after {
+        content: '+';
+        font-size: 1.5rem;
+        color: #9f2bF5;
+        transition: transform 0.3s ease;
+    }
+
+    .accordion-content {
+        color: #c0c0c0;
+        padding: 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        font-size: 1.2rem;
+    }
+
+    .accordion-item.active .accordion-content {
+        max-height: 500px; 
+        padding-bottom: 20px;
+    }
+
+    .accordion-item.active .accordion-trigger::after {
+        transform: rotate(45deg);
+    }
+    .accordion-item.active .accordion-trigger {
+        color: #fff;
+    }
+
+html {
+    height: 100%;
+}   
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
