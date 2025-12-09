@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
+html, body {
+    height: 100%;
+}
 
 :root {
   --cor_fundo: #ffffff;
@@ -10,6 +13,9 @@
   --fontes_efeito: #ff3fff;
   --categorias: #1f1f1f;
   --fonte_escura: #2c143b;
+
+
+  
 }
 
 *{
@@ -27,27 +33,105 @@ body{
     margin-right: 220px;
 }
 
-.form-image{
-    width: 60%;
-    height: 100%;
-   justify-content: left;
-   background-color: #000;
-   margin-right: 100px;
-   margin-bottom: 100px;
-
+.container {
+    display: flex;
+    
 }
 
-.form-image img{
-    width: 74%;
-    height: 80%;
-    margin-top: 0;
+/* QUADRADO AO LADO DO LOGIN */
+.quadrado {
+    width: 776px;
+    height: 781px;
+    background: #140120;
+    overflow: hidden;  /* permite o carrossel aparecer dentro */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    box-shadow: inset 0 0 1000px ;
+}
+
+.quadrado::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 661px;
+    height: 760px;
+    background: rgba(0, 0, 0, 0.55); /* AQUI ESCURECE */
+    pointer-events: none;
+    z-index: 5;
+}
+
+.megacarrosel{
+  margin-top: 340px;
+  
+  
+}
+
+
+.carousel1{
+    margin-top: -100px;
+    width: 100%;
+    display:flex;
+    overflow-x: auto;
+    
+}
+
+.carousel{
+    margin-top: -440px;
+    width: 100%;
+    display:flex;
+    overflow-x: auto;
+    
+}
+
+.carousel2{
+    margin-top: 300px;
+    width: 100%;
+    display:flex;
+    overflow-x: auto;
+    
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.grupo{
+    display:flex;
+    align-items: left;
+    gap: 1em;
+    animation: spin 5s infinite linear;
+    padding-right: 1em;
+   
 }
 
 .card {
-    height: 5rem;
-
+    flex: 0 0 130px;
+    height: 12rem;
+    padding: 0rem;
+    background: #2c143b;
+    font-size: 3rem;
+    border-radius:5px;
+    text-align: center;
+    align-content: center;
+    overflow: hidden;
+    
 }
 
+.card-imagem{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta a imagem sem deformar */
+  display: block;
+  
+  
+}
+
+@keyframes spin{
+    from {translate: 0;}
+    to{translate: -100%;}
+}
 
 .login-box{
     display: flex;
@@ -56,6 +140,8 @@ body{
     width: 440px;
     height: 480px;
     padding: 30px;
+    margin-left: 200px;
+    margin-top: 60px;
 }
 .login-header{
     text-align: center;

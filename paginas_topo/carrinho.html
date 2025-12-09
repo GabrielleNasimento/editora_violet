@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Violet - Pré Venda</title>
+  <link rel="stylesheet" href="../style.css">
+
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav class="nav-topo">
+        <div class="logo-nav">
+          <a href="../index.html">
+            <img src="../images/Violet_logo.png" alt="Logo da Violet" class="logo-img">
+          </a>
+        </div>
+
+<div class="barra-pesquisa">
+  <input type="text" placeholder="Buscar livros, autores..." class="search-bar" id="searchInput">
+  <ul id="sugestoes" class="sugestoes-lista"></ul>
+</div>
+
+        <div class="imagens">
+          <a href="../paginas_topo/perfil.html"><img src="../images/user.png" alt="Perfil"></a>
+          <a href="../paginas_topo/wish2.html"><img src="../images/heart.png" alt="Favoritos"></a>
+          <a href="#"><img src="../images/shopping-bag.png" alt="Carrinho"></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <style>
+    /* ----- RESET ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: #fff;
+    }
+
+    /* ----- HEADER SIMPLES ----- */
+    #crt-header-main {
+      width: 100%;
+      padding: 20px 40px;
+      background: #090909;
+      border-bottom: 1px solid #222;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #crt-header-main h1 {
+      font-size: 26px;
+      color: #b76bff;
+    }
+
+    #crt-header-main a {
+      text-decoration: none;
+      color: #fff;
+      opacity: .7;
+      font-size: 15px;
+    }
+    #crt-header-main a:hover {
+      opacity: 1;
+    }
+
+    /* ----- CONTAINER PRINCIPAL ----- */
+    #crt-wrapper {
+      width: 100%;
+      max-width: 1200px;
+      margin: 40px auto;
+      display: flex;
+      gap: 40px;
+      padding: 0 20px;
+      flex-wrap: wrap;
+    }
+
+    /* ----- LISTA DE ITENS ----- */
+    #crt-items-box {
+      flex: 2;
+      background: #131313;
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid #222;
+    }
+
+    #crt-items-box h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .crt-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1a1a1a;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #262626;
+    }
+
+    .crt-item img {
+      width: 70px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .crt-item-info {
+      flex: 1;
+      margin-left: 20px;
+    }
+
+    .crt-item-info h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .crt-item-info p {
+      opacity: .7;
+      font-size: 14px;
+    }
+
+    .crt-item-price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #c69cff;
+    }
+
+    .crt-remove-btn {
+      background: transparent;
+      border: none;
+      color: #ff6b6b;
+      font-size: 14px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    /* ----- RESUMO DO PEDIDO ----- */
+    #crt-summary-box {
+      flex: 1;
+      background: #131313;
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid #222;
+      height: fit-content;
+      min-width: 300px;
+    }
+
+    #crt-summary-box h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .crt-summary-line {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      font-size: 15px;
+      opacity: .85;
+    }
+
+    .crt-summary-total {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    #crt-btn-finish {
+      margin-top: 25px;
+      width: 100%;
+      padding: 14px 0;
+      background: #a020f0;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      color: #fff;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    #crt-btn-finish:hover {
+      background: #b244ff;
+    }
+
+    /* ----- RESPONSIVIDADE ----- */
+    @media (max-width: 850px) {
+      #crt-wrapper {
+        flex-direction: column;
+      }
+
+      .crt-item {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .crt-item-info {
+        margin: 15px 0;
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="crt-header-main">
+    <h1>Seu Carrinho</h1>
+    <a href="../index.html">Voltar ao início</a>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main id="crt-wrapper">
+
+    <!-- LISTA DE ITENS -->
+    <section id="crt-items-box">
+      <h2>Itens no carrinho</h2>
+
+      <!-- ITEM 1 -->
+      <div class="crt-item" data-price="109.90">
+        <img src="../images/livros/monster.jpg" alt="Livro">
+        <div class="crt-item-info">
+          <h3>Monster – Volume 1</h3>
+          <p>Capa dura • Naoki Urasawa</p>
+          <button class="crt-remove-btn" onclick="removeItem(this)">Remover</button>
+        </div>
+        <div class="crt-item-price">R$ 109,90</div>
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="crt-item" data-price="79.90">
+        <img src="../images/livros/mulher_absolute.jpg" alt="Livro">
+        <div class="crt-item-info">
+          <h3>Absolute Mulher-Maravilha 01</h3>
+          <p>Edição Especial</p>
+          <button class="crt-remove-btn" onclick="removeItem(this)">Remover</button>
+        </div>
+        <div class="crt-item-price">R$ 79,90</div>
+      </div>
+
+    </section>
+
+    <!-- RESUMO -->
+    <aside id="crt-summary-box">
+      <h2>Resumo do Pedido</h2>
+
+      <div class="crt-summary-line">
+        <span>Subtotal</span>
+        <span id="crt-subtotal">R$ 0,00</span>
+      </div>
+
+      <div class="crt-summary-line">
+        <span>Frete</span>
+        <span id="crt-frete">R$ 14,90</span>
+      </div>
+
+      <div class="crt-summary-total">
+        <span>Total</span>
+        <span id="crt-total">R$ 0,00</span>
+      </div>
+
+      <button id="crt-btn-finish">Finalizar Compra</button>
+    </aside>
+
+  </main>
+
+  <script>
+    function updateTotal() {
+      let items = document.querySelectorAll(".crt-item");
+      let subtotal = 0;
+
+      items.forEach(item => {
+        subtotal += parseFloat(item.getAttribute("data-price"));
+      });
+
+      document.getElementById("crt-subtotal").innerText = 
+        "R$ " + subtotal.toFixed(2).replace('.', ',');
+
+      let frete = 14.90;
+      let total = subtotal + frete;
+
+      document.getElementById("crt-total").innerText = 
+        "R$ " + total.toFixed(2).replace('.', ',');
+    }
+
+    function removeItem(btn) {
+      let item = btn.parentElement.parentElement;
+      item.remove();
+      updateTotal();
+    }
+
+    updateTotal();
+  </script>
+
+</body>
+</html>

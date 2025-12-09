@@ -3,39 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solo leveling - Violet</title>
+  <title> Your Name - Violet</title>
     <link rel="stylesheet" href="../style.css">
  
 </head>
 <body>
     
 <header>
-    <div class="container">
+  <div class="container">
     <nav class="nav-topo">
-        <div class="logo-livros">
-           <a href="../index.html">
+        <div class="logo-nav">
+           <a href="index.html">
             <img src="../images/violet_logo.png" alt="Logo da Violet" class="logo-img">
            </a>
         </div>
         <div class="barra-pesquisa">
           <input type="text" placeholder="Buscar livros, autores..." class="search-bar">
         </div>
-
-
-        <!-- Essa é as imagens que ficam na parte de cima -->
-       <div class="imagens">
-        <a href="../index.html"></a>
-        <a href="../paginas_topo/perfil.html"><img src="../images/user.png" alt="Perfil"></a>
-        <a href="../paginas_topo/wish2.html"><img src="../images/heart.png" alt="Favoritos"></a>
-        <a href="#"><img src="../images/shopping-bag.png" alt="Carrinho"></a>
-
-        <!-- Essa parte é as linhas do menu, na responsividade -->
-        <div class="btn-menu-mob" id="btn-menu-mob">
-          <div class="line-menumob-1"></div>
-          <div class="line-menumob-2"></div>
-          <div class="line-menumob-3"></div>
-        </div>
-
+      <div class="imagens">
+        <a href="../editora_violet/paginas_topo/perfil.html"><img src="./images/user.png" alt="Perfil"></a>
+        <a href="../editora_violet/paginas_topo/wish2.html"><img src="./images/heart.png" alt="Favoritos"></a>
+        <a href="#"><img src="./images/shopping-bag.png" alt="Carrinho"></a>
       </div>
     </nav>
   </div>
@@ -45,11 +33,10 @@
 <main>
   <div class="opcoes">
     <a href="#">Autores</a>
-    <a href="#">Editora</a>
     <a href="#">Livros</a>
     <a href="#">Pré-venda</a>
     <a href="#">Lançamentos</a>
-    <a href="#">Wishlist</a>
+    <a href="./paginas_topo/wish2.html">Wishlist</a>
     <a href="#">Meus pedidos</a>
   </div>
 </main>
@@ -99,16 +86,20 @@
         <p class="preço" >R$ 39,70  </p>
         <p style="font-size: 15px "> ou <span style="color: #fac904;">4x</span> de <span style="color: #fac904;">R$ 29,98</span> sem juros no PIX</p>
         <button id="compra_botao" class="compra_botao"><h2>Comprar</h2></button>
-        <div class="detalhes">
-          <p><strong>Gênero:</strong> Shounen</p>
-          <p><strong>Idioma:</strong> Português</p>
-		  <p><strong>Editora:</strong> NewPop</p>
-		  <p><strong>Data da publicação:</strong> 24 agosto 2020</p>
-         <p><strong>Páginas:</strong> 320</p>
-		 <p><strong>Classificação Indicativa:</strong> 16 anos</p>
-          <p><strong>Dimensões:</strong>20.8x14.2</p>
-          <p><strong>Peso:</strong> 500g</p>
-          <p><strong>Acabamento:</strong> Brochura</p>
+         <div class="detalhes1">
+           <h3 ><strong>Gênero</strong><img style="margin-left: 15px;" src="../images/documento.png" alt="genero"></i> <br> Shounen</h3>  
+           <h3 ><strong>Idioma</strong> <img style="margin-left: 15px;" src="../images/mundo.png" alt="idioma"> <br> Português</h3>
+		       <h3><strong>Editora</strong><img style="margin-left: 15px;" src="../images/construcao.png" alt="editora"> <br>NewPop</h3>
+		       <h3><strong>Dimensões</strong><img style="margin-left: 15px;" src="../images/marcador-de-livro (1).png" alt="dimensao"> <br > 20.8x14.2</h3>
+           <h3><strong>Páginas</strong><img style="margin-left: 15px;" src="../images/book-alt.png" alt="paginas"> <br > 320</h3>
+         </div>
+
+         <div class="detalhes2">
+          
+          <h3><strong>Peso</strong><br><img style="margin-left: 5px;" src="../images/camadas.png" alt="peso"> <br> 500g</h3>
+		      <h3><strong>Classificação Indicativa</strong> <br> <img style="margin-left: 5px;" src="../images/usuarios-alt.png" src="../images/usuarios-alt.png" alt="classe"><br> 16 anos</h3>
+          
+
           
         </div>
       </div>
@@ -125,20 +116,44 @@
     <div class="recomendações">
       <h3>Veja também:</h3>
       <div class="items">
-        <a href="./sakamotodays.html"><img src="../images/livros/Sakamoto Days.webp" alt="Sakamoto Days"></a>
-        <a href="./chainsawman.html"><img src="../images/livros/chainsaw.jpg" alt="Chainsaw Man"></a>
-        <a href="./jujustu.html"><img src="../images/livros/jujutsu.webp" alt="Jujutsu Kaisen"></a>
-        <a href="./blackclover.html"><img src="../images/livros/Black clover.webp" alt="Black Clover"></a>
+          
+         <a href="/páginas_livros/ocaraqueestouafim.html">
+        <img src="../images/livros/o cara que eu estou não é um cara.jpg" alt="O cara que estou afim não é um cara" >
+        </a> 
+       
+        <a href="osdoismorrem.html">
+        <img src="../images/livros/os_dois_morrem.jpeg" alt="Os dois morrem no final" >
+        </a> 
+        
+        <a href="melhorfilmes.html">
+        <img src="../images/livros/melhor do que nos filmes.jpg" alt="Melhor do que nos filmes" >
+        </a>
+		
+        <a href="yourname.html">
+        <img src="../images/livros/your_name.jpg" alt="Your name" >
+        </a>
+
+        <a href="diariosdeapotecaria.html">
+        <img src="../images/livros/diariosdeapotecaria.webp" alt="O diário de uma apotecária" >
+        </a>
+
+		
       </div>
     </div>
   </div>
-  <footer>
+  
+  
+   <footer>
   <div class="footer-container">
-    <div class="logo">Violet</div>
+    <div class="logo">
+           <a href="index.html">
+            <img src="./images/violet_logo.png" alt="Logo da Violet" class="logo-img">
+           </a>
+        </div>
     <ul>
-      <li><a href="PoliticaDePrivacidade.html">Política de Privacidade</a></li>
+      <li><a href="./PoliticaDePrivacidade.html">Política de Privacidade</a></li>
       <li><a href="./pol_pag.html">Política de pagamento</a></li>
-      <li><a href="#">Política de cashback</a></li>
+      <li><a href="./PoíticaDeCashback.html">Política de cashback</a></li>
       <li><a href="./trocas_reembolso.html">Trocas e reembolso</a></li>
       <li><a href="#">Sobre nós</a></li>
       <li><a href="#">Fale conosco</a></li>
@@ -146,12 +161,15 @@
     </ul>
 
     <div class="redes-sociais">
-      <a href="#"><img src="../images/facebook-app-symbol.png" alt="Facebook"></a>
-      <a href="#"><img src="../images/instagram.png" alt="Instagram"></a>
-      <a href="#"><img src="../images/twitter.png" alt="Twitter"></a>
-      <a href="#"><img src="../images/youtube.png" alt="YouTube"></a>
+      <a href="#"><img src="./images/facebook-app-symbol.png" alt="Facebook"></a>
+      <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="./images/twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="./images/youtube.png" alt="YouTube"></a>
     </div>
-  </footer>
+
+    <p>&copy; 2025 Violet. Todos os direitos reservados.</p>
+  </div>
+</footer>
 
 
 <script>

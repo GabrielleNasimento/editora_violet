@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Violet - Pré Venda</title>
+  <link rel="stylesheet" href="../style.css">
+
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav class="nav-topo">
+        <div class="logo-nav">
+          <a href="../index.html">
+            <img src="../images/Violet_logo.png" alt="Logo da Violet" class="logo-img">
+          </a>
+        </div>
+
+<div class="barra-pesquisa">
+  <input type="text" placeholder="Buscar livros, autores..." class="search-bar" id="searchInput">
+  <ul id="sugestoes" class="sugestoes-lista"></ul>
+</div>
+
+        <div class="imagens">
+          <a href="../paginas_topo/perfil.html"><img src="../images/user.png" alt="Perfil"></a>
+          <a href="../paginas_topo/wish2.html"><img src="../images/heart.png" alt="Favoritos"></a>
+          <a href="#"><img src="../images/shopping-bag.png" alt="Carrinho"></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <style>
+    /* ======= ESTILO EXCLUSIVO E TOTALMENTE ÚNICO ======= */
+    :root {
+      --pvx-roxo: #541970;
+      --pvx-roxo-escuro: #ffff;
+      --pvx-fundo: #121212;
+      --pvx-branco: #121212;
+      --pvx-sombra: rgba(0, 0, 0, 0.12);
+      --pvx_ativado: #48155f;
+    }
+
+    body#pvx-body-pre-venda {
+      font-family: "Poppins", sans-serif;
+      background: var(--pvx-fundo);
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+
+    /* HERO */
+    section#pvx-hero-section {
+      width: 100%;
+      padding: 60px 20px;
+      background: var(--pvx-branco);
+      text-align: center;
+      box-shadow: 0 4px 20px var(--pvx-sombra);
+    }
+
+    h2#pvx-hero-title {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+      color: var(--pvx-roxo-escuro);
+    }
+
+    p#pvx-hero-subtitle {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* LIVROS */
+    section#pvx-livros-section {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2#pvx-livros-titulo {
+      text-align: center;
+      font-size: 2rem;
+      color: var(--pvx-roxo-escuro);
+      margin-bottom: 30px;
+    }
+
+    #pvx-livros-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .pvx-livro-card {
+      background: var(--pvx-branco);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 4px 16px var(--pvx-sombra);
+      text-align: center;
+      transition: transform .3s;
+    }
+
+    .pvx-livro-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .pvx-livro-img {
+      width: 100%;
+      height: 200px;
+      object-fit:contain;
+      border-radius: 5px;
+    }
+
+    .pvx-livro-titulo {
+      margin-top: 12px;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--pvx-roxo-escuro);
+    }
+
+    .pvx-livro-desc {
+      font-size: .95rem;
+      margin-top: 6px;
+      color: #555;
+      line-height: 1.4rem;
+    }
+
+    .pvx-btn-pre-venda {
+      margin-top: 14px;
+      padding: 10px 16px;
+      border: none;
+      background: var(--pvx-roxo);
+      color: white;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .pvx-btn-pre-venda:hover {
+      background: var(--pvx_ativado);
+    }
+
+    /* MODAL */
+    #pvx-modal-pre-venda {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    #pvx-modal-box {
+      background: var(--pvx-branco);
+      width: 90%;
+      max-width: 400px;
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 4px 20px var(--pvx-sombra);
+    }
+
+    #pvx-modal-title {
+      font-size: 1.4rem;
+      color: var(--pvx-roxo-escuro);
+      margin-bottom: 10px;
+    }
+
+    #pvx-modal-text {
+      margin-bottom: 16px;
+    }
+
+    .pvx-input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .pvx-btn-confirmar {
+      width: 100%;
+      padding: 12px;
+      background: var(--pvx-roxo);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-bottom: 10px;
+      transition: .3s;
+    }
+
+    .pvx-btn-confirmar:hover {
+      background: var(--pvx_ativado);
+    }
+
+    #pvx-btn-fechar {
+      background: #ccc;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body id="pvx-body-pre-venda">
+
+  <!-- HERO -->
+  <section id="pvx-hero-section">
+    <div>
+      <h2 id="pvx-hero-title">Pré-venda Exclusiva</h2>
+      <p id="pvx-hero-subtitle">Garanta agora seu exemplar antes do lançamento oficial!</p>
+    </div>
+  </section>
+
+  <!-- LISTA DE LIVROS -->
+  <section id="pvx-livros-section">
+    <h2 id="pvx-livros-titulo">Livros Disponíveis</h2>
+
+    <div id="pvx-livros-grid">
+
+      <div class="pvx-livro-card" id="pvx-livro-001">
+        <img src="../images/livros/batman_absolute.jpg" class="pvx-livro-img" alt="Capa do Livro 1">
+        <h3 class="pvx-livro-titulo">Absolute Batman 01</h3>
+        <p class="pvx-livro-desc">Prepare-se para o Universo Absolute! Sem a mansão… sem a fortuna… sem o mordomo… tudo o que resta é o Cavaleiro das Trevas absoluto! Começa aqui o novo e arrebatador sucesso de um Batman reimaginado pelas mentes criativas dos autores Scott Snyder e Nick Dragotta! 
+
+No Universo Absolute, os heróis que já conhecemos foram reinventados do zero, com histórias de origem que transformam completamente suas habilidades e circunstâncias, mas preservam as características essenciais que os fãs conhecem e amam há décadas!</p>
+        <button class="pvx-btn-pre-venda" data-pvx-book="Absolute Batman 01">Garantir Pré-venda</button>
+      </div>
+
+      <div class="pvx-livro-card" id="pvx-livro-002">
+        <img src="../images/livros/mao-da..webp" class="pvx-livro-img" alt="Capa do Livro 2">
+        <h3 class="pvx-livro-titulo">Mo Dao Zu Shi: Comics - Volume 04</h3>
+        <p class="pvx-livro-desc">Adaptação em quadrinhos da famosa série de livros de mesmo nome!
+
+No cemitério silencioso há dez anos, está enterrado um caso sangrento que uma vez chocou as grandes famílias. No mundo marcial havia a lenda sobre a Neve Orgulhosa e Geada Fria e Lua Brilhante e Brisa Suave. Hoje em dia não há vestígios da Neve Orgulhosa e Geada Fria restando apenas um suspiro. E o assassino que todos temem e evitam mencionar, afinal foi capturado e executado ou ainda está à solta?</p>
+        <button class="pvx-btn-pre-venda" data-pvx-book="Mo Dao Zu Shi: Comics - Volume 04">Garantir Pré-venda</button>
+      </div>
+
+      <div class="pvx-livro-card" id="pvx-livro-003">
+        <img src="../images/livros/mulher_absolute.jpg" class="pvx-livro-img" alt="Capa do Livro 3">
+        <h3 class="pvx-livro-titulo">Absolute Mulher-Maravilha 01</h3>
+        <p class="pvx-livro-desc">Edição especial de lançamento com preço promocional!Prepare-se para o Universo Absolute! Sem a Ilha Paraíso... sem a irmandade que a formou... sem uma missão de paz... tudo o que restou é a Amazona Absoluta! Uma surpreendente reimaginação da Mulher-Maravilha pela escritora vencedora do Prêmio Eisner Kelly Thompson e do artista Hayden Sherman!Série vencedora do Prêmio Eisner!</p>
+        <button class="pvx-btn-pre-venda" data-pvx-book="Absolute Mulher-Maravilha 01">Garantir Pré-venda</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <section id="pvx-modal-pre-venda">
+    <div id="pvx-modal-box">
+      <h3 id="pvx-modal-title">Confirmar Pré-venda</h3>
+      <p id="pvx-modal-text">Você está prestes a garantir sua cópia de: <strong id="pvx-book-select"></strong></p>
+
+      <form id="pvx-form-pre-venda">
+        <input type="text" class="pvx-input" placeholder="Seu nome" required />
+        <input type="email" class="pvx-input" placeholder="Seu e-mail" required />
+        <button type="submit" class="pvx-btn-confirmar">Finalizar</button>
+      </form>
+
+      <button id="pvx-btn-fechar">Fechar</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="logo">Violet</div>
+      <ul>
+        <li><a href="../página_footer/PoliticaDePrivacidade.html">Política de Privacidade</a></li>
+        <li><a href="../página_footer/pol_pag.html">Política de pagamento</a></li>
+        <li><a href="../página_footer/PoíticaDeCashback.html">Política de cashback</a></li>
+        <li><a href="../página_footer/trocas_reembolso.html">Trocas e reembolso</a></li>
+        <li><a href="../página_footer/sobrenos.html">Sobre nós</a></li>
+        <li><a href="../página_footer/contate-nos.html">Fale conosco</a></li>
+      </ul>
+
+      <div class="redes-sociais">
+        <a href="#"><img src="../images/facebook-app-symbol.png" alt="Facebook"></a>
+        <a href="#"><img src="../images/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="../images/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="../images/youtube.png" alt="YouTube"></a>
+      </div>
+
+      <p>&copy; 2025 Violet. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+
+  <script>
+    // ===== JS EXCLUSIVO =====
+    const pvxModal = document.querySelector('#pvx-modal-pre-venda');
+    const pvxBtnClose = document.querySelector('#pvx-btn-fechar');
+    const pvxBookNameTarget = document.querySelector('#pvx-book-select');
+
+    document.querySelectorAll('.pvx-btn-pre-venda').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const livro = btn.getAttribute('data-pvx-book');
+        pvxBookNameTarget.textContent = livro;
+        pvxModal.style.display = 'flex';
+      });
+    });
+
+    pvxBtnClose.addEventListener('click', () => {
+      pvxModal.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>

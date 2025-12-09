@@ -1,0 +1,227 @@
+    :root{
+      --cor-principal:#8502d2;
+      --cor_fundo2:#541970;
+      --cor-escura:#ffffff;
+      --texto-sec:#fffcfc;
+      --fundo:#0f0f0f;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,Arial}
+    body{background:var(--fundo);color:var(--cor-escura)}
+
+    header{background:var(--cor-principal);padding:18px 20px;color:white}
+    .container{max-width:1100px;margin:auto;padding:20px}
+
+    h1{margin-bottom:14px}
+.nav-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+
+.logo-nav {
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.logo-livros {
+  position: flex;
+  padding-left: 50px;
+}
+
+.logo-img {
+  height: 80px;
+  height: 55px;  
+  width: auto;
+}
+
+.barra-pesquisa {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 500px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: 14px;
+  background-color: #fff;
+  color: #000;
+}
+
+
+.logo {
+  font-size: 24px;
+  color: white;
+}
+
+
+.imagens {
+  padding-left: 15px;
+  margin-left: auto;        
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-right: 0;          
+}
+
+.imagens img {
+  display: inline-block;   
+  vertical-align: middle;   
+  height: 28px;            
+  width: auto;              
+}
+
+.imagens img {
+  display: inline-block; 
+  vertical-align: middle;
+  width: auto;
+  height: 28px;
+  cursor: pointer;
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s;
+}
+
+.imagens img:hover {
+  transform: scale(1.1);
+}
+
+.opcoes {
+  background-color: var(--cor_fundo2);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  gap: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.opcoes a {
+  color: var(--fontes);
+  font-weight: 500;
+  font-size: 14px;
+  padding: 4px 10px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+  font-weight: bold;
+}
+
+.opcoes a:hover {
+  color: var(--fontes_efeito);
+  background-color: #8502d2;
+}
+
+
+.search-bar {
+      width: 500px;
+      padding: 12px;
+      border-radius: 20px;
+      border: none;
+}
+
+
+
+.categorias {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #1f1f1f;
+}
+
+.categorias button {
+  padding: 10px 25px;
+  background-color: #6e33aa;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.categorias button:hover {
+  background-color: #8a4bcc;
+}
+    /* CARD DE PEDIDO - estilo Amazon */
+    .pedido-card{
+      background: #1d1c1c; 
+      border-radius:12px;
+      padding:18px;
+      margin-bottom:18px;
+      display:flex;
+      gap:18px;
+      box-shadow:0 4px 14px #000;
+      transition:0.2s;
+    }
+    .pedido-card:hover{transform:scale(1.01)}
+
+    .pedido-card img{
+      width:130px;height:180px;object-fit:cover;border-radius:8px;
+    }
+
+    .infos{flex:1;display:flex;flex-direction:column;justify-content:space-between}
+
+    .titulo{font-size:1.1rem;font-weight:600;margin-bottom:4px}
+    .autor{color:var(--texto-sec);font-size:.9rem;margin-bottom:8px}
+
+    .preco{font-size:1rem;font-weight:600;margin:6px 0}
+
+    /* BADGES DE STATUS */
+    .status{
+      display:inline-block;
+      padding:4px 10px;
+      border-radius:30px;
+      font-size:.8rem;
+      color:white;
+      margin-bottom:8px;
+    }
+    .entregue{background:#10b981}
+    .processando{background:#3b82f6}
+    .pendente{background:#f59e0b}
+    .cancelado{background:#ef4444}
+
+    /* BOTÕES */
+    .acoes{display:flex;gap:10px;margin-top:10px}
+    .btn{
+      padding:8px 12px;
+      border-radius:8px;
+      background:#8502d2;
+      color:white;
+      text-decoration:none;
+      font-size:.85rem;
+    }
+    .btn:hover{opacity:.85}
+
+    /* MODAL */
+    #modal{
+      position:fixed;inset:0;
+      background:rgba(0,0,0,0.5);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+      backdrop-filter:blur(4px);
+    }
+    #modal-box{
+      background:white;
+      max-width:600px;width:100%;
+      border-radius:12px;
+      padding:20px;position:relative;
+    }
+    #closeModal{
+      position:absolute;right:14px;top:10px;
+      background:none;border:none;font-size:22px;color:var(--cor-escura);
+    }
