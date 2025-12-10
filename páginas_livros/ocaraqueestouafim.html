@@ -3,16 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> O cara que estou afim não é um cara! - Violet</title>
+  <title> O cara que estou afim não é um cara! Vol. 2 - Violet</title>
     <link rel="stylesheet" href="../style.css">
- 
+    <style>
+      footer {
+  width: 105vw !important; /* ocupa 100% da largura visível */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw; /* corrige deslocamento */
+  margin-right: -50vw;
+}
+
+  /* Deixa o header mais equilibrado */
+  header .nav-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px; /* AQUI dá o afastamento da esquerda e da direita */
+  }
+
+  /* Afasta a logo da borda */
+  .logo-nav img {
+    display: block;
+    margin-left: 10px; /* Pequeno respiro */
+    max-height: 55px;
+  }
+
+  /* Ajusta a barra de pesquisa para ficar mais centralizada */
+  .barra-pesquisa {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .barra-pesquisa input {
+    width: 60%;
+    max-width: 450px;
+  }
+
+  /* Mantém as imagens alinhadas à direita */
+  .imagens {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .imagens img {
+    height: 28px;
+  }
+
+  footer {
+    margin-top: 20px;
+  }
+    </style>
 </head>
 <body>
     
 <header>
-    <div class="container">
+  <div class="container">
     <nav class="nav-topo">
-        <div class="logo-livros">
+        <div class="logo-nav">
            <a href="../index.html">
             <img src="../images/violet_logo.png" alt="Logo da Violet" class="logo-img">
            </a>
@@ -20,41 +71,38 @@
         <div class="barra-pesquisa">
           <input type="text" placeholder="Buscar livros, autores..." class="search-bar">
         </div>
-
-
-        <!-- Essa é as imagens que ficam na parte de cima -->
-       <div class="imagens">
-        <a href="../index.html"></a>
-        <a href="../paginas_topo/perfil.html"><img src="../images/user.png" alt="Perfil"></a>
-        <a href="../paginas_topo/wish2.html"><img src="../images/heart.png" alt="Favoritos"></a>
-        <a href="#"><img src="../images/shopping-bag.png" alt="Carrinho"></a>
-
-        <!-- Essa parte é as linhas do menu, na responsividade -->
-        <div class="btn-menu-mob" id="btn-menu-mob">
-          <div class="line-menumob-1"></div>
-          <div class="line-menumob-2"></div>
-          <div class="line-menumob-3"></div>
-        </div>
-
+      <div class="imagens">
+        <a href="../editora_violet/paginas_topo/perfil.html"><img src="./images/user.png" alt="Perfil"></a>
+        <a href="../editora_violet/paginas_topo/wish2.html"><img src="./images/heart.png" alt="Favoritos"></a>
+        <a href="#"><img src="./images/shopping-bag.png" alt="Carrinho"></a>
       </div>
     </nav>
   </div>
 </header>
 
+<!-- Essa parte é os nomes que ficam em baixo  -->
+<main>
   <div class="opcoes">
-    <a href="#">Autores</a>
-    <a href="#">Editora</a>
-    <a href="#">Livros</a>
-    <a href="#">Pré-venda</a>
-    <a href="#">Lançamentos</a>
-    <a href="#">Wishlist</a>
-    <a href="#">Meus pedidos</a>
+    <a href="../pagina_autores/autores.html">Autores</a>
+    <a href="../páginas_livros/todososlivros.html">Livros</a>
+    <a href="../paginas_topo/pre_venda.html">Pré-venda</a>
+    <a href="../paginas_topo/wish2.html">Wishlist</a>
+    <a href="../paginas_topo/pedidos.html">Meus pedidos</a>
   </div>
 </main>
- 
+
   <div class="conteudo">
     <div class="produto">
-      <img src="../images/livros/o cara que eu estou não é um cara.jpg">
+      <div class="todas_imagens">
+       <div class="principal">
+        <img src="../images/livros/o cara que eu estou não é um cara.jpg">
+       </div>
+         <div class="img_lado">
+          <img class="img1" src="../images/livros/o cara 1.jpg" >
+         <div class="img2">
+          <img  src="../images/livros/o cara 2.jpg" >
+         </div>
+      </div>
 
       <div class="info">
 
@@ -66,49 +114,53 @@
         </svg>
     </label>
       </div>
+    
+        <h1>Solo Leveling</h1>
+         <p style="font-size: 20px " style="color: rgba(255, 255, 255, 0.623);"> (Full Color) Capa comum – 24 agosto 2020</p>
+        <div class="autor_nome">
+		     <p style="font-size: 15px " > por Sumiko Arai </p>
+        </div>
 
-      <div class="coracao-para-nomesG">
-        <input type="checkbox" id="coracao" /> <!--Cria uma caixinha de marcar(checkbox), O id="coracao" ele relaciona o checkbox com o <label> -->
-    <label for="coracao">  <!--Como o label está vinculado ao input pelo atributo for="coracao",quando o usuário clicar no conteúdo do label ele vai marcar ou desmarcar o checkbox  -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ffffff">  <!-- O SVG é o desenho do coração, tendo atributos, width e height definem o tamanho do ícone, viewBox  é a área do desenho do ícone, fill="none" que é sem preenchimento, stroke que é a cor da linha -->
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />  <!-- O path é o caminho vetorial que desenha o coração -->
-        </svg>
-    </label>
-      </div>
+         <div class="estrelinha_texto">
+          <ul class="avaliacao">
+            <li class="star-icon ativo" data-avaliacao="1"></li>
+            <li class="star-icon" data-avaliacao="2"></li>
+            <li class="star-icon" data-avaliacao="3"></li>
+            <li class="star-icon" data-avaliacao="4"></li>
+            <li class="star-icon" data-avaliacao="5"></li>
+          </ul>
+          <h4>(4,9)</h4>
 
-        <h1>O cara que estou afim não é um cara! Vol. 2</h1>
-		<h2 style="font-size: 18px"> por Sumiko Arai </h2>
+         </div>
 
-        <ul class="avaliacao">
-          <li class="star-icon ativo" data-avaliacao="1"></li>
-          <li class="star-icon" data-avaliacao="2"></li>
-          <li class="star-icon" data-avaliacao="3"></li>
-          <li class="star-icon" data-avaliacao="4"></li>
-          <li class="star-icon" data-avaliacao="5"></li>
-        </ul>
-
-        <p class="preço" >R$ 39,69 </p>
+        <p class="preço" >R$ 39,70  </p>
+        <p style="font-size: 15px "> ou <span style="color: #fac904;">4x</span> de <span style="color: #fac904;">R$ 29,98</span> sem juros no PIX</p>
         <button id="compra_botao" class="compra_botao"><h2>Comprar</h2></button>
-        
-        <div class="detalhes">
-          <h3><strong>Gênero:</strong> Romance</h3>
-          <h3><strong>Idioma:</strong> Português</h3>
-		      <h3><strong>Editora:</strong> NewPOP</h3>
-		      <h3><strong>Data da publicação:</strong> 20 maio 2025</h3>
-          <h3><strong>Páginas:</strong> 184</h3>
-		      <h3><strong>Classificação Indicativa:</strong> 14 anos</h3>
-          <h3><strong>Dimensões:</strong>15 x 2 x 21 cm</h3>
-          <h3><strong>Peso:</strong> 260g</h3>
-          <h3><strong>Acabamento:</strong> Brochura</h3>
+         <div class="detalhes1">
+           <h3 ><strong>Gênero</strong><img style="margin-left: 15px;" src="../images/documento.png" alt="Romance"></i> <br> Romance</h3>  
+           <h3 ><strong>Idioma</strong> <img style="margin-left: 15px;" src="../images/mundo.png" alt="idioma"> <br> Português</h3>
+		       <h3><strong>Editora</strong><img style="margin-left: 15px;" src="../images/construcao.png" alt="editora"> <br>NewPop</h3>
+		       <h3><strong>Dimensões</strong><img style="margin-left: 15px;" src="../images/marcador-de-livro (1).png" alt="dimensao"> <br > 15x2x21cm</h3>
+           <h3><strong>Páginas</strong><img style="margin-left: 15px;" src="../images/book-alt.png" alt="paginas"> <br > 184</h3>
+         </div>
+
+         <div class="detalhes2">
+          
+          <h3><strong>Peso</strong><br><img style="margin-left: 5px;" src="../images/camadas.png" alt="peso"> <br> 260g</h3>
+		      <h3><strong>Classificação Indicativa</strong> <br> <img style="margin-left: 5px;" src="../images/usuarios-alt.png" src="../images/usuarios-alt.png" alt="classe"><br> 14 anos</h3>
+          
+
           
         </div>
       </div>
     </div>
 
+
     <div class="description">
     <br>  <h3>Descrição</h3>
 	
-      <p style="text-align:justify">Depois de descobrir que “o cara da qual estava a fim não era um cara”, Aya fica sem saber distinguir se o que elas têm é uma amizade ou se é alguma coisa totalmente distinta.<br>Por outro lado, Mitsuki está em conflito com o distanciamento correto que deveria ter com Aya. “Para mim você é... Para você eu sou...? Que tipo de existência somos uma para a outra?” E, mesmo assim, a relação das duas, criada a partir da “música”, não consegue ir contra a atração e continua avançando com tudo...</p>
+      <p >Depois de descobrir que “o cara da qual estava a fim não era um cara”, Aya fica sem saber distinguir se o que elas têm é uma amizade ou se é alguma coisa totalmente distinta.
+Por outro lado, Mitsuki está em conflito com o distanciamento correto que deveria ter com Aya. “Para mim você é... Para você eu sou...? Que tipo de existência somos uma para a outra?” E, mesmo assim, a relação das duas, criada a partir da “música”, não consegue ir contra a atração e continua avançando com tudo...</p>
 
     </div>
 
@@ -122,30 +174,33 @@
       </div>
     </div>
   </div>
-
+  
+  
   <footer>
-  <div class="footer-container">
-    <div class="logo">Violet</div>
-    <ul>
-      <li><a href="PoliticaDePrivacidade.html">Política de Privacidade</a></li>
-      <li><a href="./pol_pag.html">Política de pagamento</a></li>
-      <li><a href="#">Política de cashback</a></li>
-      <li><a href="./trocas_reembolso.html">Trocas e reembolso</a></li>
-      <li><a href="#">Sobre nós</a></li>
-      <li><a href="#">Fale conosco</a></li>
-      <li><a href="#">FAQ</a></li>
-    </ul>
+    <div class="footer-container">
+      <div class="logo_footer"><a href="../index.html">
+<img src="../images/Violet_logo.png"></img></div>
+      </a>
+      <ul>
+        <li><a href="../página_footer/PoliticaDePrivacidade.html">Política de Privacidade</a></li>
+        <li><a href="../página_footer/pol_pag.html">Política de pagamento</a></li>
+        <li><a href="../página_footer/PoíticaDeCashback.html">Política de cashback</a></li>
+        <li><a href="./página_footer/trocas_reembolso.html">Trocas e reembolso</a></li>
+        <li><a href="../página_footer/sobrenos.html">Sobre nós</a></li>
+        <li><a href="../página_footer/contate-nos.html">Fale conosco</a></li>
+      </ul>
 
-    <div class="redes-sociais">
-      <a href="#"><img src="../images/facebook-app-symbol.png" alt="Facebook"></a>
-      <a href="#"><img src="../images/instagram.png" alt="Instagram"></a>
-      <a href="#"><img src="../images/twitter.png" alt="Twitter"></a>
-      <a href="#"><img src="../images/youtube.png" alt="YouTube"></a>
+      <div class="redes-sociais">
+        <a href="#"><img src="../images/facebook-app-symbol.png" alt="Facebook"></a>
+        <a href="#"><img src="../images/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="../images/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="../images/youtube.png" alt="YouTube"></a>
+      </div>
+
+      <p>&copy; 2025 Violet. Todos os direitos reservados.</p>
     </div>
+  </footer>
 
-    <p>&copy; 2025 Violet. Todos os direitos reservados.</p>
-  </div>
-</footer>
 
 <script>
         var bu = document.getElementById("compra_botao");

@@ -2186,3 +2186,16 @@ footer p {
   align-items: center;
   margin-bottom: 15px;
 }
+
+.detalhes1 img {
+margin-top: 5px;
+width: auto;
+height: 24px;
+}
+
+.detalhes2 img {
+margin-top: 5px;
+width: auto;
+height: 24px;
+}
+
