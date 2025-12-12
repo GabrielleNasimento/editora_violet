@@ -55,8 +55,8 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    width: 661px;
-    height: 760px;
+    width: 725px;
+    height: 771px;
     background: rgba(0, 0, 0, 0.55); /* AQUI ESCURECE */
     pointer-events: none;
     z-index: 5;
