@@ -1,202 +1,237 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Your Name - Violet</title>
-    <link rel="stylesheet" href="../style.css">
-    <style>
-      footer {
-  width: 105vw !important; /* ocupa 100% da largura visível */
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw; /* corrige deslocamento */
-  margin-right: -50vw;
-}
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    footer {
+      width: 105vw !important;
+      /* ocupa 100% da largura visível */
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      /* corrige deslocamento */
+      margin-right: -50vw;
+    }
 
-  /* Deixa o header mais equilibrado */
-  header .nav-topo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px; /* AQUI dá o afastamento da esquerda e da direita */
-  }
+    /* Deixa o header mais equilibrado */
+    header .nav-topo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+      /* AQUI dá o afastamento da esquerda e da direita */
+    }
 
-  /* Afasta a logo da borda */
-  .logo-nav img {
-    display: block;
-    margin-left: 10px; /* Pequeno respiro */
-    max-height: 55px;
-  }
+    /* Afasta a logo da borda */
+    .logo-nav img {
+      display: block;
+      margin-left: 10px;
+      /* Pequeno respiro */
+      max-height: 55px;
+    }
 
-  /* Ajusta a barra de pesquisa para ficar mais centralizada */
-  .barra-pesquisa {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-  }
+    /* Ajusta a barra de pesquisa para ficar mais centralizada */
+    .barra-pesquisa {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
 
-  .barra-pesquisa input {
-    width: 60%;
-    max-width: 450px;
-  }
+    .barra-pesquisa input {
+      width: 60%;
+      max-width: 450px;
+    }
 
-  /* Mantém as imagens alinhadas à direita */
-  .imagens {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-  }
+    /* Mantém as imagens alinhadas à direita */
+    .imagens {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
 
-  .imagens img {
-    height: 28px;
-  }
+    .imagens img {
+      height: 28px;
+    }
 
-  footer {
-    margin-top: 20px;
-  }
-    </style>
+    .coracao-para-nomesG {
+      margin-left: 105px;
+
+    }
+
+    footer {
+      margin-top: 20px;
+    }
+  </style>
 </head>
+
 <body>
-    
-<header>
-  <div class="container">
-    <nav class="nav-topo">
+
+  <header>
+    <div class="container">
+      <nav class="nav-topo">
         <div class="logo-nav">
-           <a href="../index.html">
+          <a href="../index.html">
             <img src="../images/violet_logo.png" alt="Logo da Violet" class="logo-img">
-           </a>
+          </a>
         </div>
         <div class="barra-pesquisa">
           <input type="text" placeholder="Buscar livros, autores..." class="search-bar">
         </div>
-      <div class="imagens">
-        <a href="../editora_violet/paginas_topo/perfil.html"><img src="./images/user.png" alt="Perfil"></a>
-        <a href="../editora_violet/paginas_topo/wish2.html"><img src="./images/heart.png" alt="Favoritos"></a>
-        <a href="#"><img src="./images/shopping-bag.png" alt="Carrinho"></a>
-      </div>
-    </nav>
-  </div>
-</header>
+        <div class="imagens">
+          <a href="../editora_violet/paginas_topo/perfil.html"><img src="./images/user.png" alt="Perfil"></a>
+          <a href="../editora_violet/paginas_topo/wish2.html"><img src="./images/heart.png" alt="Favoritos"></a>
+          <a href="#"><img src="./images/shopping-bag.png" alt="Carrinho"></a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-<!-- Essa parte é os nomes que ficam em baixo  -->
-<main>
-  <div class="opcoes">
-    <a href="../pagina_autores/autores.html">Autores</a>
-    <a href="../páginas_livros/todososlivros.html">Livros</a>
-    <a href="../paginas_topo/pre_venda.html">Pré-venda</a>
-    <a href="../paginas_topo/wish2.html">Wishlist</a>
-    <a href="../paginas_topo/pedidos.html">Meus pedidos</a>
-  </div>
-</main>
+  <!-- Essa parte é os nomes que ficam em baixo  -->
+  <main>
+    <div class="opcoes">
+      <a href="../pagina_autores/autores.html">Autores</a>
+      <a href="../páginas_livros/todososlivros.html">Livros</a>
+      <a href="../paginas_topo/pre_venda.html">Pré-venda</a>
+      <a href="../paginas_topo/wish2.html">Wishlist</a>
+      <a href="../paginas_topo/pedidos.html">Meus pedidos</a>
+    </div>
+  </main>
 
   <div class="conteudo">
     <div class="produto">
       <div class="todas_imagens">
-       <div class="principal">
-        <img src="../images/livros/solo_leveling.webp">
-       </div>
-         <div class="img_lado">
-          <img class="img1" src="../images/livros/solo1.jpg" >
-         <div class="img2">
-          <img  src="../images/livros/solo2.webp" >
-         </div>
-      </div>
-
-      <div class="info">
-
-<div class="coracao-para-nomesG">
-        <input type="checkbox" id="coracao" /> <!--Cria uma caixinha de marcar(checkbox), O id="coracao" ele relaciona o checkbox com o <label> -->
-    <label for="coracao">  <!--Como o label está vinculado ao input pelo atributo for="coracao",quando o usuário clicar no conteúdo do label ele vai marcar ou desmarcar o checkbox  -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ffffff">  <!-- O SVG é o desenho do coração, tendo atributos, width e height definem o tamanho do ícone, viewBox  é a área do desenho do ícone, fill="none" que é sem preenchimento, stroke que é a cor da linha -->
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />  <!-- O path é o caminho vetorial que desenha o coração -->
-        </svg>
-    </label>
-      </div>
-    
-        <h1>Solo Leveling</h1>
-         <p style="font-size: 20px " style="color: rgba(255, 255, 255, 0.623);"> (Full Color) Capa comum – 24 agosto 2020</p>
-        <div class="autor_nome">
-		     <p style="font-size: 15px " > por Makoto Shinkai </p>
+        <div class="principal">
+          <img src="../images/livros/solo_leveling.webp">
+        </div>
+        <div class="img_lado">
+          <img class="img1" src="../images/livros/solo1.jpg">
+          <div class="img2">
+            <img src="../images/livros/solo2.webp">
+          </div>
         </div>
 
-         <div class="estrelinha_texto">
-          <ul class="avaliacao">
-            <li class="star-icon ativo" data-avaliacao="1"></li>
-            <li class="star-icon" data-avaliacao="2"></li>
-            <li class="star-icon" data-avaliacao="3"></li>
-            <li class="star-icon" data-avaliacao="4"></li>
-            <li class="star-icon" data-avaliacao="5"></li>
-          </ul>
-          <h4>(4,9)</h4>
+        <div class="info">
 
-         </div>
+          <div class="coracao-para-nomesG">
+            <input type="checkbox" id="coracao" />
+            <!--Cria uma caixinha de marcar(checkbox), O id="coracao" ele relaciona o checkbox com o <label> -->
+            <label for="coracao">
+              <!--Como o label está vinculado ao input pelo atributo for="coracao",quando o usuário clicar no conteúdo do label ele vai marcar ou desmarcar o checkbox  -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                stroke="#ffffff">
+                <!-- O SVG é o desenho do coração, tendo atributos, width e height definem o tamanho do ícone, viewBox  é a área do desenho do ícone, fill="none" que é sem preenchimento, stroke que é a cor da linha -->
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                <!-- O path é o caminho vetorial que desenha o coração -->
+              </svg>
+            </label>
+          </div>
 
-        <p class="preço" >R$ 39,70  </p>
-        <p style="font-size: 15px "> ou <span style="color: #fac904;">4x</span> de <span style="color: #fac904;">R$ 29,98</span> sem juros no PIX</p>
-        <button id="compra_botao" class="compra_botao"><h2>Comprar</h2></button>
-         <div class="detalhes1">
-           <h3 ><strong>Gênero</strong><img style="margin-left: 15px;" src="../images/documento.png" alt="genero"></i> <br> Shounen</h3>  
-           <h3 ><strong>Idioma</strong> <img style="margin-left: 15px;" src="../images/mundo.png" alt="idioma"> <br> Português</h3>
-		       <h3><strong>Editora</strong><img style="margin-left: 15px;" src="../images/construcao.png" alt="editora"> <br>NewPop</h3>
-		       <h3><strong>Dimensões</strong><img style="margin-left: 15px;" src="../images/marcador-de-livro (1).png" alt="dimensao"> <br > 20.8x14.2</h3>
-           <h3><strong>Páginas</strong><img style="margin-left: 15px;" src="../images/book-alt.png" alt="paginas"> <br > 320</h3>
-         </div>
+          <h1>Solo Leveling</h1>
+          <p style="font-size: 20px " style="color: rgba(255, 255, 255, 0.623);"> (Full Color) Capa comum – 24 agosto
+            2020</p>
+          <div class="autor_nome">
+            <p style="font-size: 15px "> por Makoto Shinkai </p>
+          </div>
 
-         <div class="detalhes2">
-          
-          <h3><strong>Peso</strong><br><img style="margin-left: 5px;" src="../images/camadas.png" alt="peso"> <br> 500g</h3>
-		      <h3><strong>Classificação Indicativa</strong> <br> <img style="margin-left: 5px;" src="../images/usuarios-alt.png" src="../images/usuarios-alt.png" alt="classe"><br> 16 anos</h3>
-          
+          <div class="estrelinha_texto">
+            <ul class="avaliacao">
+              <li class="star-icon ativo" data-avaliacao="1"></li>
+              <li class="star-icon" data-avaliacao="2"></li>
+              <li class="star-icon" data-avaliacao="3"></li>
+              <li class="star-icon" data-avaliacao="4"></li>
+              <li class="star-icon" data-avaliacao="5"></li>
+            </ul>
+            <h4>(4,9)</h4>
 
-          
+          </div>
+
+          <p class="preço">R$ 39,70 </p>
+          <p style="font-size: 15px "> ou <span style="color: #fac904;">4x</span> de <span style="color: #fac904;">R$
+              29,98</span> sem juros no PIX</p>
+          <button id="compra_botao" class="compra_botao">
+            <h2>Comprar</h2>
+          </button>
+          <div class="detalhes1">
+            <h3><strong>Gênero</strong><img style="margin-left: 15px;" src="../images/documento.png" alt="genero"></i>
+              <br> Shounen
+            </h3>
+            <h3><strong>Idioma</strong> <img style="margin-left: 15px;" src="../images/mundo.png" alt="idioma"> <br>
+              Português</h3>
+            <h3><strong>Editora</strong><img style="margin-left: 15px;" src="../images/construcao.png" alt="editora">
+              <br>NewPop
+            </h3>
+            <h3><strong>Dimensões</strong><img style="margin-left: 15px;" src="../images/marcador-de-livro (1).png"
+                alt="dimensao"> <br> 20.8x14.2</h3>
+            <h3><strong>Páginas</strong><img style="margin-left: 15px;" src="../images/book-alt.png" alt="paginas"> <br>
+              320</h3>
+          </div>
+
+          <div class="detalhes2">
+
+            <h3><strong>Peso</strong><br><img style="margin-left: 5px;" src="../images/camadas.png" alt="peso"> <br>
+              500g</h3>
+            <h3><strong>Classificação Indicativa</strong> <br> <img style="margin-left: 5px;"
+                src="../images/usuarios-alt.png" src="../images/usuarios-alt.png" alt="classe"><br> 16 anos</h3>
+
+
+
+          </div>
         </div>
       </div>
-    </div>
 
 
-    <div class="description">
-    <br>  <h3>Descrição</h3>
-	
-      <p >Depois de um evento quase fatal em uma dessas masmorras, Jin-Woo desperta um sistema misterioso que lhe permite “levelar” sozinho, aumentando seus poderes e habilidades de forma extraordinária algo único e nunca visto antes entre os caçadores. Com isso, ele passa de um caçador fraco e subestimado para um dos mais poderosos do mundo, enfrentando monstros, outros caçadores e mistérios obscuros que envolvem os portais e seu próprio passado.</p>
+      <div class="description">
+        <br>
+        <h3>Descrição</h3>
 
-    </div>
+        <p>Depois de um evento quase fatal em uma dessas masmorras, Jin-Woo desperta um sistema misterioso que lhe
+          permite “levelar” sozinho, aumentando seus poderes e habilidades de forma extraordinária algo único e nunca
+          visto antes entre os caçadores. Com isso, ele passa de um caçador fraco e subestimado para um dos mais
+          poderosos do mundo, enfrentando monstros, outros caçadores e mistérios obscuros que envolvem os portais e seu
+          próprio passado.</p>
 
-    <div class="recomendações">
-      <h3>Veja também:</h3>
-      <div class="items">
-          
-         <a href="../páginas_livros/ocaraqueestouafim.html">
-        <img src="../images/livros/o cara que eu estou não é um cara.jpg" alt="O cara que estou afim não é um cara" >
-        </a> 
-       
-        <a href="osdoismorrem.html">
-        <img src="../images/livros/os_dois_morrem.jpeg" alt="Os dois morrem no final" >
-        </a> 
-        
-        <a href="melhorfilmes.html">
-        <img src="../images/livros/melhor do que nos filmes.jpg" alt="Melhor do que nos filmes" >
-        </a>
-		
-        <a href="yourname.html">
-        <img src="../images/livros/your_name.jpg" alt="Your name" >
-        </a>
+      </div>
 
-        <a href="diariosdeapotecaria.html">
-        <img src="../images/livros/diariosdeapotecaria.webp" alt="O diário de uma apotecária" >
-        </a>
+      <div class="recomendações">
+        <h3>Veja também:</h3>
+        <div class="items">
 
-		
+          <a href="../páginas_livros/ocaraqueestouafim.html">
+            <img src="../images/livros/o cara que eu estou não é um cara.jpg" alt="O cara que estou afim não é um cara">
+          </a>
+
+          <a href="osdoismorrem.html">
+            <img src="../images/livros/os_dois_morrem.jpeg" alt="Os dois morrem no final">
+          </a>
+
+          <a href="melhorfilmes.html">
+            <img src="../images/livros/melhor do que nos filmes.jpg" alt="Melhor do que nos filmes">
+          </a>
+
+          <a href="yourname.html">
+            <img src="../images/livros/your_name.jpg" alt="Your name">
+          </a>
+
+          <a href="diariosdeapotecaria.html">
+            <img src="../images/livros/diariosdeapotecaria.webp" alt="O diário de uma apotecária">
+          </a>
+
+
+        </div>
       </div>
     </div>
   </div>
-  
-  
+
   <footer>
     <div class="footer-container">
       <div class="logo_footer"><a href="../index.html">
-<img src="../images/Violet_logo.png"></img></div>
+          <img src="../images/Violet_logo.png"></img></div>
       </a>
       <ul>
         <li><a href="../página_footer/PoliticaDePrivacidade.html">Política de Privacidade</a></li>
@@ -219,27 +254,26 @@
   </footer>
 
 
-<script>
-        var bu = document.getElementById("compra_botao");
-        bu.onclick = function () {
-            alert("Seu pedido foi encaminhado ao carrinho!");
-        };
+  <script>
+    var bu = document.getElementById("compra_botao");
+    bu.onclick = function () {
+      alert("Seu pedido foi encaminhado ao carrinho!");
+    };
 
-//Parte das estrelinhas, avaliação //
-var stars = document.querySelectorAll('.star-icon');   //Seletando as estrelinhas //
-document.addEventListener('click',function(e){       //Criação do evento de clique //
-  var classStar = e.target.classList;                //Seletando a estrelinha principal  //
-  if(!classStar.contains('ativo')){                  //Uma condicional  //
-    stars.forEach(function(star){                    //Verificar se tem o ativo  //
-      star.classList.remove('ativo');  
+    //Parte das estrelinhas, avaliação //
+    var stars = document.querySelectorAll('.star-icon');   //Seletando as estrelinhas //
+    document.addEventListener('click', function (e) {       //Criação do evento de clique //
+      var classStar = e.target.classList;                //Seletando a estrelinha principal  //
+      if (!classStar.contains('ativo')) {                  //Uma condicional  //
+        stars.forEach(function (star) {                    //Verificar se tem o ativo  //
+          star.classList.remove('ativo');
+        });
+        classStar.add('ativo');
+        console.log(e.target.getAttribute('data-avaliacao'));
+
+      }
     });
-    classStar.add('ativo');
-    console.log(e.target.getAttribute('data-avaliacao'));
 
-  }
-});
-
-</script>
+  </script>
 
 </body>
-
