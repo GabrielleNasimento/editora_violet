@@ -2200,11 +2200,13 @@ height: 24px;
 }
 
 
+
 .barra-pesquisa {
-  position: relative;
+  position: absolute;
   width: 100%;
-  max-width: 400px; /* largura da barra */
+  max-width: 400px;
   margin: 0 auto;
+  margin-right: 50px;
 }
 
 .sugestoes-lista {
